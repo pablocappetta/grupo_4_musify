@@ -1,7 +1,5 @@
 ## Musify 🎵
 
-#
-
 - 🎺 Empower your tracks with studio-class kits
 - 🖥️ Connect with producers around the world
 - ⚡ Share your knowledge and make profits out of it
