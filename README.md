@@ -1,14 +1,20 @@
 ## Musify 🎵
 
+#
+
 - 🎺 Empower your tracks with studio-class kits
 - 🖥️ Connect with producers around the world
 - ⚡ Share your knowledge and make profits out of it
+
+#
 
 ### Who are we?
 
 We are a group of four students from [Digital House] that will change the music production standards.
 
 Our goal is to provide you a platform where you can search, try and buy multiple sound kits to improve your sound.
+
+#
 
 <br/>
 
