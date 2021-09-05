@@ -4,22 +4,31 @@
 - 🌱 Connect with producers around the world
 - ⚡ Share your knowledge and make profits out of it
 
-### Who are we?:
+### Who are we?
 
 We are a group of four students from [Digital House] that will change the music production standards.
 
 <details>
+
   <summary>:zap: Pablo</summary>
-    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinpablo]
-    
+    <img align="left" alt="LinkedIn Pablo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinpablo]
+    <img align="left" alt="Twitter logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/>[twitterpablo]
+    <img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>[githubpablo]
+
+</details>
+
   <summary>:zap: Nico</summary>
-    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinnico]
+    <img align="left" alt="LinkedIn Nico" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinnico]
+
+</details>
 
   <summary>:zap: Diego</summary>
-    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedindiego]
+    <img align="left" alt="LinkedIn Diego" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedindiego]
+
+</details>
 
   <summary>:zap: Félix</summary>
-    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinfelix]
+    <img align="left" alt="LinkedIn Félix" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinfelix]
 
 </details>
 
