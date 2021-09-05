@@ -85,3 +85,13 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <!-- Others -->
 
 [digital house]: https://www.digitalhouse.com
+
+<!-- Referentes:
+
+https://www.producerloops.com/
+https://theproducerkit.com/
+https://soundoracle.net/
+https://patreon.com/
+https://soundcloud.com/
+
+/>
