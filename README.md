@@ -8,6 +8,8 @@
 
 We are a group of four students from [Digital House] that will change the music production standards.
 
+<br/>
+
 <details>
   <summary>👨🏻‍💻 Pablo</summary>
   <br/>
