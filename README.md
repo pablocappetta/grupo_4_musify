@@ -11,9 +11,9 @@ We are a group of four students from [Digital House] that will change the music 
 <details>
 
   <summary>:zap: Pablo</summary>
-    <img align="left" alt="LinkedIn Pablo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinpablo]
-    <img align="left" alt="Twitter logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/>[twitterpablo]
-    <img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>[githubpablo]
+    [<img align="left" alt="LinkedIn Pablo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinpablo]
+    [<img align="left" alt="Twitter logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/>][twitterpablo]
+    [<img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>][githubpablo]
 
 </details>
 
