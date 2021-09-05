@@ -28,13 +28,14 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <br/>
 
 <details>
-  <summary>:zap: Nico</summary>
+  <summary>:musical_keyboard: Nico</summary>
   <br/>
-  TBD
+  26 years old Business Administration student from Buenos Aires, Argentina. I love to learn and listen about music theory stuff, instruments and anything related with the English rock band Muse. Also a casual gamer in my free time.
   <br/>
   <br/>
   
   [<img align="left" alt="LinkedIn Nico" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinnico]
+  [<img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>][githubnico]
 
 </details>
 
@@ -73,6 +74,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <!-- Nico links -->
 
 [linkedinnico]: https://linkedin.com/in/nicolasignacioacu
+[githubnico]: https://github.com/nicoacu
 
 <!-- Diego links -->
 
