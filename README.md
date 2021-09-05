@@ -8,10 +8,15 @@
 
 We are a group of four students from [Digital House] that will change the music production standards.
 
+Our goal is to provide you a platform where you can search, try and buy multiple sound kits to improve your sound.
+
 <br/>
 
 <details>
   <summary>👨🏻‍💻 Pablo</summary>
+  <br/>
+  I'm a 25 years old comp-sci student from Buenos Aires, Argentina. In my free times, I produce electronic music. I'm also a casual gamer and a big fan of the Half-Life universe.
+  <br/>
   <br/>
   
   [<img align="left" alt="LinkedIn Pablo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinpablo]
@@ -25,6 +30,9 @@ We are a group of four students from [Digital House] that will change the music 
 <details>
   <summary>:zap: Nico</summary>
   <br/>
+  TBD
+  <br/>
+  <br/>
   
   [<img align="left" alt="LinkedIn Nico" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinnico]
 
@@ -35,6 +43,9 @@ We are a group of four students from [Digital House] that will change the music 
 <details>
   <summary>:zap: Diego</summary>
   <br/>
+  TBD
+  <br/>
+  <br/>
   
   [<img align="left" alt="LinkedIn Diego" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedindiego]
 
@@ -44,6 +55,9 @@ We are a group of four students from [Digital House] that will change the music 
 
 <details>
   <summary>:zap: Félix</summary>
+  <br/>
+  TBD
+  <br/>
   <br/>
   
   [<img align="left" alt="LinkedIn Félix" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinfelix]
