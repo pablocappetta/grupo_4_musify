@@ -4,23 +4,51 @@
 - 🌱 Connect with producers around the world
 - ⚡ Share your knowledge and make profits out of it
 
-### Connect with us:
+### Who are we?:
 
-<img align="left" alt="pabloCard" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> [linkedinpablo]
-<img align="left" alt="nicoCard" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> [linkedinnico]
-<img align="left" alt="diegoCard" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> [linkedindiego]
-<img align="left" alt="felixCard" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> [linkedinfelix]
-
-<br/>
+We are a group of four students from [Digital House] that will change the music production standards.
 
 <details>
-  <summary>:zap: Who are we?</summary>
+  <summary>:zap: Pablo</summary>
+    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinpablo]
+    
+  <summary>:zap: Nico</summary>
+    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinnico]
 
-TBD
+  <summary>:zap: Diego</summary>
+    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedindiego]
+
+  <summary>:zap: Félix</summary>
+    <img align="left" alt="LinkedIn logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>[linkedinfelix]
 
 </details>
 
+<br/>
+
+<!-- Pablo links -->
+
 [linkedinpablo]: https://linkedin.com/in/pablocappetta
+[twitterpablo]: https://twitter.com/pablocappetta
+[githubpablo]: https://github.com/pablocappetta
+
+<!-- Nico links -->
+
 [linkedinnico]: https://linkedin.com/in/nicolasignacioacu
+
+<!-- Diego links -->
+
 [linkedindiego]: https://linkedin.com/
+
+<!-- Felix links -->
+
 [linkedinfelix]: https://linkedin.com/
+
+[<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+[<img align="left" alt="codeSTACKr | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
+[<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+
+<!-- Others -->
+
+[digital house]: https://www.digitalhouse.com
