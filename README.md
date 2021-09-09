@@ -6,9 +6,9 @@
 
 ## Who are we?
 
-We are a group of four students from [Digital House] that will change the music production standards.
+We are a group of four students from [Digital House] that will change the music standards.
 
-Our goal is to provide you a platform where you can search, try and buy multiple sound kits to improve your sound.
+Our goal is to provide you a platform where you can search, try and buy multiple sound kits to improve your productions.
 
 <br/>
 
