@@ -15,7 +15,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>👨🏻‍💻 Pablo</summary>
   <br/>
-  I'm a 25 year old comp-sci student from Buenos Aires, Argentina. In my free times, I produce electronic music. I'm also a casual gamer and a big fan of the Half-Life universe.
+  I'm a 25 years old comp-sci student from Buenos Aires, Argentina. In my free times, I produce electronic music. I'm also a casual gamer and a big fan of the Half-Life universe.
   <br/>
   <br/>
   
@@ -30,7 +30,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>:musical_keyboard: Nico</summary>
   <br/>
-  26 year old Business Administration student from Buenos Aires, Argentina. I love to learn and listen about music theory stuff, instruments and anything related with the English rock band Muse. Also a casual gamer in my free time.
+  26 years old Business Administration student from Buenos Aires, Argentina. I love to learn and listen about music theory stuff, instruments and anything related with the English rock band Muse. Also a casual gamer in my free time.
   <br/>
   <br/>
   
@@ -57,7 +57,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>:octocat: Félix</summary>
   <br/>
-  Well, hey there! I'm a 22 year old psychology student, thinking about the idea of getting into academia or pursuing a tech career. Mediocre musician, professional progressive rock listener. The real embodiment of a Jack of all trades, but master of none!
+  Well, hey there! I'm a 22 years old psychology student, thinking about the idea of getting into academia or pursuing a tech career. Mediocre musician, professional progressive rock listener. The real embodiment of a Jack of all trades, but master of none!
   <br/>
   <br/>
   
