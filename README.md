@@ -83,7 +83,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 <!-- Felix links -->
 
-[linkedinfelix]: https://linkedin.com/felix-hernandez-vieyra
+[linkedinfelix]: www.linkedin.com/in/felix-hernandez-vieyra
 [githubfelix]: https://github.com/Felix-Hz
 
 <!-- Others -->
