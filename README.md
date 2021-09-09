@@ -13,7 +13,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <br/>
 
 <details>
-  <summary>👨🏻‍💻 Pablo</summary>
+  <summary>:man_technologist_tone1: Pablo</summary>
   <br/>
   I'm a 25 years old comp-sci student from Buenos Aires, Argentina. In my free times, I produce electronic music. I'm also a casual gamer and a big fan of the Half-Life universe.
   <br/>
