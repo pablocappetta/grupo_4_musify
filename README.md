@@ -57,7 +57,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>:octocat: Félix</summary>
   <br/>
-  22 years old Psychology student, rambling around Academia and a tech career. Mediocre musician, but proffesional ProgRock listener. The real embodiment of jack of all trades, but master of none! 
+  22 years old Psychology student, rambling around Academia and a tech career. Mediocre musician, but professional ProgRock listener. The real embodiment of jack of all trades, but master of none! 
   <br/>
   <br/>
   
