@@ -57,11 +57,12 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>:zap: Félix</summary>
   <br/>
-  TBD
+  22 years old Psychology student, rambling around Academia and a tech career. Mediocre musician, but proffesional ProgRock listener. The real embodiment of jack of all trades, but master of none! 
   <br/>
   <br/>
   
   [<img align="left" alt="LinkedIn Félix" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinfelix]
+  [<img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>][githubfelix]
 
 </details>
 
@@ -82,7 +83,8 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 <!-- Felix links -->
 
-[linkedinfelix]: https://linkedin.com/
+[linkedinfelix]: https://linkedin.com/felix-hernandez-vieyra
+[githubfelix]: https://github.com/Felix-Hz
 
 <!-- Others -->
 
