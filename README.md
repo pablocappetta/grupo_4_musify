@@ -57,7 +57,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>:octocat: Félix</summary>
   <br/>
-  Well, hey there! I'm a 22 year old psychology student, thinking about the idea of getting into academia or pursuing a tech career. Mediocre musician, professional progressive rock istener. The real embodiment of a Jack of all trades, but master of none!
+  Well, hey there! I'm a 22 year old psychology student, thinking about the idea of getting into academia or pursuing a tech career. Mediocre musician, professional progressive rock listener. The real embodiment of a Jack of all trades, but master of none!
   <br/>
   <br/>
   
