@@ -44,7 +44,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>:zap: Diego</summary>
   <br/>
-  TBD
+  Hi there! :raised_hand_with_fingers_splayed: my name is Diego I am 29 years old, electronic engineer from Buenos Aires, Argentina. A passionate about music, guitarist by hobby. I love learning about everything, art, philosophy and technology.
   <br/>
   <br/>
   
