@@ -49,7 +49,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
   <br/>
   
   [<img align="left" alt="LinkedIn Diego" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedindiego]
-
+  [<img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>][githubdiego]
 </details>
 
 <br/>
