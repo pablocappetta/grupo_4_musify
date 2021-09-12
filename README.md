@@ -79,7 +79,9 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 <!-- Diego links -->
 
-[linkedindiego]: https://linkedin.com/
+[linkedindiego]: https://www.linkedin.com/in/diegolcejas/
+[githubnico]: https://github.com/diegocejj
+
 
 <!-- Felix links -->
 
