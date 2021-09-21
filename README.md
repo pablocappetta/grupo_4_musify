@@ -44,7 +44,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <details>
   <summary>:zap: Diego</summary>
   <br/>
-  Hi there! :raised_hand_with_fingers_splayed: my name is Diego I am 29 years old, electronic engineer from Buenos Aires, Argentina. A passionate about music, guitarist by hobby. I love learning about everything, art, philosophy and technology.
+  Hi there! :raised_hand_with_fingers_splayed: My name is Diego and I am a 29 years old electronic engineer from Buenos Aires, Argentina. Passionate about music, guitarist by hobby. I love learning about everything, but, mainly, about art, philosophy and technology.
   <br/>
   <br/>
   
@@ -68,9 +68,9 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 ## Wireframes
 
-<a href="https://www.figma.com/file/C3W3cx8nyI5wKt7MubjCjZ/Musify?node-id=105%3A0">Figma link</a>
+Check out our <strong>[Figma]</strong> to see more details on what we're working and what we want to achieve. 😉
 
-Preview:
+Don't tell anyone, but here's a tiny preview:
 
 <img width="75%" src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
 
@@ -108,6 +108,7 @@ Preview:
 <!-- Others -->
 
 [digital house]: https://www.digitalhouse.com
+[figma]: https://www.figma.com/file/C3W3cx8nyI5wKt7MubjCjZ/Musify?node-id=105%3A0
 
 <!-- Referentes:
 
