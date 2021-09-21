@@ -66,6 +66,19 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 </details>
 
+## Wireframes
+
+<img src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
+
+<img src="https://i.imgur.com/Bq6wjOg.png" align="center" alt="Wireframe detalle del producto" />
+
+<img src="https://i.imgur.com/Zjr9jZO.png" align="center" alt="Wireframe cart" />
+
+<img src="https://i.imgur.com/gwg2jwr.png" align="center" alt="Wireframe register" />
+
+<img src="https://i.imgur.com/qBakogb.png" align="center" alt="Wireframe login" />
+
+
 <!-- Pablo links -->
 
 [linkedinpablo]: https://linkedin.com/in/pablocappetta
