@@ -72,15 +72,15 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 Preview:
 
-<img width="50%" src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
+<img width="75%" src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
 
-<img width="50%" src="https://i.imgur.com/Bq6wjOg.png" align="center" alt="Wireframe detalle del producto" />
+<img width="75%" src="https://i.imgur.com/Bq6wjOg.png" align="center" alt="Wireframe detalle del producto" />
 
-<img width="50%" src="https://i.imgur.com/Zjr9jZO.png" align="center" alt="Wireframe cart" />
+<img width="75%" src="https://i.imgur.com/Zjr9jZO.png" align="center" alt="Wireframe cart" />
 
-<img width="50%" src="https://i.imgur.com/gwg2jwr.png" align="center" alt="Wireframe register" />
+<img width="75%" src="https://i.imgur.com/gwg2jwr.png" align="center" alt="Wireframe register" />
 
-<img width="50%" src="https://i.imgur.com/qBakogb.png" align="center" alt="Wireframe login" />
+<img width="75%" src="https://i.imgur.com/qBakogb.png" align="center" alt="Wireframe login" />
 
 
 <!-- Pablo links -->
