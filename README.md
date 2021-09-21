@@ -68,15 +68,19 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 ## Wireframes
 
-<img src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
+<a href="https://www.figma.com/file/C3W3cx8nyI5wKt7MubjCjZ/Musify?node-id=105%3A0">Figma link</a>
 
-<img src="https://i.imgur.com/Bq6wjOg.png" align="center" alt="Wireframe detalle del producto" />
+Preview:
 
-<img src="https://i.imgur.com/Zjr9jZO.png" align="center" alt="Wireframe cart" />
+<img width="50%" src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
 
-<img src="https://i.imgur.com/gwg2jwr.png" align="center" alt="Wireframe register" />
+<img width="50%" src="https://i.imgur.com/Bq6wjOg.png" align="center" alt="Wireframe detalle del producto" />
 
-<img src="https://i.imgur.com/qBakogb.png" align="center" alt="Wireframe login" />
+<img width="50%" src="https://i.imgur.com/Zjr9jZO.png" align="center" alt="Wireframe cart" />
+
+<img width="50%" src="https://i.imgur.com/gwg2jwr.png" align="center" alt="Wireframe register" />
+
+<img width="50%" src="https://i.imgur.com/qBakogb.png" align="center" alt="Wireframe login" />
 
 
 <!-- Pablo links -->
