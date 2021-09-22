@@ -7,6 +7,10 @@
   font-family: "Roboto";
 }
 
+html {
+  line-height: 1.15;
+}
+
 /******************/
 /* HEADER STYLING */
 /******************/
@@ -16,11 +20,60 @@ header {
   padding: 10px 14px;
   width: 100%;
   z-index: 101;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 #logo {
   width: 97.828px;
   height: 20.75px;
+  flex: 50%;
+}
+
+.menu-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 50%;
+  margin-left: .5rem;
+  margin-right: 9px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-button-sign-up {
+  background-color: #ffcf00;
+  color: black;
+  border-radius: 35px;
+  height: 42px;
+  line-height: 34px;
+  font-weight: 700;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  align-items: center;
+}
+
+.mobile-button-log-in {
+  background-color: #000000;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  border solid 2px #ffffff;
+  border-radius: 35px;
+  height: 42px;
+  line-height: 34px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+#burger-button {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  margin-left: .25rem;
 }
 
 /******************/
