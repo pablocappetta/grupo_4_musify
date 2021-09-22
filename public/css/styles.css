@@ -1,13 +1,38 @@
+/******************/
+/* WEB STYLING */
+/******************/
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+/******************/
+/* HEADER STYLING */
+/******************/
+
 header {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 22px 34px;
+  background-color: #222222;
+  padding: 10px 14px;
   width: 100%;
   z-index: 101;
 }
 
-#header-logo {
-  width: 240px;
+#logo {
+  width: 97.828px;
+  height: 20.75px;
 }
+
+/******************/
+/* MAIN STYLING */
+/******************/
+
+main {
+}
+
+/******************/
+/* FOOTER STYLING */
+/******************/
 
 footer {
   background-color: #222222;
@@ -15,4 +40,5 @@ footer {
   padding-bottom: 4rem;
   justify-content: center;
   text-align: center;
+  color: white;
 }
