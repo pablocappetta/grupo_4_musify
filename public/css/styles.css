@@ -81,11 +81,17 @@ header {
 
 a.mobile-button-sign-up {
   padding-top: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 a.mobile-button-log-in {
   padding-top: 1px;
   padding-right: 10px;
+  padding-left: 10px;
+}
+
+a {
 }
 
 header a:link {
@@ -101,6 +107,7 @@ main {
 
 .section-home {
   text-align: center;
+  margin: 15px;
 }
 
 .grids-titles {
