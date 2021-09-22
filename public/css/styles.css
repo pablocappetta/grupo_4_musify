@@ -5,6 +5,7 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto";
+  margin: 0;
 }
 
 html {
@@ -16,7 +17,7 @@ html {
 /******************/
 
 header {
-  background-color: #222222;
+  background-color: black;
   padding: 10px 14px;
   width: 100%;
   z-index: 101;
@@ -26,6 +27,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 0px;
 }
 
 #logo {
@@ -38,8 +40,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex: 50%;
-  margin-left: .5rem;
-  margin-right: 9px;
   justify-content: center;
   align-items: center;
 }
@@ -49,11 +49,13 @@ header {
   color: black;
   border-radius: 35px;
   height: 42px;
+  border: solid 2px #ffcf00;
   line-height: 34px;
   font-weight: 700;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 9px;
 }
 
 .mobile-button-log-in {
@@ -65,15 +67,29 @@ header {
   border-radius: 35px;
   height: 42px;
   line-height: 34px;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 9px;
 }
 
 #burger-button {
   width: 25px;
   height: 25px;
   border: 0;
-  margin-left: .25rem;
+  margin-left: 4px;
+}
+
+a.mobile-button-sign-up {
+  padding-top: 1px;
+}
+
+a.mobile-button-log-in {
+  padding-top: 1px;
+  padding-right: 10px;
+}
+
+header a:link {
+  text-decoration: none;
 }
 
 /******************/
@@ -81,6 +97,18 @@ header {
 /******************/
 
 main {
+}
+
+.section-home {
+  text-align: center;
+}
+
+.grids-titles {
+  margin: 10px;
+}
+
+.grids-descriptions {
+  margin: 10px;
 }
 
 /******************/
