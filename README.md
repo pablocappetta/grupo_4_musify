@@ -42,14 +42,14 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <br/>
 
 <details>
-  <summary>:zap: Diego</summary>
+  <summary>🎸 Diego</summary>
   <br/>
-  TBD
+  Hi there! :raised_hand_with_fingers_splayed: My name is Diego and I am a 29 years old electronic engineer from Buenos Aires, Argentina. Passionate about music, guitarist by hobby. I love learning about everything, but, mainly, about art, philosophy and technology.
   <br/>
   <br/>
   
   [<img align="left" alt="LinkedIn Diego" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedindiego]
-
+  [<img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>][githubdiego]
 </details>
 
 <br/>
@@ -66,6 +66,23 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 </details>
 
+## Wireframes
+
+Check out our <strong>[Figma]</strong> to see more details on what we're working and what we want to achieve. 😉
+
+Don't tell anyone, but here's a tiny preview:
+
+<img width="75%" src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
+
+<img width="75%" src="https://i.imgur.com/Bq6wjOg.png" align="center" alt="Wireframe detalle del producto" />
+
+<img width="75%" src="https://i.imgur.com/Zjr9jZO.png" align="center" alt="Wireframe cart" />
+
+<img width="75%" src="https://i.imgur.com/gwg2jwr.png" align="center" alt="Wireframe register" />
+
+<img width="75%" src="https://i.imgur.com/qBakogb.png" align="center" alt="Wireframe login" />
+
+
 <!-- Pablo links -->
 
 [linkedinpablo]: https://linkedin.com/in/pablocappetta
@@ -79,7 +96,9 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 <!-- Diego links -->
 
-[linkedindiego]: https://linkedin.com/
+[linkedindiego]: https://www.linkedin.com/in/diegolcejas/
+[githubdiego]: https://github.com/diegocejj
+
 
 <!-- Felix links -->
 
@@ -89,6 +108,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 <!-- Others -->
 
 [digital house]: https://www.digitalhouse.com
+[figma]: https://www.figma.com/file/C3W3cx8nyI5wKt7MubjCjZ/Musify?node-id=105%3A0
 
 <!-- Referentes:
 
