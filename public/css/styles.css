@@ -99,6 +99,18 @@ header a:link {
 main {
 }
 
+.section-home {
+  text-align: center;
+}
+
+.grids-titles {
+  margin: 10px;
+}
+
+.grids-descriptions {
+  margin: 10px;
+}
+
 /******************/
 /* FOOTER STYLING */
 /******************/
