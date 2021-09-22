@@ -1,4 +1,4 @@
-## Musify 🎵
+## <strong>Musify</strong> 🎵
 
 - 🎺 Empower your tracks with studio-class kits
 - 🖥️ Connect with producers around the world
@@ -6,7 +6,7 @@
 
 <br/>
 
-## Who are we?
+## Who are we? 🔎
 
 We are a group of four students from <strong>[Digital House]</strong> that will change the music standards.
 
@@ -70,7 +70,7 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 <br/>
 
-## What we aim to do
+## What we aim to do 📌
 
 We aim to <strong>create a website intended for music producers around the world</strong> to improve the quality of their work by using libraries created by other musicians.
 
@@ -78,7 +78,7 @@ As music lovers, we know for sure that <strong>imagination has no limits</strong
 
 <br/>
 
-## Reference sites
+## Reference sites 📃
 
 Well...we're beginners, right? We've discussed and we <strong>really</strong> like the elements that below sites provide.
 
@@ -90,7 +90,7 @@ Well...we're beginners, right? We've discussed and we <strong>really</strong> li
 
 <br/>
 
-## Wireframes
+## Wireframes ✏️
 
 Check out our <strong>[Figma]</strong> to see more details on what we're working and what we want to achieve. 😉
 
