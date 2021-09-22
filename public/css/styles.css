@@ -42,3 +42,13 @@ footer {
   text-align: center;
   color: white;
 }
+
+.web-footer__link:link {
+  text-decoration: none;
+  color: white;
+}
+
+.web-footer__link:active:visited {
+  text-decoration: none;
+  color: white;
+}
