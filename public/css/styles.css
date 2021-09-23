@@ -154,8 +154,10 @@ img {
   max-width: 100%;
 }
 
-/* .main-image-grid {
-} */
+.main-image-grid {
+  width: 339px;
+  height: 226px;
+}
 
 .main-image-grid:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
