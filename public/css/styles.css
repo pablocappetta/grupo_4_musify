@@ -126,7 +126,6 @@ main {
 }
 
 .section-home-grids {
-  margin: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -159,8 +158,7 @@ img {
   width: 300px;
   height: 150px;
   transition: box-shadow 0.3s;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 2px;
 }
 
 .main-image-grid:hover {
