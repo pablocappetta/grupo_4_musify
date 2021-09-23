@@ -131,9 +131,9 @@ main {
 }
 
 .container-grid-main {
-  text-align: center;
   padding: 18px;
   width: 100%;
+  text-align: -webkit-center;
 }
 
 .grids-titles {
@@ -154,12 +154,8 @@ img {
   max-width: 100%;
 }
 
-.main-image-grid {
-  width: 300px;
-  height: 150px;
-  transition: box-shadow 0.3s;
-  border-radius: 2px;
-}
+/* .main-image-grid {
+} */
 
 .main-image-grid:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
@@ -177,7 +173,7 @@ p.grids-descriptions {
 }
 
 .container-middle-grid {
-  text-align: center;
+  text-align: -webkit-center;
   padding: 28px;
   background-color: #222222;
   color: white;
@@ -243,6 +239,46 @@ h2.grids-titles {
 .mobile-button-sign-up-main:hover {
   background-color: #ffd82a;
   border: solid 2px #ffd82a;
+}
+
+/******************/
+/* MAIN IMAGES */
+/******************/
+
+.div-main-box-image-1 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-grid (11).jpg");
+  background-size: contain;
+}
+
+.div-main-box-image-2 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-grid (12).jpg");
+  background-size: contain;
+}
+
+.div-main-box-image-3 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-grid (10).jpg");
+  background-size: contain;
+}
+
+.div-main-box-image-4 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-studio.jpg");
+  background-size: contain;
 }
 
 /******************/
