@@ -1,12 +1,14 @@
-## Musify 🎵
+## <strong>Musify</strong> 🎵
 
 - 🎺 Empower your tracks with studio-class kits
 - 🖥️ Connect with producers around the world
 - ⚡ Share your knowledge and make profits out of it
 
-## Who are we?
+<br/>
 
-We are a group of four students from [Digital House] that will change the music standards.
+## Who are we? 🔎
+
+We are a group of four students from <strong>[Digital House]</strong> that will change the music standards.
 
 Our goal is to provide you a platform where you can search, try and buy multiple sound kits to improve your productions.
 
@@ -66,11 +68,35 @@ Our goal is to provide you a platform where you can search, try and buy multiple
 
 </details>
 
-## Wireframes
+<br/>
+
+## What we aim to do 📌
+
+We aim to <strong>create a website intended for music producers around the world</strong> to improve the quality of their work by using libraries created by other musicians.
+
+As music lovers, we know for sure that <strong>imagination has no limits</strong>. With <strong>Musify</strong>, you'll be able to both share and use samples as you wish.
+
+<br/>
+
+## Reference sites 📃
+
+Well...we're beginners, right? We've discussed and we <strong>really</strong> like the elements that below sites provide.
+
+- <strong>https://patreon.com/</strong> @ The header, the main. Patreon does a fantastic job providing a modern and fresh UI. Our goal is to replicate/achieve something similar for our page.
+
+- <strong>https://theproducerkit.com/</strong> @ The simplicity of this page is what we do like. Everything is pretty much on the main page. 
+
+- <strong>https://www.loopcloud.com/cloud/</strong> @ The absolute winner for us. This page captures the UI mindset the four of us have. We're stunned by the way it's designed and our goal is to build something really similar.
+
+<br/>
+
+## Wireframes ✏️
 
 Check out our <strong>[Figma]</strong> to see more details on what we're working and what we want to achieve. 😉
 
 Don't tell anyone, but here's a tiny preview:
+
+<br/>
 
 <img width="75%" src="https://i.imgur.com/zAExhD7.png" align="center" alt="Wireframe home" />
 
@@ -81,7 +107,6 @@ Don't tell anyone, but here's a tiny preview:
 <img width="75%" src="https://i.imgur.com/gwg2jwr.png" align="center" alt="Wireframe register" />
 
 <img width="75%" src="https://i.imgur.com/qBakogb.png" align="center" alt="Wireframe login" />
-
 
 <!-- Pablo links -->
 
@@ -110,12 +135,3 @@ Don't tell anyone, but here's a tiny preview:
 [digital house]: https://www.digitalhouse.com
 [figma]: https://www.figma.com/file/C3W3cx8nyI5wKt7MubjCjZ/Musify?node-id=105%3A0
 
-<!-- Referentes:
-
-https://www.producerloops.com/
-https://theproducerkit.com/
-https://soundoracle.net/
-https://patreon.com/
-https://soundcloud.com/
-
-/>

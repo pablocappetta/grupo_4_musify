@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Circular";
   margin: 0;
 }
 
@@ -12,12 +12,21 @@ html {
   line-height: 1.15;
 }
 
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url(/css/fonts/CircularStd-Book.otf);
+}
+
 /******************/
 /* HEADER STYLING */
 /******************/
 
 header {
-  background-color: black;
+  background-color: #222222;
   padding: 10px 14px;
   width: 100%;
   z-index: 101;
@@ -30,9 +39,13 @@ header {
   margin: 0px;
 }
 
+.header-logo {
+  align-self: center;
+  padding-top: 5px;
+}
+
 #logo {
   width: 97.828px;
-  height: 20.75px;
   flex: 50%;
 }
 
@@ -40,8 +53,10 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex: 50%;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .mobile-button-sign-up {
@@ -56,6 +71,11 @@ header {
   padding-right: 8px;
   margin-left: 8px;
   margin-right: 9px;
+}
+
+.mobile-button-sign-up:hover {
+  background-color: #ffd82a;
+  border: solid 2px #ffd82a;
 }
 
 .mobile-button-log-in {
@@ -81,11 +101,17 @@ header {
 
 a.mobile-button-sign-up {
   padding-top: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 a.mobile-button-log-in {
   padding-top: 1px;
   padding-right: 10px;
+  padding-left: 10px;
+}
+
+a {
 }
 
 header a:link {
@@ -99,16 +125,162 @@ header a:link {
 main {
 }
 
-.section-home {
-  text-align: center;
+.section-home-grids {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.container-grid-main {
+  padding: 18px;
+  width: 100%;
+  text-align: -webkit-center;
 }
 
 .grids-titles {
-  margin: 10px;
+  text-align: center;
+  margin-left: 17px;
+  margin-right: 17px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .grids-descriptions {
-  margin: 10px;
+  text-align: left;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-image-grid {
+  width: 339px;
+  height: 226px;
+}
+
+.main-image-grid:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+p.grids-descriptions {
+  text-align: justify;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.section-middle-grid {
+  text-align: left;
+  padding-top: 5px;
+}
+
+.container-middle-grid {
+  text-align: -webkit-center;
+  padding: 28px;
+  background-color: #222222;
+  color: white;
+}
+
+.container-commends-main {
+  text-align: center;
+  padding: 18px;
+}
+
+.section-home-commends {
+  padding: 18px;
+  text-align: left;
+}
+
+.person-commend-img {
+  width: 95px;
+  height: 95px;
+  margin-bottom: 25px;
+  border-radius: 47.5px;
+  transition: box-shadow 0.3s;
+}
+
+.person-commend-img:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+p.commends-descriptions {
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+p.commends-name-person {
+  font-weight: bold;
+}
+
+.section-join-us {
+  text-align: center;
+  max-width: 100%;
+}
+
+.container-join-us {
+  padding: 36px;
+  max-width: 100%;
+}
+
+h2.grids-titles {
+  margin-bottom: 21px;
+}
+
+.mobile-button-sign-up-main {
+  background-color: #ffcf00;
+  color: black;
+  border-radius: 35px;
+  border: solid 2px #ffcf00;
+  line-height: 34px;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0.78125rem 1.5rem;
+}
+
+.mobile-button-sign-up-main:hover {
+  background-color: #ffd82a;
+  border: solid 2px #ffd82a;
+}
+
+/******************/
+/* MAIN IMAGES */
+/******************/
+
+.div-main-box-image-1 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-grid (11).jpg");
+  background-size: contain;
+}
+
+.div-main-box-image-2 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-grid (12).jpg");
+  background-size: contain;
+}
+
+.div-main-box-image-3 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-grid (10).jpg");
+  background-size: contain;
+}
+
+.div-main-box-image-4 {
+  width: 300px;
+  height: 150px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+  background: url("/img-studio.jpg");
+  background-size: contain;
 }
 
 /******************/
@@ -131,5 +303,39 @@ footer {
 
 .web-footer__link:active:visited {
   text-decoration: none;
+  color: white;
+}
+
+.footer-icons {
+  color: white;
+  margin: 15px;
+}
+
+footer .flex-column {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+footer .web-footer__container-flex {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  text-align: center;
+  align-items: center;
+  place-content: center;
+}
+
+footer .web-footer__social-icons {
+}
+
+.copyright {
+  display: flex;
+  text-align: center;
+  place-content: center;
+  margin-top: 55px;
+}
+
+footer a {
   color: white;
 }
