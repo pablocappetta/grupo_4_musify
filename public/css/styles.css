@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Circular", "Circular Black";
+  font-family: "Circular";
   margin: 0;
 }
 
@@ -24,6 +24,11 @@ a {
 @font-face {
   font-family: "Circular Black";
   src: url(/css/fonts/CircularStd-Black.otf);
+}
+
+@font-face {
+  font-family: "Patron";
+  src: url(/css/fonts/AktivGrotesk-Regular.otf);
 }
 
 /******************/
@@ -185,7 +190,7 @@ main {
 
 .grids-descriptions {
   text-align: left;
-  padding-top: 18px;
+  padding-top: 9px;
   padding-bottom: 18px;
 }
 
@@ -272,7 +277,7 @@ h2.grids-titles {
   color: rgb(255, 66, 77);
 }
 
-.container-join-us h2.grids-titles {
+h3.grids-titles {
   text-align: center;
 }
 
@@ -442,6 +447,10 @@ footer a {
 
   .grids-titles {
     text-align: left;
+  }
+
+  .container-middle-grid p.grids-descriptions {
+    text-align: center;
   }
 }
 
