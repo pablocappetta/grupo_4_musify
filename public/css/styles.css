@@ -218,11 +218,6 @@ p.grids-descriptions {
   padding-right: 17px;
 }
 
-.section-middle-grid {
-  text-align: left;
-  padding-top: 5px;
-}
-
 .container-middle-grid {
   text-align: -webkit-center;
   padding: 28px;
@@ -421,7 +416,15 @@ footer a {
 /*Laptop*/
 /********/
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .section-home-grids {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-search-bar {
+    display: flex;
+  }
 
   .header-links{
     display: flex;
@@ -433,5 +436,44 @@ footer a {
 
   .header-logo {
     margin-right: 15px;
+  }
+
+  input {
+    border: none;
+    text-align: center;
+    width: 425px;
+    height: 20px;
+    border-radius: 10px;
+    placeholder: "Hola";
+  }
+
+  .container-grid-main {
+  }
+
+  .first-grid-home {
+    display: flex;
+    flex-direction: row;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .second-grid-home {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .third-grid-home {
+    display: flex;
+    flex-direction: row;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .main-image-grid {
+    display: flex;
+    text-align: right;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   }
 }
