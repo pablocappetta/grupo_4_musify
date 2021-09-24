@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Circular";
+  font-family: "Circular", "Circular Black";
   margin: 0;
 }
 
@@ -19,6 +19,11 @@ a {
 @font-face {
   font-family: "Circular";
   src: url(/css/fonts/CircularStd-Book.otf);
+}
+
+@font-face {
+  font-family: "Circular Black";
+  src: url(/css/fonts/CircularStd-Black.otf);
 }
 
 /******************/
@@ -125,6 +130,14 @@ header a:link {
 main {
 }
 
+.top-bar-image {
+  display: none;
+}
+
+.main-button-separator {
+  display: none;
+}
+
 .section-top-view {
   background-color: #222222;
   padding: 18px;
@@ -141,7 +154,7 @@ main {
 .section-top-view p.grids-descriptions {
   padding: 0px;
   margin-left: 17px;
-  margin-right: 100px;
+  margin-right: 17px;
   font-size: 1.25rem;
 }
 
@@ -162,6 +175,7 @@ main {
 
 .grids-titles {
   text-align: center;
+  font-size: 24px;
   margin-left: 17px;
   margin-right: 17px;
   border-top-left-radius: 15px;
@@ -231,7 +245,6 @@ p.grids-descriptions {
 }
 
 .person-commend-img:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 p.commends-descriptions {
@@ -257,6 +270,10 @@ p.commends-name-person {
 h2.grids-titles {
   margin-bottom: 21px;
   color: rgb(255, 66, 77);
+}
+
+.container-join-us h2.grids-titles {
+  text-align: center;
 }
 
 .mobile-button-sign-up-main {
@@ -356,6 +373,8 @@ footer a {
   }
 
   .container-grid-main {
+    padding: 0px;
+    margin: 18px;
   }
 
   .first-grid-home {
@@ -382,7 +401,47 @@ footer a {
   .main-image-grid {
     display: flex;
     text-align: right;
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    margin-right: 18px;
+    margin-left: 18px;
+    opacity: 80%;
+  }
+
+  .section-top-view p.grids-descriptions {
+    margin-right: 100px;
+  }
+
+  .section-top-view {
+    display: flex;
+    flex-direction: row;
+    padding: 36px;
+  }
+
+  .flex-first-column-main {
+    flex: 50%;
+    flex-direction: column;
+  }
+
+  .flex-second-column-top-main {
+    flex: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .top-bar-image {
+    display: flex;
+    width: 80%;
+  }
+
+  .main-button-separator {
+    display: revert;
+    margin-right: 100px;
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  .grids-titles {
+    text-align: left;
   }
 }
 
@@ -436,6 +495,5 @@ footer a {
   .main-image-grid {
     display: flex;
     text-align: right;
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   }
 }
