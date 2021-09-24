@@ -102,11 +102,18 @@ header {
   margin-right: 9px;
 }
 
+.mobile-button-log-in:hover {
+  border: solid 2px #ff424d;
+}
+
 #burger-button {
   width: 25px;
   height: 25px;
   border: 0;
   margin-left: 4px;
+}
+
+#burger-button:hover {
 }
 
 a.mobile-button-sign-up {
