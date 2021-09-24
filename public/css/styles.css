@@ -39,6 +39,12 @@ header {
   margin: 0px;
 }
 
+.header-container{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+}
+
 .header-logo {
   align-self: center;
   padding-top: 5px;
@@ -49,14 +55,21 @@ header {
   flex: 50%;
 }
 
+
 .menu-flex {
   display: flex;
   flex-wrap: wrap;
   flex: 50%;
-  justify-content: right;
+  justify-content: space-around;
   align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.header-links{
+  display: none;
+  text-decoration:none;
+  color: white;
 }
 
 .mobile-button-sign-up {
@@ -351,6 +364,14 @@ footer a {
     display: flex;
   }
 
+  .header-logo {
+    margin-right: 15px;
+  }
+
+  .header-links{
+    display: flex;
+  }
+
   input {
     border: none;
     text-align: center;
@@ -388,5 +409,29 @@ footer a {
     display: flex;
     text-align: right;
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  }
+
+  .mobile-button-sign-up{
+    margin-left: 25vw;
+  }
+
+}
+
+/********/
+/*Laptop*/
+/********/
+
+@media (min-width: 1024px) {
+
+  .header-links{
+    display: flex;
+  }
+
+  .mobile-button-sign-up{
+    margin-left: 25vw;
+  }
+
+  .header-logo {
+    margin-right: 15px;
   }
 }
