@@ -9,7 +9,7 @@
 }
 
 html {
-  line-height: 1.15;
+  line-height: 1.75;
 }
 
 a {
@@ -60,11 +60,11 @@ header {
 }
 
 .mobile-button-sign-up {
-  background-color: #ffcf00;
-  color: black;
+  background-color: #ff424d;
+  color: white;
   border-radius: 35px;
   height: 42px;
-  border: solid 2px #ffcf00;
+  border: solid 2px #ff424d;
   line-height: 34px;
   font-weight: 700;
   padding-left: 8px;
@@ -74,8 +74,8 @@ header {
 }
 
 .mobile-button-sign-up:hover {
-  background-color: #ffd82a;
-  border: solid 2px #ffd82a;
+  background-color: #ff5f67;
+  border: solid 2px #ff5f67;
 }
 
 .mobile-button-log-in {
@@ -125,10 +125,34 @@ header a:link {
 main {
 }
 
-.section-home-grids {
+.section-top-view {
+  background-color: #222222;
+  padding: 18px;
+  color: white;
+}
+
+.section-top-view h2 {
+  font-size: 3.5rem !important;
+  color: #ff424d;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.section-top-view p.grids-descriptions {
+  padding: 0px;
+  margin-left: 17px;
+  margin-right: 100px;
+  font-size: 1.25rem;
+}
+
+.header-search-bar {
+  display: none;
+}
+
+/* .section-home-grids {
   padding-top: 5px;
   padding-bottom: 5px;
-}
+} */
 
 .container-grid-main {
   padding: 18px;
@@ -142,6 +166,7 @@ main {
   margin-right: 17px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  color: rgb(255, 66, 77);
 }
 
 .grids-descriptions {
@@ -163,8 +188,19 @@ img {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
+.first-grid-home {
+  text-align: -webkit-center;
+}
+
+.second-grid-home {
+  text-align: -webkit-center;
+}
+
+.third-grid-home {
+  text-align: -webkit-center;
+}
+
 p.grids-descriptions {
-  text-align: justify;
   padding-left: 17px;
   padding-right: 17px;
 }
@@ -225,13 +261,14 @@ p.commends-name-person {
 
 h2.grids-titles {
   margin-bottom: 21px;
+  color: rgb(255, 66, 77);
 }
 
 .mobile-button-sign-up-main {
-  background-color: #ffcf00;
-  color: black;
+  background-color: #ff424d;
+  color: white;
   border-radius: 35px;
-  border: solid 2px #ffcf00;
+  border: solid 2px #ff424d;
   line-height: 34px;
   font-weight: 700;
   font-size: 12px;
@@ -239,48 +276,8 @@ h2.grids-titles {
 }
 
 .mobile-button-sign-up-main:hover {
-  background-color: #ffd82a;
-  border: solid 2px #ffd82a;
-}
-
-/******************/
-/* MAIN IMAGES */
-/******************/
-
-.div-main-box-image-1 {
-  width: 300px;
-  height: 150px;
-  transition: box-shadow 0.3s;
-  border-radius: 2px;
-  background: url("/img-grid (11).jpg");
-  background-size: contain;
-}
-
-.div-main-box-image-2 {
-  width: 300px;
-  height: 150px;
-  transition: box-shadow 0.3s;
-  border-radius: 2px;
-  background: url("/img-grid (12).jpg");
-  background-size: contain;
-}
-
-.div-main-box-image-3 {
-  width: 300px;
-  height: 150px;
-  transition: box-shadow 0.3s;
-  border-radius: 2px;
-  background: url("/img-grid (10).jpg");
-  background-size: contain;
-}
-
-.div-main-box-image-4 {
-  width: 300px;
-  height: 150px;
-  transition: box-shadow 0.3s;
-  border-radius: 2px;
-  background: url("/img-studio.jpg");
-  background-size: contain;
+  background-color: #ff5f67;
+  border: solid 2px #ff5f67;
 }
 
 /******************/
@@ -338,4 +335,58 @@ footer .web-footer__social-icons {
 
 footer a {
   color: white;
+}
+
+/********/
+/*Tablet*/
+/********/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section-home-grids {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-search-bar {
+    display: flex;
+  }
+
+  input {
+    border: none;
+    text-align: center;
+    width: 425px;
+    height: 20px;
+    border-radius: 10px;
+    placeholder: "Hola";
+  }
+
+  .container-grid-main {
+  }
+
+  .first-grid-home {
+    display: flex;
+    flex-direction: row;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .second-grid-home {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .third-grid-home {
+    display: flex;
+    flex-direction: row;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .main-image-grid {
+    display: flex;
+    text-align: right;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  }
 }
