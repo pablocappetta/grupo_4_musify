@@ -203,6 +203,7 @@ main {
   padding: 18px;
   width: 100%;
   text-align: -webkit-center;
+  align-self: center;
 }
 
 .grids-titles {
@@ -533,7 +534,7 @@ footer a {
 /*Laptop*/
 /********/
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1024px) {
   #burger-button {
     display: none;
   }
@@ -657,7 +658,8 @@ footer a {
   .top-bar-image-alt-desktop {
     display: revert;
     margin-right: 50px;
-    width: 100%;
+    width: 463px;
+    height: 336px;
     opacity: 80%;
   }
 
