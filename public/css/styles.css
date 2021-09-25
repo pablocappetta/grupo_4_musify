@@ -146,6 +146,11 @@ header a:link {
   text-decoration: none;
 }
 
+.icons-line-fix {
+  line-height: 0px;
+  vertical-align: text-bottom;
+}
+
 /******************/
 /* MAIN STYLING */
 /******************/
@@ -154,6 +159,10 @@ main {
 }
 
 .top-bar-image {
+  display: none;
+}
+
+.top-bar-image-alt-desktop {
   display: none;
 }
 
@@ -503,8 +512,16 @@ footer a {
     margin-top: 36px;
   }
 
-  .grids-titles {
+  h3.grids-titles {
     text-align: left;
+  }
+
+  .container-middle-grid h3.grids-titles {
+    text-align: center;
+  }
+
+  .container-join-us .grids-titles {
+    text-align: center;
   }
 
   .container-middle-grid p.grids-descriptions {
@@ -552,11 +569,12 @@ footer a {
     align-items: center;
     text-align: center;
     align-self: center;
+    font-size: 16px;
+    margin-top: 2px;
   }
 
-  .icons-line-fix {
-    line-height: 0px;
-    vertical-align: text-bottom;
+  li a:hover {
+    color: #ff424d;
   }
 
   header {
@@ -633,8 +651,14 @@ footer a {
   }
 
   .top-bar-image {
-    display: flex;
-    width: 50%;
+    display: none;
+  }
+
+  .top-bar-image-alt-desktop {
+    display: revert;
+    margin-right: 50px;
+    width: 100%;
+    opacity: 80%;
   }
 
   .main-button-separator {
