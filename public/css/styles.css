@@ -156,18 +156,6 @@ main {
   display: none;
 }
 
-.mobile-button-sign-up-main {
-  background-color: #ff424d;
-  color: white;
-  border-radius: 35px;
-  border: solid 2px #ff424d;
-  line-height: 34px;
-  font-weight: 700;
-  font-size: 12px;
-  padding: 0.78125rem 1.5rem;
-  display: none;
-}
-
 .section-top-view {
   background-color: #222222;
   padding: 18px;
@@ -186,11 +174,6 @@ main {
   margin-left: 17px;
   margin-right: 17px;
   font-size: 1.25rem;
-}
-
-.flex-first-column-main {
-  flex: 50%;
-  flex-direction: column;
 }
 
 .header-search-bar {
@@ -311,6 +294,22 @@ h3.grids-titles {
   text-align: center;
 }
 
+.mobile-button-sign-up-main {
+  background-color: #ff424d;
+  color: white;
+  border-radius: 35px;
+  border: solid 2px #ff424d;
+  line-height: 34px;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0.78125rem 1.5rem;
+}
+
+.mobile-button-sign-up-main:hover {
+  background-color: #ff5f67;
+  border: solid 2px #ff5f67;
+}
+
 /******************/
 /* FOOTER STYLING */
 /******************/
@@ -392,22 +391,13 @@ footer a {
     width: 425px;
     height: 20px;
     border-radius: 10px;
+    placeholder: "Hola";
   }
 
   .container-grid-main {
     padding: 0px;
     margin: 18px;
   }
-
-  .mobile-button-sign-up-main {
-    display: revert;
-  }
-  
-  .mobile-button-sign-up-main:hover {
-    background-color: #ff5f67;
-    border: solid 2px #ff5f67;
-  }
-  
 
   .first-grid-home {
     display: flex;
@@ -449,7 +439,6 @@ footer a {
     padding-bottom: 104px;
     padding-left: 40px;
     padding-right: 40px;
-}
   }
 
   .flex-first-column-main {
