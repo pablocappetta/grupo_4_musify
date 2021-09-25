@@ -371,9 +371,30 @@ footer a {
 /*Mobile S*/
 /**********/
 
-@media (max-width: 374px) {
+@media (min-width: 320px) and (max-width: 374px) {
   #burger-button {
     display: none;
+  }
+
+  .mobile-button-log-in {
+    margin-right: 0px;
+  }
+}
+
+/**************/
+/*Mobile M & L*/
+/**************/
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .top-bar-image {
+    justify-content: center;
+    display: revert;
+    width: 80%;
+  }
+
+  .flex-second-column-top-main {
+    text-align: center;
+    padding-top: 18px;
   }
 }
 
