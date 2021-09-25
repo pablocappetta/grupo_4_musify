@@ -126,6 +126,10 @@ header {
 #burger-button:hover {
 }
 
+.desktop-button-cart {
+  display: none;
+}
+
 a.mobile-button-sign-up {
   padding-top: 2px;
   padding-right: 10px;
@@ -539,6 +543,16 @@ footer a {
     display: none;
   }
 
+  .desktop-button-cart {
+    display: revert;
+    font-size: 18px;
+    margin-right: 9px;
+  }
+
+  a.desktop-button-cart:hover {
+    color: #ff424d;
+  }
+
   .mobile-button-log-in {
     margin-right: 0px;
   }
@@ -584,6 +598,10 @@ footer a {
     padding: 12px 16px;
     display: block;
     text-align: left;
+  }
+
+  .store-dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.014);
   }
 
   .store-dropdown {
@@ -697,8 +715,16 @@ footer a {
     margin-top: 36px;
   }
 
-  .grids-titles {
+  h3.grids-titles {
     text-align: left;
+  }
+
+  .container-middle-grid h3.grids-titles {
+    text-align: center;
+  }
+
+  .container-join-us .grids-titles {
+    text-align: center;
   }
 
   .container-middle-grid p.grids-descriptions {
