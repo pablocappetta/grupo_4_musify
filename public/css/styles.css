@@ -150,7 +150,11 @@ header a:link {
   text-decoration: none;
 }
 
-.icons-line-fix {
+.icons-line-fix-logo {
+  line-height: 0px;
+}
+
+.icons-line-fix-chevron {
   line-height: 0px;
   vertical-align: text-bottom;
 }
