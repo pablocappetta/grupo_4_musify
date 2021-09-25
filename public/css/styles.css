@@ -646,6 +646,8 @@ footer a {
     flex-direction: row;
     padding-top: 18px;
     padding-bottom: 18px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 
   .second-grid-home {
@@ -653,6 +655,8 @@ footer a {
     flex-direction: row-reverse;
     padding-top: 18px;
     padding-bottom: 18px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 
   .third-grid-home {
@@ -660,6 +664,8 @@ footer a {
     flex-direction: row;
     padding-top: 18px;
     padding-bottom: 18px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 
   .main-image-grid {
