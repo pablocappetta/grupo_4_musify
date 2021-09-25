@@ -389,7 +389,7 @@ footer a {
   .top-bar-image {
     justify-content: center;
     display: revert;
-    width: 80%;
+    width: 60%;
   }
 
   .flex-second-column-top-main {
@@ -511,6 +511,14 @@ footer a {
 /********/
 
 @media (min-width: 1024px) and (max-width: 1439px) {
+  #burger-button {
+    display: none;
+  }
+
+  .mobile-button-log-in {
+    margin-right: 0px;
+  }
+
   .section-home-grids {
     display: flex;
     flex-direction: column;
@@ -518,6 +526,10 @@ footer a {
 
   .header-search-bar {
     display: flex;
+  }
+
+  header {
+    padding: 10px 27px;
   }
 
   input {
@@ -530,6 +542,8 @@ footer a {
   }
 
   .container-grid-main {
+    padding: 0px;
+    margin: 18px;
   }
 
   .first-grid-home {
@@ -556,5 +570,54 @@ footer a {
   .main-image-grid {
     display: flex;
     text-align: right;
+    margin-right: 18px;
+    margin-left: 18px;
+    opacity: 80%;
+  }
+
+  .section-top-view p.grids-descriptions {
+    margin-right: 100px;
+  }
+
+  .section-top-view {
+    display: flex;
+    flex-direction: row;
+    padding-top: 88px;
+    padding-bottom: 104px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .flex-first-column-main {
+    flex: 50%;
+    flex-direction: column;
+    margin-left: 18px;
+  }
+
+  .flex-second-column-top-main {
+    flex: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .top-bar-image {
+    display: flex;
+    width: 50%;
+  }
+
+  .main-button-separator {
+    display: revert;
+    margin-right: 100px;
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  .grids-titles {
+    text-align: left;
+  }
+
+  .container-middle-grid p.grids-descriptions {
+    text-align: center;
   }
 }
