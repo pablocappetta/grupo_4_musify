@@ -75,6 +75,10 @@ header {
   padding-bottom: 5px;
 }
 
+.flex-nav-bar-header {
+  display: none;
+}
+
 .mobile-button-sign-up {
   background-color: #ff424d;
   color: white;
@@ -135,6 +139,7 @@ a.mobile-button-log-in {
 }
 
 a {
+  color: white;
 }
 
 header a:link {
@@ -527,6 +532,31 @@ footer a {
 
   .header-search-bar {
     display: flex;
+  }
+
+  .flex-nav-bar-header {
+    display: revert;
+    padding-left: 9px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  li {
+    padding-left: 27px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+  }
+
+  .icons-line-fix {
+    line-height: 0px;
+    vertical-align: text-bottom;
   }
 
   header {
