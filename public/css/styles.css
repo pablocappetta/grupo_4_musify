@@ -214,6 +214,7 @@ img {
 .main-image-grid {
   width: 339px;
   height: 226px;
+  align-self: center;
 }
 
 .main-image-grid:hover {
