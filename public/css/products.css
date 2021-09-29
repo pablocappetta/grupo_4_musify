@@ -1,0 +1,72 @@
+/******************/
+/* WEB STYLING */
+/******************/
+
+/******************/
+/* HEADER STYLING */
+/******************/
+
+/******************/
+/* MAIN STYLING */
+/******************/
+
+.top-section {
+  background-color: blanchedalmond;
+}
+
+.top-section__title {
+  padding: 5px;
+}
+.top-section__title .flex-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-section__product .flex-column {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.product-description {
+  width: 48%;
+}
+
+/******************/
+/* FOOTER STYLING */
+/******************/
+
+/**********/
+/*Mobile S*/
+/**********/
+
+@media (min-width: 320px) and (max-width: 374px) {
+}
+
+/**************/
+/*Mobile M & L*/
+/**************/
+
+@media (min-width: 375px) and (max-width: 767px) {
+}
+
+/********/
+/*Tablet*/
+/********/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/********/
+/*Laptop*/
+/********/
+
+@media (min-width: 1024px) {
+}
+
+/********/
+/*Laptop L*/
+/********/
+
+@media (min-width: 1025px) {
+}
