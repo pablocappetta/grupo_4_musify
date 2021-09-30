@@ -12,8 +12,6 @@ We are a group of four students from <strong>[Digital House]</strong> that will 
 
 Our goal is to provide you a platform where you can search, try and buy multiple sound kits to improve your productions.
 
-Join us: https://musify-dh.herokuapp.com/.
-
 <br/>
 
 <details>
@@ -77,6 +75,8 @@ Join us: https://musify-dh.herokuapp.com/.
 We aim to <strong>create a website intended for music producers around the world</strong> to improve the quality of their work by using libraries created by other musicians.
 
 As music lovers, we know for sure that <strong>imagination has no limits</strong>. With <strong>Musify</strong>, you'll be able to both share and use samples as you wish.
+
+You can find more information here: https://musify-dh.herokuapp.com/.
 
 <br/>
 
