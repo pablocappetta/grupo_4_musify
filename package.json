@@ -4,6 +4,7 @@
   "description": "- 🎺 Empower your tracks with studio-class kits\r - 🖥️ Connect with producers around the world\r - ⚡ Share your knowledge and make profits out of it",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,6 @@
   "homepage": "https://github.com/pablocappetta/grupo_4_musify#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "keywords": []
 }
