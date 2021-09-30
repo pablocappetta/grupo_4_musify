@@ -12,6 +12,8 @@ We are a group of four students from <strong>[Digital House]</strong> that will 
 
 Our goal is to provide you a platform where you can search, try and buy multiple sound kits to improve your productions.
 
+Join us: https://musify-dh.herokuapp.com/.
+
 <br/>
 
 <details>
@@ -84,7 +86,7 @@ Well...we're beginners, right? We've discussed and we <strong>really</strong> li
 
 - <strong>https://patreon.com/</strong> @ The header, the main. Patreon does a fantastic job providing a modern and fresh UI. Our goal is to replicate/achieve something similar for our page.
 
-- <strong>https://theproducerkit.com/</strong> @ The simplicity of this page is what we do like. Everything is pretty much on the main page. 
+- <strong>https://theproducerkit.com/</strong> @ The simplicity of this page is what we do like. Everything is pretty much on the main page.
 
 - <strong>https://www.loopcloud.com/cloud/</strong> @ The absolute winner for us. This page captures the UI mindset the four of us have. We're stunned by the way it's designed and our goal is to build something really similar.
 
@@ -124,7 +126,6 @@ Don't tell anyone, but here's a tiny preview:
 [linkedindiego]: https://www.linkedin.com/in/diegolcejas/
 [githubdiego]: https://github.com/diegocejj
 
-
 <!-- Felix links -->
 
 [linkedinfelix]: https://linkedin.com/in/felix-hernandez-vieyra
@@ -134,4 +135,3 @@ Don't tell anyone, but here's a tiny preview:
 
 [digital house]: https://www.digitalhouse.com
 [figma]: https://www.figma.com/file/C3W3cx8nyI5wKt7MubjCjZ/Musify?node-id=105%3A0
-
