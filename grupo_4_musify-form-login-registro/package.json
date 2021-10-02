@@ -1,0 +1,23 @@
+{
+  "name": "musify",
+  "version": "0.0.1",
+  "description": "- 🎺 Empower your tracks with studio-class kits\r - 🖥️ Connect with producers around the world\r - ⚡ Share your knowledge and make profits out of it",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablocappetta/grupo_4_musify.git"
+  },
+  "author": "Pablo Cappetta, Nicolas Acuña, Diego Cejas, Felix Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablocappetta/grupo_4_musify/issues"
+  },
+  "homepage": "https://github.com/pablocappetta/grupo_4_musify#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
+}

@@ -350,8 +350,7 @@ h3.grids-titles {
 
 .register-form-container {
   width: 85%;
-  max-width: 720px;
-  margin: 40px 60px;
+  margin: 150px 60px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -366,7 +365,6 @@ main div section div form p input {
   margin: 25px 0;
   padding: 23px;
   border: none;
-  text-align: left;
 }
 
 main div section div form p button {
@@ -377,18 +375,18 @@ main div section div form p button {
 }
 
 .btn-form-signin {
-  background-color: #ff424d;
+  background-color: rgb(89, 89, 89);
   margin-top: 20px;
   margin-bottom: 35px;
   transition: all 0.35s;
 }
 
 .btn-form-signin:hover {
-  background-color: #ff5f67;
+  background-color: rgb(150, 150, 150);
 }
 
-.btn-form-signup {
-  color: white;
+.btn-form-signup { 
+  color: white ;
   border: solid 2px #ff424d;
   background-color: #f8f8f8;
   margin: 5px 0;
@@ -398,13 +396,12 @@ main div section div form p button {
   border-radius: 120px;
 }
 
-.btn-text-signup {
+.btn-text-signup{
   color: #ff424d;
 }
 
 .btn-form-signup:hover {
-  background-color: #006db9;
-  border-color: #006db9;
+  background-color: #ff424d;
 }
 
 .btn-form-signup:hover .btn-text-signup {
@@ -412,10 +409,24 @@ main div section div form p button {
   transition: all 0.35s;
 }
 
+.privacy-policy {
+  width: 75%;
+  margin: 20px;
+  color: rgb(114, 114, 114);
+  align-self: center;
+  text-align: center;
+}
+
 .text-login-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+}
+
+.login-form {
+  color: rgb(114, 114, 114);
+  margin-bottom: 10px;
+  text-align: center;
+  align-self: center;
 }
 
 .hiper-login {
@@ -431,14 +442,13 @@ main div section div form p button {
 }
 
 .psw-container {
-  align-self: center;
-  margin: 15px 0;
+align-self:flex-end;
+margin: 15px 0;
 }
 
 .login-form-container {
   width: 85%;
-  max-width: 720px;
-  margin: 40px 60px;
+  margin: 150px 60px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -449,18 +459,18 @@ main div section div form p button {
 }
 
 .btn-form-login1 {
-  background-color: #ff424d;
+  background-color: rgb(89, 89, 89);
   margin-top: 20px;
   margin-bottom: 35px;
   transition: all 0.35s;
 }
 
 .btn-form-login1:hover {
-  background-color: #ff5f67;
+  background-color: rgb(150, 150, 150);
 }
 
-.btn-form-login {
-  color: white;
+.btn-form-login { 
+  color: white ;
   border: solid 2px #ff424d;
   background-color: #f8f8f8;
   margin: 5px 0;
@@ -475,8 +485,7 @@ main div section div form p button {
 }
 
 .btn-form-login:hover {
-  background-color: #006db9;
-  border-color: #006db9;
+  background-color: #ff424d;
 }
 
 .btn-form-login:hover .btn-text-login {
@@ -500,9 +509,9 @@ main div section div form p button {
 
 .login-form {
   color: rgb(114, 114, 114);
+  margin-bottom: 10px;
   text-align: center;
   align-self: center;
-  margin-bottom: 40px;
 }
 
 .hiper-signup {
@@ -719,6 +728,14 @@ footer a {
   .container-middle-grid p.grids-descriptions {
     text-align: center;
   }
+
+  .register-form-container {
+    width: 75%;
+  }
+
+  .login-form-container {
+    width: 75%;
+}
 }
 
 /********/
@@ -932,6 +949,14 @@ footer a {
   .container-commends-main {
     flex: 33.33%;
   }
+
+  .register-form-container {
+    width: 55%;
+  }
+
+  .login-form-container {
+    width: 55%;
+}
 }
 
 /********/
@@ -1158,4 +1183,12 @@ footer a {
   .container-commends-main {
     flex: 33.33%;
   }
+
+  .register-form-container {
+    width: 55%;
+  }
+
+  .login-form-container {
+    width: 55%;
+}
 }
