@@ -493,16 +493,10 @@ main div section div form p button {
   text-align: center;
 }
 
-.text-login-container {
-  display: flex;
-  justify-content: center;
-}
-
 .login-form {
   color: rgb(114, 114, 114);
   text-align: center;
   align-self: center;
-  margin-bottom: 40px;
 }
 
 .hiper-signup {
