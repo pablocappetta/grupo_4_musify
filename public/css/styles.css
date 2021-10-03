@@ -421,6 +421,12 @@ main div section div form p button {
   margin-bottom: 40px;
 }
 
+.text-signup-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
 .hiper-login {
   color: #ff424d;
 }
