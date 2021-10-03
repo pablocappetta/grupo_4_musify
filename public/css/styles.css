@@ -91,6 +91,7 @@ header {
   padding-right: 8px;
   margin-left: 8px;
   margin-right: 9px;
+  transition: all 0.35s;
 }
 
 .mobile-button-sign-up:hover {
@@ -110,6 +111,7 @@ header {
   padding-left: 8px;
   padding-right: 8px;
   margin-right: 9px;
+  transition: all 0.35s;
 }
 
 .mobile-button-log-in:hover {
@@ -327,6 +329,7 @@ h3.grids-titles {
   font-weight: 700;
   font-size: 12px;
   padding: 0.78125rem 1.5rem;
+  transition: all 0.35s;
 }
 
 .mobile-button-sign-up-main:hover {
