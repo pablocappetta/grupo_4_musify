@@ -442,6 +442,12 @@ article.product-new-arrivals {
   filter: blur(2.5px);
 }
 
+.starred-icon:hover ~ .container-products {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  opacity: 90%;
+  filter: blur(2.5px);
+}
+
 article.product-new-arrivals:hover .starred-icon {
   opacity: 100%;
 }
