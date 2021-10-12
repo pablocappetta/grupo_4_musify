@@ -411,6 +411,8 @@ article.product-new-arrivals {
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 22px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .section-home-grids {
