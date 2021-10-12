@@ -206,11 +206,6 @@ main {
   display: none;
 }
 
-/* .section-home-grids {
-  padding-top: 5px;
-  padding-bottom: 5px;
-} */
-
 .section-payment-methods {
   max-width: 1024px;
   margin: auto;
@@ -246,7 +241,6 @@ main {
   font-size: 14px;
   font-family: "Circular Black";
   font-weight: bolder;
-  opacity: 90%;
   color: #ff424d;
 }
 
@@ -255,13 +249,30 @@ iframe {
   border-radius: 4px;
 }
 
-.icon-payment {
+/* .icon-payment {
   display: block;
   font-size: 20px;
   width: 40px;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.212);
   color: black;
+  border-radius: 1000px;
+  align-self: center;
+  padding-top: 3px;
+  margin-right: 16px;
+  margin-left: 8px;
+  text-align: center;
+  opacity: 80%;
+  transition: all 0.35s;
+} */
+
+.icon-payment {
+  display: block;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ff424b2f;
+  color: #ff424d;
   border-radius: 1000px;
   align-self: center;
   padding-top: 3px;
@@ -389,14 +400,47 @@ article.product-new-arrivals {
   color: black;
 }
 
-.container-products:hover {
-  box-shadow: 0 0 11px rgba(255, 255, 255, 0.041);
-  opacity: 90%;
+.product-new-arrivals {
+  position: relative;
+}
+
+/*CHECK HOVER WITH CONTAINER*/
+.starred-icon {
+  display: none;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid transparent;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  left: 125px;
+  color: #ff424d;
+  top: 125px;
+  transition: 0.35s ease-in-out;
+  text-align: center;
+  -webkit-writing-mode: vertical-rl;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.starred-icon:hover {
+  transition: transform 0.35s ease-in-out;
+  transform: rotate(180deg);
+  color: white;
+  background-color: #ff424d;
 }
 
 .container-products-new-arrivals:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   opacity: 90%;
+  filter: blur(2.5px);
+}
+
+.container-products:hover {
+  box-shadow: 0 0 11px rgba(255, 255, 255, 0.041);
+  opacity: 90%;
+  filter: blur(2.5px);
 }
 
 .most-liked-libraries {
@@ -442,7 +486,7 @@ article.product-new-arrivals {
   border-bottom-right-radius: 4px;
   max-width: 100%;
   margin: 15px;
-  transition: all 0.3s;
+  transition: all 0.35s;
 }
 
 .container-products-new-arrivals {
@@ -456,8 +500,9 @@ article.product-new-arrivals {
   border-bottom-right-radius: 4px;
   max-width: 100%;
   margin: 15px;
-  transition: all 0.3s;
+  transition: all 0.35s;
   color: white;
+  position: relative;
 }
 
 .container-products-new-arrivals p {
@@ -503,29 +548,6 @@ article.product-new-arrivals {
   color: rgba(0, 0, 0, 0.76);
 }
 
-.starred-icon {
-  display: block;
-  font-size: 16px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ff424d;
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  right: 20px;
-  color: #ff424d;
-  top: -15px;
-  transition: 0.3s ease-in-out;
-  text-align: center;
-}
-
-.starred-icon:hover {
-  transition: transform 0.3s ease-in-out;
-  transform: rotate(180deg);
-  color: white;
-  background-color: #ff424d;
-}
-
 .container-commends-main {
   text-align: center;
   padding: 18px;
@@ -541,10 +563,7 @@ article.product-new-arrivals {
   height: 95px;
   margin-bottom: 25px;
   border-radius: 47.5px;
-  transition: box-shadow 0.3s;
-}
-
-.person-commend-img:hover {
+  transition: box-shadow 0.35s;
 }
 
 p.commends-descriptions {
