@@ -404,24 +404,29 @@ article.product-new-arrivals {
   position: relative;
 }
 
+.product {
+  position: relative;
+}
+
 /*CHECK HOVER WITH CONTAINER*/
 .starred-icon {
-  display: none;
+  display: block;
   font-size: 14px;
   width: 30px;
   height: 30px;
   border: 1px solid transparent;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.966);
   border-radius: 50%;
   position: absolute;
   left: 125px;
   color: #ff424d;
   top: 125px;
-  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
   text-align: center;
   -webkit-writing-mode: vertical-rl;
   z-index: 1000;
   cursor: pointer;
+  opacity: 0;
 }
 
 .starred-icon:hover {
@@ -429,6 +434,20 @@ article.product-new-arrivals {
   transform: rotate(180deg);
   color: white;
   background-color: #ff424d;
+}
+
+.starred-icon:hover ~ .container-products-new-arrivals {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  opacity: 90%;
+  filter: blur(2.5px);
+}
+
+article.product-new-arrivals:hover .starred-icon {
+  opacity: 100%;
+}
+
+article.product:hover .starred-icon {
+  opacity: 100%;
 }
 
 .container-products-new-arrivals:hover {
