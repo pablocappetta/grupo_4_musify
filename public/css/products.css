@@ -315,6 +315,10 @@ h3.title-product-name {
 @media (min-width: 768px) and (max-width: 1023px) {
   .flex-container__product {
     flex-direction: row;
+    max-width: 768px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .top-section__title .flex-column {
@@ -375,6 +379,8 @@ h3.title-product-name {
     border: solid 2px #ff424bb9;
     height: 2.5rem;
     width: 6rem;
+    position: absolute;
+    right: 8%;
   }
 
   /********************** top-section__product ******************************/
@@ -394,6 +400,10 @@ h3.title-product-name {
 @media (min-width: 1024px) {
   .flex-container__product {
     flex-direction: row;
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .top-section__title .flex-column {
