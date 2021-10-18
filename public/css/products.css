@@ -1,7 +1,111 @@
 /******************/
-/* WEB STYLING */
+/* mid-section-styling */
 /******************/
 
+.mid-section-artist {
+  padding: 28px;
+  background-color: #141518;
+}
+
+.header-flex__artist {
+  display: flex;
+  background-color: #171a22fc;
+  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-position-x: center;
+  box-shadow: 0 0 11px rgb(33 33 33 / 20%);
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.first-column__artist {
+  margin: 2rem;
+}
+
+.profile-photo__artist {
+  width: 120px;
+  height: 120px;
+  border-radius: 65px;
+}
+
+.products-flex__artist {
+  display: flex;
+  flex-direction: column;
+  border-bottom: #3a3a3a10 1px solid;
+  padding: 1rem;
+  background-color: #171a22fc;
+  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-position-x: center;
+  box-shadow: 0 0 11px rgb(33 33 33 / 20%);
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.items-flex__artist {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0.5rem;
+}
+
+.items-flex__artist img {
+  width: 100px;
+  height: 100px;
+}
+
+.items-flex__artist h4 {
+  flex: 0.3;
+  align-self: center;
+}
+
+.second-column-flex__artist {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex: 1;
+  align-self: center;
+}
+
+.name__artist {
+  text-align: start;
+  font-size: 24px;
+  color: rgb(255, 66, 77);
+}
+
+.container-tags__artist {
+  display: flex;
+}
+
+.title-common-tags__artist {
+  align-self: center;
+}
+
+.tag__artist {
+  border: 1px solid gray;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  font-size: x-small;
+  border-radius: 4px;
+  background-color: #141518;
+}
+
+.tag__artist a {
+  color: #ff424d;
+}
+
+.timer-item__artist {
+  text-align: end;
+}
 /******************/
 /* HEADER STYLING */
 /******************/
@@ -11,20 +115,53 @@
 /******************/
 
 .top-section {
-  background-color: rgb(230, 230, 230);
+  background-color: #141518;
   padding-bottom: 1rem;
-}
-
-.mid-section-testimonials {
-  text-align: -webkit-center;
-  padding: 28px;
 }
 
 .bottom-section-recommendations {
   text-align: -webkit-center;
   padding: 28px;
-  background-color: rgb(230, 230, 230);
+  background-color: #141518;
   color: white;
+}
+
+.bottom-container-recommendations .grids-titles {
+  background-color: #171a22fc;
+  border-bottom: #3a3a3a10 1px solid;
+  padding: 1rem;
+  background-color: #171a22fc;
+  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-position-x: center;
+  box-shadow: 0 0 11px rgb(33 33 33 / 20%);
+  margin: auto;
+}
+.bottom-container-recommendations .most-liked-libraries {
+  background-color: #171a22fc;
+  border-bottom: #3a3a3a10 1px solid;
+  padding: 1rem;
+  background-color: #171a22fc;
+  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-position-x: center;
+  box-shadow: 0 0 11px rgb(33 33 33 / 20%);
+  color: white;
+  margin: auto;
+}
+
+.bottom-container-recommendations .most-liked-libraries .container-products {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 21, 24, 0.5) 50%,
+    rgba(74, 74, 74, 0.5) 20%
+  );
 }
 
 .title-product-name {
@@ -59,7 +196,7 @@
   color: rgb(255, 66, 77);
 }
 
-.container-details-products__same-genre {
+.container-details-products__recommended {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -67,22 +204,22 @@
   position: relative;
   margin-top: -10px;
   color: white;
-  background-color: black;
+  background-color: #141518;
 }
 
-.container-details-products__same-genre p {
+.container-details-products__recommended p {
   color: white;
-  background-color: black;
+  background-color: #141518;
 }
 
-.details__same-genre {
+.details__recommended {
   font-size: 14px;
   text-align: left;
   padding-left: 15px;
   margin-top: auto;
   padding-bottom: 7px;
   color: rgba(255, 255, 255, 0.76);
-  background-color: black;
+  background-color: #141518;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -119,22 +256,6 @@
   border-image-slice: 1;
   border-width: 1px;
   border-image-source: linear-gradient(89deg, #16161680, #d1d1d100);
-  animation: ColorGradientAnimation 3s ease infinite;
-}
-
-@keyframes ColorGradientAnimation {
-  0% {
-    border-image-source: linear-gradient(89deg, #1111117c, #d1d1d100);
-  }
-  25% {
-    border-image-source: linear-gradient(178deg, #4d4d4d85, #b8b8b800);
-  }
-  50% {
-    border-image-source: linear-gradient(267deg, #1a1a1a71, #cacaca00);
-  }
-  100% {
-    border-image-source: linear-gradient(89deg, #1111117c, #ffffff00);
-  }
 }
 
 .flex-container__product {
@@ -143,8 +264,7 @@
   justify-content: space-between;
   margin: 2rem;
   padding: 1rem;
-  /* border: rgba(207, 207, 207, 0.521) solid 1px; */
-  box-shadow: 0 0 11px rgb(33 33 33 / 20%);
+  box-shadow: 0 0 11px rgb(99 99 99 / 20%);
   border-radius: 4px;
   background-color: rgba(207, 207, 207, 0.76);
   background-image: url(https://i.imgur.com/lQMyVZP.png);
@@ -153,6 +273,8 @@
   background-attachment: fixed;
   background-blend-mode: color;
   background-position-x: center;
+  background-color: #171a22fc;
+  color: white;
 }
 
 .title-icons {
@@ -250,7 +372,6 @@ h3.title-product-name {
   }
 
   .add-to-cart-button {
-    /* reminder to modify this part to make the add to cart button for the mobile version. in the meantime i'll cry while I sleep because it's not workingggg. */
     display: none;
     font-size: 14px;
     width: 30px;
@@ -268,6 +389,27 @@ h3.title-product-name {
     z-index: 1000;
     cursor: pointer;
     opacity: 0;
+  }
+
+  .container-tags__artist {
+    display: none;
+  }
+
+  .header-flex__artist {
+    flex-direction: column;
+  }
+
+  .profile-photo__artist {
+    display: block;
+    margin: auto;
+  }
+
+  .name__artist {
+    text-align: center;
+  }
+
+  .second-column-flex__artist {
+    text-align: center;
   }
 
   .add-to-cart-button:hover {
@@ -404,6 +546,26 @@ h3.title-product-name {
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .header-flex__artist {
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .bottom-container-recommendations .most-liked-libraries {
+    max-width: 1024px;
+  }
+
+  .bottom-container-recommendations h3.grids-titles {
+    max-width: 1024px;
+  }
+
+  .products-flex__artist {
+    max-width: 1024px;
+    margin: auto;
   }
 
   .top-section__title .flex-column {
