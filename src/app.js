@@ -11,7 +11,7 @@ app.set('view engine', 'ejs'); // Define que el motor que utilizamos es EJS
 app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
 
 app.get("/", (req, res) => {
-  res.render(path.join(__dirname, "/views/users/index.ejs"));
+  res.render(path.join(__dirname, "/views/users/index.ejs")); // Con EJS se remplaza el SendFile por el .render
 });
 
 app.get("/login", (req, res) => {
