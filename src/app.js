@@ -39,3 +39,4 @@ app.get("/about", (req, res) => {
 });
 
 app.use(express.static("public"));
+
