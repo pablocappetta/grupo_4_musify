@@ -1,59 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/styles.css" rel="stylesheet" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
-    <title>Musify</title>
-  </head>
+  <%- include ('../partials/head') %>  <!-- Corremos los partials -->
   <body>
     <div class="color-fix-desktop-top">
-      <header class="margin-fix-for-desktop-header">
-        <div class="header-logo">
-          <a href="/">
-            <span id="logo"><i class="icons-line-fix-logo bi bi-vinyl-fill "></i> Musify</span>
-            <!-- <img id="logo" src="/img-logo-musify.png" alt="Musify logo" /> -->
-          </a>
-        </div>
-        <nav class="flex-nav-bar-header">
-          <ul>
-            <li><a href="/" class="nav-menu-item">Home</a></li>
-            <li>
-              <div class="store-dropdown">
-                <a href="/products" class="store-dropdown">Store <i class="icons-line-fix-chevron bi bi-chevron-down"></i></a>
-                <div class="store-dropdown-content">
-                  <a href="/products">Products</a>
-                  <a href="#">Libraries</a>
-                  <a href="#">Samples</a>
-                </div>
-              </div>
-            </li>
-            <li><a href="/about" class="nav-menu-item">About Us</a></li>
-            <li><a href="/contact" class="nav-menu-item">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="menu-flex">
-          <a href="/cart" class="icons-line-fix desktop-button-cart">
-            <i class="bi bi-cart2"></i>
-          </a>
-          <a href="/register" class="mobile-button-sign-up">Sign Up</a>
-          <a href="/login" class="mobile-button-log-in">Log In</a>
-          <a href="#" id="burger-button"><img
-            src="/img-burger-icon.svg"
-            alt="Burger button"
-          />
-        </a>
-        </div>
-      </header>
+      <%- include ('../partials/header') %>
     </div>
     <main>
       <div class="color-fix-desktop-top">
@@ -70,11 +20,11 @@
           </div>
           <div class="flex-second-column-top-main">
             <img
-              src="/img-musician.jpg"
+              src="../img/img-musician.jpg"
               class="top-bar-image"
             ></img>
             <img
-            src="/img-grid (8).jpg"
+            src="../img/img-grid (8).jpg"
             class="top-bar-image-alt-desktop"
           ></img>
           </div>
@@ -118,70 +68,70 @@
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article10.jpg" />
+              <img class="product-image" src="../img/cart-img/article10.jpg" />
               <p class="details">Flow</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article11.jpg" />
+              <img class="product-image" src="../img/cart-img/article11.jpg" />
               <p class="details">Trap King</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article12.jpg" />
+              <img class="product-image" src="../img/cart-img/article12.jpg" />
               <p class="details">After Hour</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article13.jpg" />
+              <img class="product-image" src="../img/cart-img/article13.jpg" />
               <p class="details">Rugged Trap Essentials 2</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article14.jpg" />
+              <img class="product-image" src="../img/cart-img/article14.jpg" />
               <p class="details">Smashed</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article15.jpg" />
+              <img class="product-image" src="../img/cart-img/article15.jpg" />
               <p class="details">Andhera Records Vol. 1</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article16.jpg" />
+              <img class="product-image" src="../img/cart-img/article16.jpg" />
               <p class="details">#TechHouse by Function Loops</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article17.jpg" />
+              <img class="product-image" src="../img/cart-img/article17.jpg" />
               <p class="details">The Astro</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article18.jpg" />
+              <img class="product-image" src="../img/cart-img/article18.jpg" />
               <p class="details">Tropical by Singular Sounds</p>
             </div>
           </article>
           <article class="product-new-arrivals">
             <i class="starred-icon bi bi-eye"></i>
             <div class="container-products-new-arrivals">
-              <img class="product-image" src="/cart-img/article19.jpg" />
+              <img class="product-image" src="../img/cart-img/article19.jpg" />
               <p class="details">Drum & Bass Essentials by Skifonix</p>
             </div>
           </article>
@@ -196,12 +146,12 @@
             Be your own super-producer. Join us and be part of the Musify
             family. Sharing is caring, is what they say. Check the most liked libraries!
           </p>
-          <!-- <img class="main-image-grid" src="/img-studio.jpg" /> -->
+          <!-- <img class="main-image-grid" src="../img/img-studio.jpg" /> -->
           <section class="most-liked-libraries">
             <article class="product">
               <i class="starred-icon bi bi-eye"></i>
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article69.jpg" />
+                <img class="product-image" src="../img/cart-img/article69.jpg" />
                 <div class="container-details-products">
                   <p class="prices">$39.99</p>
                   <p class="discounts">10% OFF</p>
@@ -213,7 +163,7 @@
             <article class="product">
               <i class="starred-icon bi bi-eye"></i>
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article73.jpg" />
+                <img class="product-image" src="../img/cart-img/article73.jpg" />
                 <div class="container-details-products">
                   <p class="prices">$25.49</p>
                   <p class="discounts">30% OFF</p>
@@ -225,7 +175,7 @@
             <article class="product">
               <i class="starred-icon bi bi-eye"></i>
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article71.jpg" />
+                <img class="product-image" src="../img/cart-img/article71.jpg" />
                 <div class="container-details-products">
                   <p class="prices">$11.49</p>
                   <p class="discounts">50% OFF</p>
@@ -237,7 +187,7 @@
             <article class="product">
               <i class="starred-icon bi bi-eye"></i>
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article72.jpg" />
+                <img class="product-image" src="../img/cart-img/article72.jpg" />
                 <div class="container-details-products">
                   <p class="prices">$49.99</p>
                   <p class="discounts">5% OFF</p>
@@ -251,7 +201,7 @@
       </section>
       <section class="section-home-commends">
         <div class="container-commends-main">
-          <img class="person-commend-img" src="/img-person.jpg" />
+          <img class="person-commend-img" src="../img/img-person.jpg" />
           <p class="commends-descriptions">
             "I literally cried because a website like this never existed
             before. It's fantastic and I'm more powerful now."
@@ -259,14 +209,14 @@
           <p class="commends-name-person">Wanda Romanoff</p>
         </div>
         <div class="container-commends-main">
-          <img class="person-commend-img" src="/img-person (2).jpg" />
+          <img class="person-commend-img" src="../img/img-person (2).jpg" />
           <p class="commends-descriptions">
             "Yeah, I'm the green guy. And I'm not in the mood... Mind your own business, kiddo."
           </p>
           <p class="commends-name-person">Bruce Banner</p>
         </div>
         <div class="container-commends-main">
-          <img class="person-commend-img" src="/img-person (3).jpg" />
+          <img class="person-commend-img" src="../img/img-person (3).jpg" />
           <p class="commends-descriptions">
             "This page is so cool that not even Thanos can break it with his
             famous finger snap. Thank you, devs!"
@@ -281,51 +231,6 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="web-footer">
-        <div class="web-footer__title">
-          <h2>Musify</h2>
-        </div>
-        <div class="flex-column">
-          <div class="web-footer__link">
-            <a href="#">About Us</a>
-          </div>
-          <div class="web-footer__link">
-            <a href="#">Resources</a>
-          </div>
-          <div class="web-footer__link">
-            <a href="#">FAQ</a>
-          </div>
-          <div class="web-footer__link">
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
-        <div class="web-footer__container-flex">
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Instagram profile">
-              <i class="footer-icons bi-instagram"></i
-            ></a>
-          </div>
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Facebook profile">
-              <i class="footer-icons bi-facebook" color="white"></i>
-            </a>
-          </div>
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Twitter profile">
-              <i class="footer-icons bi-twitter"></i>
-            </a>
-          </div>
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Youtube profile">
-              <i class="footer-icons bi-youtube"></i>
-            </a>
-          </div>
-        </div>
-        <div class="copyright">
-          <h3>Copyright</h3>
-        </div>
-      </div>
-    </footer>
+    <%- include ('../partials/footer') %>
   </body>
 </html>

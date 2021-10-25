@@ -1,66 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link href="/css/styles.css" rel="stylesheet" />
-    <link href="/css/products.css" rel="stylesheet" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
-    <title>Musify</title>
-  </head>
+  <%- include ('../partials/head') %>
   <body>
     <div class="color-fix-desktop-top">
-      <header class="margin-fix-for-desktop-header">
-        <div class="header-logo">
-          <a href="/">
-            <span id="logo"
-              ><i class="icons-line-fix-logo bi bi-vinyl-fill"></i> Musify</span
-            >
-            <!-- <img id="logo" src="/img-logo-musify.png" alt="Musify logo" /> -->
-          </a>
-        </div>
-        <nav class="flex-nav-bar-header">
-          <ul>
-            <li><a href="/" class="nav-menu-item">Home</a></li>
-            <li>
-              <div class="store-dropdown">
-                <a href="/products" class="store-dropdown"
-                  >Store
-                  <i class="icons-line-fix-chevron bi bi-chevron-down"></i
-                ></a>
-                <div class="store-dropdown-content">
-                  <a href="/products">Products</a>
-                  <a href="#">Libraries</a>
-                  <a href="#">Samples</a>
-                </div>
-              </div>
-            </li>
-            <li><a href="/about" class="nav-menu-item">About Us</a></li>
-            <li><a href="/contact" class="nav-menu-item">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="menu-flex">
-          <a href="/cart" class="icons-line-fix desktop-button-cart">
-            <i class="bi bi-cart2"></i>
-          </a>
-          <a href="/register" class="mobile-button-sign-up">Sign Up</a>
-          <a href="/login" class="mobile-button-log-in">Log In</a>
-          <a href="#" id="burger-button"
-            ><img src="/img-burger-icon.svg" alt="Burger button" />
-          </a>
-        </div>
-      </header>
+      <%- include ('../partials/header') %>
     </div>
     <main>
       <section class="top-section">
@@ -79,7 +22,7 @@
             <div class="first-column__product">
               <img
                 class="main-image-product"
-                src="/cart-img/article10.jpg"
+                src="../img/cart-img/article10.jpg"
                 class="top-bar-image-alt-desktop"
               />
             </div>
@@ -116,7 +59,7 @@
       <section class="mid-section-artist">
         <div class="header-flex__artist">
           <div class="first-column__artist">
-            <img class="profile-photo__artist" src="/img-person.jpg" />
+            <img class="profile-photo__artist" src="../img/img-person.jpg" />
           </div>
           <div class="second-column-flex__artist">
             <h1 class="name__artist">Soundscrapes</h3>
@@ -140,7 +83,7 @@
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="/cart-img/article10.jpg"
+              src="../img/cart-img/article10.jpg"
               class="top-bar-image-alt-desktop"
             />
             <h4>Flow. </h4>
@@ -149,7 +92,7 @@
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="/cart-img/article11.jpg"
+              src="../img/cart-img/article11.jpg"
               class="top-bar-image-alt-desktop"
             />
             <h4>Trap King.</h4>
@@ -158,7 +101,7 @@
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="/cart-img/article12.jpg"
+              src="../img/cart-img/article12.jpg"
               class="top-bar-image-alt-desktop"
             />
             <h4>After Hour.</h4>
@@ -167,7 +110,7 @@
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="/cart-img/article13.jpg"
+              src="../img/cart-img/article13.jpg"
               class="top-bar-image-alt-desktop"
             />
             <h4>Another one.</h4>
@@ -178,11 +121,11 @@
       <section class="bottom-section-recommendations">
         <div class="bottom-container-recommendations">
           <h3 class="grids-titles">Our recommendations</h3>
-          <!-- <img class="main-image-grid" src="/img-studio.jpg" /> -->
+          <!-- <img class="main-image-grid" src="../img/img-studio.jpg" /> -->
           <section class="most-liked-libraries">
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article69.jpg" />
+                <img class="product-image" src="../img/cart-img/article69.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$39.99</p>
                   <p class="discounts">10% OFF</p>
@@ -193,7 +136,7 @@
             </article>
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article73.jpg" />
+                <img class="product-image" src="../img/cart-img/article73.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$25.49</p>
                   <p class="discounts">30% OFF</p>
@@ -204,7 +147,7 @@
             </article>
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article71.jpg" />
+                <img class="product-image" src="../img/cart-img/article71.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$11.49</p>
                   <p class="discounts">50% OFF</p>
@@ -215,7 +158,7 @@
             </article>
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="/cart-img/article72.jpg" />
+                <img class="product-image" src="../img/cart-img/article72.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$49.99</p>
                   <p class="discounts">5% OFF</p>
@@ -228,51 +171,6 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="web-footer">
-        <div class="web-footer__title">
-          <h2>Musify</h2>
-        </div>
-        <div class="flex-column">
-          <div class="web-footer__link">
-            <a href="#">About Us</a>
-          </div>
-          <div class="web-footer__link">
-            <a href="#">Resources</a>
-          </div>
-          <div class="web-footer__link">
-            <a href="#">FAQ</a>
-          </div>
-          <div class="web-footer__link">
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
-        <div class="web-footer__container-flex">
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Instagram profile">
-              <i class="footer-icons bi-instagram"></i
-            ></a>
-          </div>
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Facebook profile">
-              <i class="footer-icons bi-facebook" color="white"></i>
-            </a>
-          </div>
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Twitter profile">
-              <i class="footer-icons bi-twitter"></i>
-            </a>
-          </div>
-          <div class="web-footer__social-icons">
-            <a href="#" target="_blank" title="Youtube profile">
-              <i class="footer-icons bi-youtube"></i>
-            </a>
-          </div>
-        </div>
-        <div class="copyright">
-          <h3>Copyright</h3>
-        </div>
-      </div>
-    </footer>
+    <%- include ('../partials/footer') %>
   </body>
 </html>

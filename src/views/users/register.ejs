@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head') %>
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../partials/header') %>
+    </div>
+    <main>
+      <div class="main-form">
+        <section>
+          <div class="main-form-structure">
+            <form
+              action="/register"
+              method="POST"
+              class="register-form-container"
+            >
+              <p>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full name"
+                  required
+                  minlength="8"
+                  maxlength="32"
+                />
+              </p>
+              <p>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail address"
+                  required
+                />
+              </p>
+              <p>
+                <!-- <label class="form-title" for="birth-date">Birth date</label> -->
+                <input
+                  type="date"
+                  name="birth-date"
+                  value="2021-09-24"
+                  max="2022-12-31"
+                  id="birth-date"
+                  required
+                />
+              </p>
+              <!-- <p>
+                <label for="photo">Profile Picture </label>
+                <input
+                  type="file"
+                  name="photo"
+                  id="photo"
+                  accept=".jpg"
+                  required
+                />
+              </p> -->
+              <p>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                  min="8"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])"
+                />
+                <!-- RegEx PATTERN: 1 Uppercase, 1 Lowercase, 1 Number, 1 Symbol, symbol required -->
+              </p>
+              <p class="form-btn-container">
+                <button type="submit" class="btn-form-signin">
+                  <a href="/#">Sign Up</a>
+                </button>
+                <div class="login-separation-container">
+                    <p class="login-separation">
+                        Or
+                    </p>
+                </div>
+                <button type="submit" class="btn-form-signup">
+                  <a class="btn-text-signup" href="https://www.facebook.com/"
+                    >Sign Up with Facebook</a
+                  >
+                </button>
+                <button type="submit" class="btn-form-signup">
+                  <a
+                    class="btn-text-signup"
+                    href="https://accounts.google.com/signin/v2/identifier?hl=es-419&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                    >Sign Up with Google</a
+                  >
+                </button>
+              </p>
+              <p class="privacy-policy">
+                By signing up, you agree to Musify's Terms of Use, Privacy Policy
+                and Cookie Policy.
+              </p>
+            </form>
+          </div>
+          <div class="text-login-container">
+            <p class="login-form">
+              Already have an account?
+              <a href="/login" class="hiper-login"> Log in. </a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include ('../partials/footer') %>
+  </body>
+</html>
