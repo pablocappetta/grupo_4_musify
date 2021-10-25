@@ -1,9 +1,23 @@
-/_ Retrospectiva _/
+# Retrospectiva 
 
-Buscamos un sitio sobrio, moderno y minimalista.
+### :muscle: Keep doing: 
 
-El público al que orientamos es un público jóven (millennials, centennials y baby boomers).
+- Working on a high-detailed level. 
+- Good commits labeling. 
 
-Nuestra intención es crear un home donde se explique de qué trata el sitio y donde se hará un highlight de los kits más vendidos para que los usuarios ingresen directamente al catálogo desde allí.
+### :point_right: More of: 
 
-La idea es seguir los lineamientos de Patreon, The Producer Kit y Loopcloud.
+- Increase CSS selectors descriptiveness. 
+- Improve the stucture of the site. Maybe applying root, or CSS-variables.
+
+### :pray: Start doing: 
+
+- Daily meetings.
+
+### :raised_back_of_hand: Stop doing: 
+
+- Bad distribution of workload during the week.
+
+### :fist_raised: Less of: 
+
+- Confusing bilingual comments, commits and variable naming. 
