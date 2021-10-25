@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 // Rutas 
 const mainRouter = require('./routes/main');
-// const productsRouter = require('./routes/products');
+const productsRouter = require('./routes/products');
 
 app.use('/',mainRouter);
-// app.use('/products'),
+app.use('/',productsRouter); 

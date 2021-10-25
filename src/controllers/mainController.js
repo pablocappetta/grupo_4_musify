@@ -17,16 +17,7 @@ const mainController = {
         let archivo = path.join(__dirname, "../views/users/register");
         res.render(archivo);
       },
-      
-    cart:(req, res) => {
-        let archivo = path.join(__dirname, "../views/products/cart");
-        res.render(archivo);
-      },
-      
-    products: (req, res) => {
-        let archivo = path.join(__dirname, "../views/products/products");
-        res.render(archivo);
-      },
+
       
     contact: (req, res) => {
         let archivo = path.join(__dirname, "../views/users/contact");
