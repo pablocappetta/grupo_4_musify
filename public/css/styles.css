@@ -754,7 +754,7 @@ main div section div form p button {
   border-radius: 0.5rem;
   outline: none;
   background: transparent;
-  color: #ff5f67;
+  color: black;
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
@@ -762,12 +762,12 @@ main div section div form p button {
 }
 
 .input-form-control-email:focus { 
-  border-color: #ff424d; 
+  border-color: black; 
 }
 
 .input-form-control-email:focus ~ .form-label-email {
   background: #f8f8f8;
-  color: #ff424d;
+  color: black;
   transform: translateY(-2.875rem);
 }
 
@@ -796,7 +796,7 @@ main div section div form p button {
   border-radius: 0.5rem;
   outline: none;
   background: transparent;
-  color: #ff5f67;
+  color: black;
   font-size: 1rem;
   text-indent: 1rem;
   margin: 24px 3px;
@@ -804,12 +804,12 @@ main div section div form p button {
 }
 
 .input-form-control-psw:focus { 
-  border-color: #ff424d; 
+  border-color: black; 
 }
 
 .input-form-control-psw:focus ~ .form-label-psw {
   background: #f8f8f8;
-  color: #ff424d;
+  color: black;
   transform: translateY(-2.875rem);
 }
 
