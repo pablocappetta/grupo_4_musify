@@ -729,6 +729,90 @@ main div section div form p button {
 /* MAIN STYLING -- LOGIN -- */
 /*******************************/
 
+.form-wrapper-email {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-email {
+  position: absolute;
+  top: 50%;
+  left: 0.65rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-email {
+  height: inherit;
+  width: 100%;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  color: #ff5f67;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+.input-form-control-email:focus { 
+  border-color: #ff424d; 
+}
+
+.input-form-control-email:focus ~ .form-label-email {
+  background: #f8f8f8;
+  color: #ff424d;
+  transform: translateY(-2.875rem);
+}
+
+.form-wrapper-psw {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-psw {
+  position: absolute;
+  top: 85%;
+  left: 0.65rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-psw {
+  height: inherit;
+  width: 100%;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  color: #ff5f67;
+  font-size: 1rem;
+  text-indent: 1rem;
+  margin: 24px 3px;
+  transition: all 0.35s;
+}
+
+.input-form-control-psw:focus { 
+  border-color: #ff424d; 
+}
+
+.input-form-control-psw:focus ~ .form-label-psw {
+  background: #f8f8f8;
+  color: #ff424d;
+  transform: translateY(-2.875rem);
+}
+
 .forgot-psw {
   color: rgb(114, 114, 114);
 }
@@ -740,12 +824,13 @@ main div section div form p button {
 
 .login-form-container {
   width: 85%;
-  max-width: 720px;
+  max-width: 920px;
   margin: 40px 60px;
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: 12px 20px;
+  gap: 25px;
+  padding: 15px 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
