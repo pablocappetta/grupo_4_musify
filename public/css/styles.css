@@ -124,10 +124,7 @@ header {
   height: 25px;
   border: 0;
   margin-left: 4px;
-}
-
-#burger-button:hover {
-}
+} 
 
 .desktop-button-cart {
   display: none;
@@ -165,9 +162,6 @@ header a:link {
 /******************/
 /* MAIN STYLING */
 /******************/
-
-main {
-}
 
 .top-bar-image {
   display: none;
@@ -862,10 +856,7 @@ footer .web-footer__container-flex {
   text-align: center;
   align-items: center;
   place-content: center;
-}
-
-footer .web-footer__social-icons {
-}
+} 
 
 .copyright {
   display: flex;
