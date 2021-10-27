@@ -728,7 +728,6 @@ main div section div form p button {
 /*******************************/
 /* MAIN STYLING -- LOGIN -- */
 /*******************************/
-
 .form-wrapper-email {
   position: relative;
   display: flex;
@@ -815,6 +814,10 @@ main div section div form p button {
 
 .forgot-psw {
   color: rgb(114, 114, 114);
+}
+
+.forgot-psw:hover {
+  color: black;
 }
 
 .psw-container {
