@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head') %>
+  <!-- Corremos los partials -->
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../partials/header') %>
+    </div>
+    <main>
+      <div class="container products-wrapper">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="products-title">Form to edit a product</h2>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="id" class="form-label">Select Product ID:</label>
+          <select name="id" id="id" class="form-input">
+            <% productSent.forEach(product => { %>  
+            <option value="<%=
+            product.id %>"><%=
+            product.id %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="col-12">
+          <form action="/store/edit/<%=
+          productSent.id %>?_method=PUT"" method="POST"> <!-- @nacuna: We need to research what conditional to use so this form action takes the Product ID picked above to edit the page-->
+            <div class="row product-detail">
+              <div class="col-12 col-md-6">
+                <label for="name" class="form-label">Product Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="<%= productSent.name %>"
+                  value="<%= productSent.name %>"
+                  class="form-input"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="price" class="form-label">Price:</label>
+                <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  placeholder="E.g: 9.99"
+                  class="form-input"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="discount" class="form-label">Discount:</label>
+                <input
+                  type="text"
+                  id="discount"
+                  name="discount"
+                  placeholder="Ej: 15"
+                  class="form-input"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="genre" class="form-label">Genre:</label>
+                <select name="genre" id="genre" class="form-input">
+                  <option value="">Choose</option>
+                  <option value="Ambient">Ambient</option>
+                  <option value="Hip-Hop">Hip-Hop</option>
+                  <option value="Cinematic">Cinematic</option>
+                  <option value="Jazz">Jazz</option>
+                  <option value="Trap">Trap</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="description" class="form-label"
+                  >Product Description:</label
+                >
+                <textarea
+                  name="descriptionProduct"
+                  id="descriptionProduct"
+                  class="form-input"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <label for="description" class="form-label"
+                  >Artist Description:</label
+                >
+                <textarea
+                  name="descriptionProducer"
+                  id="descriptionProducer"
+                  class="form-input"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="buy-now-button">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include ('../partials/footer') %>
+  </body>
+</html>
