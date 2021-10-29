@@ -22,14 +22,14 @@
             <div class="first-column__product">
               <img
                 class="main-image-product"
-                src="../img/cart-img/article10.jpg"
+                src="/img/cart-img/<%= productSent.imageProduct %>"
                 class="top-bar-image-alt-desktop"
               />
             </div>
             <div class="second-column__product">
               <div class="title-and-price-row">
-                <h3 class="title-product-name">Flow</h3>
-                <h3 class="title-product-price">$8.99</h3>
+                <h3 class="title-product-name"><%= productSent.name %></h3>
+                <h3 class="title-product-price">$<%= productSent.price %></h3>
                 <div class="add-to-cart-div">
                   <button type="submit" class="add-to-cart-button">
                     Add to Cart
@@ -39,18 +39,14 @@
               <div class="container-producer">
                 <h4 class="title-producer">
                   Made by:
-                  <a href="/producer" class="link-producer">Soundscrapes</a>
+                  <a href="/producer" class="link-producer"><%= productSent.producer %></a>
                 </h4>
                 <h4 class="title-genre">
-                  Genre: <a href="/genre" class="link-genre">Ambient</a>
+                  Genre: <a href="/genre" class="link-genre"><%= productSent.genre %></a>
                 </h4>
               </div>
               <p class="product-description">
-                Keeping a beat interesting is one of the most important parts of
-                production. Flow was designed to add ear candy to your beats.
-                Stand out and add energy and excitement to your music just by
-                dragging and dropping. This is one of the several samples made
-                by Soundscrapes producers.
+                <%= productSent.descriptionProduct %>
               </p>
             </div>
           </div>
@@ -59,10 +55,10 @@
       <section class="mid-section-artist">
         <div class="header-flex__artist">
           <div class="first-column__artist">
-            <img class="profile-photo__artist" src="../img/img-person.jpg" />
+            <img class="profile-photo__artist" src="/img/<%= productSent.imageProducer %>" />
           </div>
           <div class="second-column-flex__artist">
-            <h1 class="name__artist">Soundscrapes</h3>
+            <h1 class="name__artist"><%= productSent.producer %></h3>
               <div class="container-tags__artist">
             <h3 class="title-common-tags__artist">Most common tags:</h4>
             <h4 class="tag__artist"><a href="/genre" class="link-genre">Ambient</a></h4>
@@ -71,11 +67,7 @@
             <h4 class="tag__artist"> <a href="/genre" class="link-genre">Abstract</a></h4>
               </div>
             <p class="description__artist">
-              Winners of the first 'Musify Revelation Artists' competition, Our
-              favorite guys from Sweden are there with new sample sounds,
-              carefully tailored for the needs of any new producers. From
-              Ambient FX to Tech House samples, you'll probably find everything
-              you need for your new songs here.
+              <%= productSent.descriptionProducer %>
             </p>
           </div>
         </div>
@@ -83,16 +75,16 @@
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="../img/cart-img/article10.jpg"
+              src="/img/cart-img/article10.jpg"
               class="top-bar-image-alt-desktop"
             />
-            <h4>Flow. </h4>
+            <h4><%= productSent.name %></h4>
             <h4 class="timer-item__artist">0:00/3:00</h4>
           </article>
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="../img/cart-img/article11.jpg"
+              src="/img/cart-img/article11.jpg"
               class="top-bar-image-alt-desktop"
             />
             <h4>Trap King.</h4>
@@ -101,7 +93,7 @@
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="../img/cart-img/article12.jpg"
+              src="/img/cart-img/article12.jpg"
               class="top-bar-image-alt-desktop"
             />
             <h4>After Hour.</h4>
@@ -110,7 +102,7 @@
           <article class="items-flex__artist">
             <img
               class="main-image-product"
-              src="../img/cart-img/article13.jpg"
+              src="/img/cart-img/article13.jpg"
               class="top-bar-image-alt-desktop"
             />
             <h4>Another one.</h4>
@@ -125,7 +117,7 @@
           <section class="most-liked-libraries">
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="../img/cart-img/article69.jpg" />
+                <img class="product-image" src="/img/cart-img/article69.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$39.99</p>
                   <p class="discounts">10% OFF</p>
@@ -136,7 +128,7 @@
             </article>
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="../img/cart-img/article73.jpg" />
+                <img class="product-image" src="/img/cart-img/article73.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$25.49</p>
                   <p class="discounts">30% OFF</p>
@@ -147,7 +139,7 @@
             </article>
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="../img/cart-img/article71.jpg" />
+                <img class="product-image" src="/img/cart-img/article71.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$11.49</p>
                   <p class="discounts">50% OFF</p>
@@ -158,7 +150,7 @@
             </article>
             <article class="product">
               <div class="container-products">
-                <img class="product-image" src="../img/cart-img/article72.jpg" />
+                <img class="product-image" src="/img/cart-img/article72.jpg" />
                 <div class="container-details-products__recommended">
                   <p class="prices">$49.99</p>
                   <p class="discounts">5% OFF</p>
