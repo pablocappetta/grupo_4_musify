@@ -10,7 +10,7 @@
 .header-flex__artist {
   display: flex;
   background-color: #171a22fc;
-  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-image: url("../img/product_background_img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -38,7 +38,7 @@
   border-bottom: #3a3a3a10 1px solid;
   padding: 1rem;
   background-color: #171a22fc;
-  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-image: url("../img/product_background_img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -150,7 +150,7 @@ p.description__artist {
   border-radius: 4px;
   padding: 1rem;
   background-color: #171a22fc;
-  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-image: url("../img/product_background_img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -165,7 +165,7 @@ p.description__artist {
   border-bottom: 4px;
   padding: 1rem;
   background-color: #171a22fc;
-  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-image: url("../img/product_background_img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -295,7 +295,7 @@ a.link-producer {
   box-shadow: 0 0 11px rgb(99 99 99 / 20%);
   border-radius: 4px;
   background-color: rgba(207, 207, 207, 0.76);
-  background-image: url(https://i.imgur.com/lQMyVZP.png);
+  background-image: url("../img/product_background_img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -495,6 +495,14 @@ h3.title-product-name {
     justify-content: space-between;
   }
 
+  .add-to-cart-div {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    order: 3;
+    flex: 0.1;
+  }
+
   /********************** top-section__product ******************************/
 
   .first-column__product img {
@@ -519,7 +527,7 @@ h3.title-product-name {
     align-self: center;
     font-size: 24px;
     color: rgb(255, 66, 77);
-    flex: 0.1;
+    flex: 0.7;
     padding-left: 0.5rem;
     text-overflow: ellipsis;
   }
@@ -530,7 +538,7 @@ h3.title-product-name {
     order: 2;
     font-size: 24px;
     color: rgb(255, 66, 77);
-    flex: 0.34;
+    flex: 0.2;
     padding-right: 0.5rem;
     padding-left: 1rem;
   }
@@ -550,6 +558,7 @@ h3.title-product-name {
     width: 6rem;
     position: absolute;
     right: 8%;
+    top: 30%;
   }
 
   /********************** top-section__product ******************************/
@@ -630,7 +639,7 @@ h3.title-product-name {
     align-self: center;
     font-size: 24px;
     color: rgb(255, 66, 77);
-    flex: 0.1;
+    flex: 0.7;
     padding-left: 0.5rem;
     text-overflow: ellipsis;
   }
@@ -641,7 +650,7 @@ h3.title-product-name {
     order: 2;
     font-size: 24px;
     color: rgb(255, 66, 77);
-    flex: 0.34;
+    flex: 0.2;
     padding-right: 0.5rem;
     padding-left: 1rem;
   }
@@ -660,7 +669,7 @@ h3.title-product-name {
     height: 2.5rem;
     width: 6rem;
     position: absolute;
-    right: -50%;
+    right: -65%;
   }
 
   /********************** top-section__product ******************************/

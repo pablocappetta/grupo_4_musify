@@ -29,6 +29,7 @@ const productsController = {
 
     res.render(archivo, {
       productSent: product,
+      productLoop: products,
     });
   },
 
