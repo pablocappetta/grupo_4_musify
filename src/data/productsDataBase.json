@@ -9,7 +9,7 @@
     "descriptionProduct": "Keeping a beat interesting is one of the most important parts of production. Flow was designed to add ear candy to your beats. Stand out and add energy and excitement to your music just by dragging and dropping. This is one of the several samples made by Soundscrapes producers.",
     "descriptionProducer": "Winners of the first 'Musify Revelation Artists' competition, Our favorite guys from Sweden are there with new sample sounds, carefully tailored for the needs of any new producers. From Ambient FX to Tech House samples, you'll probably find everything you need for your new songs here.",
     "imageProduct": "article10.jpg",
-    "imageProducer": "img-person.jpg"
+    "imageProducer": "1_soundscrapes.jpg"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "descriptionProduct": "Trap King is the latest installment from Soundscrapes inspired by modern Trap music. This edition includes drums, 808s, loops, MIDIs and voice samples from Duki that will be sure to help you create crazy beats! This kit is a must-have as it will quickly become your favorite go-to when making beats.",
     "descriptionProducer": "Winners of the first 'Musify Revelation Artists' competition, Our favorite guys from Sweden are there with new sample sounds, carefully tailored for the needs of any new producers. From Ambient FX to Tech House samples, you'll probably find everything you need for your new songs here.",
     "imageProduct": "article11.jpg",
-    "imageProducer": "img-person.jpg"
+    "imageProducer": "1_soundscrapes.jpg"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "descriptionProduct": "Have you ever listened to Explosions in the Sky and though 'How these guys make these crazy melodies with their guitars?' well, here our friends from Soundscrapes are sharing their secrets in this sample pack to reproduce the same kind of unique sound associated with Post Rock.",
     "descriptionProducer": "Winners of the first 'Musify Revelation Artists' competition, Our favorite guys from Sweden are there with new sample sounds, carefully tailored for the needs of any new producers. From Ambient FX to Tech House samples, you'll probably find everything you need for your new songs here.",
     "imageProduct": "article12.jpg",
-    "imageProducer": "img-person.jpg"
+    "imageProducer": "1_soundscrapes.jpg"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "descriptionProduct": "Another iteration from Soundscrapes that will complement your Trap songs.",
     "descriptionProducer": "Winners of the first 'Musify Revelation Artists' competition, Our favorite guys from Sweden are there with new sample sounds, carefully tailored for the needs of any new producers. From Ambient FX to Tech House samples, you'll probably find everything you need for your new songs here.",
     "imageProduct": "article13.jpg",
-    "imageProducer": "img-person.jpg"
+    "imageProducer": "1_soundscrapes.jpg"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "descriptionProduct": "Bongo. that's all you need to know.",
     "descriptionProducer": "Hey, I'm Bongo.",
     "imageProduct": "article14.jpg",
-    "imageProducer": "img-person (3).jpg"
+    "imageProducer": "2_bongo.jpg"
   },
   {
     "id": 6,
@@ -67,9 +67,9 @@
     "producer": "Adhera",
     "genre": "Tech House",
     "descriptionProduct": "Recommended by artist like Marc Ribellet, this is the famous Sample Pack Vol. 1 from the famous producer Adhera",
-    "descriptionProducer": "Producer, DJ, Manager, and Cousing of Eminem.",
+    "descriptionProducer": "Producer, DJ, Manager, and Cousin of Eminem.",
     "imageProduct": "article15.jpg",
-    "imageProducer": "img-person (2).jpg"
+    "imageProducer": "3_adhera.jpg"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "descriptionProduct": "Are you in love with tech house as we are? then look no further, this is the sample pack that will help you to compose profesional tech house. Don't forget to follow us on ILoveFunctionLoops.dot.com ",
     "descriptionProducer": "Function Loops description.",
     "imageProduct": "article16.jpg",
-    "imageProducer": "producer_functionloops.jpg"
+    "imageProducer": "7_function_loops.jpg"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "descriptionProduct": "Did you hear about Eminem's return? Let me tell you that without The Astro that couldn't be possible. Don't forget to follow us on ILoveFunctionLoops.dot.com",
     "descriptionProducer": "Function Loops description.",
     "imageProduct": "article17.jpg",
-    "imageProducer": "producer_functionloops.jpg"
+    "imageProducer": "7_function_loops.jpg"
   },
   {
     "id": 9,
@@ -103,21 +103,21 @@
     "producer": "Singular Sounds",
     "genre": "Tropical",
     "descriptionProduct": "Chill samples, Chill life.",
-    "descriptionProducer": "Singular Sounds description.",
+    "descriptionProducer": "Singular Sounds is a creation from the Drummer of Skifonix in his free time. All sales from Singular Sounds are donated to a russian animal reserve.",
     "imageProduct": "article18.jpg",
-    "imageProducer": "producer_singularsounds.jpg"
+    "imageProducer": "6_singular_sounds.jpg"
   },
   {
     "id": 10,
     "name": "Drum & Bass Essentials by Skifonix",
-    "price": 1200,
+    "price": 4.99,
     "discount": 10,
     "producer": "Skifonix",
     "genre": "Russian",
     "descriptionProduct": "І я пачынаю з тач-рока Пакуль паліць на танцы, ён яго ламае Я даю ёй пацалунак, каб яна пакаталася Не ведаючы чаму, у яго няма канкурэнцыі, ага Зрабіце 'de Tetra Brik, збан і кусаючы Рыка Andamo 'з Biza, у горадзе tintin Цяжэй за ўсё браць наканечнік, перамяшчаючы цэглу.",
     "descriptionProducer": "Yes, they are russians.",
     "imageProduct": "article19.jpg",
-    "imageProducer": "producer_skifonix.jpg"
+    "imageProducer": "4_skifonix.jpg"
   },
   {
     "id": 11,
@@ -127,33 +127,33 @@
     "producer": "Singular Sounds",
     "genre": "Jazz",
     "descriptionProduct": "10 in 1 bundle for Jazz and R&B. Now in Offer!",
-    "descriptionProducer": "Singular Sounds description.",
+    "descriptionProducer": "Singular Sounds is a creation from the Drummer of Skifonix in his free time. All sales from Singular Sounds are donated to a russian animal reserve.",
     "imageProduct": "article69.jpg",
-    "imageProducer": "producer_singularsounds.jpg"
+    "imageProducer": "6_singular_sounds.jpg"
   },
   {
     "id": 12,
     "name": "Compass - Cinematic Underworld",
     "price": 25.49,
     "discount": 30,
-    "producer": "Singular Sounds",
+    "producer": "Noga Erez",
     "genre": "Cinematic",
     "descriptionProduct": "Epic Music for Epic films, Compass is the cheapest way to the most expensive quality",
-    "descriptionProducer": "Singular Sounds description.",
+    "descriptionProducer": "Noga Erez is an Israeli singer, songwriter and producer. In 2017, her song 'Dance While You Shoot' was used by Apple in an advertising campaign for its music streaming service. In the same year she released her debut album, Off the Radar to critical acclaim..",
     "imageProduct": "article73.jpg",
-    "imageProducer": "producer_singularsounds.jpg"
+    "imageProducer": "5_nogaerez.jpg"
   },
   {
     "id": 13,
     "name": "Dark Hip Hop",
     "price": 11.49,
     "discount": 50,
-    "producer": "Andhera",
+    "producer": "Adhera",
     "genre": "Hip Hop",
     "descriptionProduct": "Synths, MIDIs and WAVs to combine the sexiest R&B with the darkest Hip Hop that you could ever create. Another work from Andhera.",
-    "descriptionProducer": "Producer, DJ, Manager, and Cousing of Eminem.",
+    "descriptionProducer": "Producer, DJ, Manager, and Cousin of Eminem.",
     "imageProduct": "article71.jpg",
-    "imageProducer": "img-person (2).jpg"
+    "imageProducer": "3_adhera.jpg"
   },
   {
     "id": 14,
@@ -163,8 +163,8 @@
     "producer": "Singular Sounds",
     "genre": "Ambient",
     "descriptionProduct": "Concentration and Atmospherics kits. Specially recommended for those that want to venture in the lo-fi genre.",
-    "descriptionProducer": "Singular Sounds description.",
+    "descriptionProducer": "Singular Sounds is a creation from the Drummer of Skifonix in his free time. All sales from Singular Sounds are donated to a russian animal reserve.",
     "imageProduct": "article72.jpg",
-    "imageProducer": "producer_singularsounds.jpg"
+    "imageProducer": "6_singular_sounds.jpg"
   }
 ]
