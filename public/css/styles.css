@@ -681,7 +681,7 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
-.bi-person-circle {
+.reg-user-icon {
   position: absolute;
   top: 58%;
   right: 4%;
@@ -690,7 +690,7 @@ h3.grids-titles {
   transition: all 0.35s;
 }
 
-.input-form-control-fullname:focus ~ .bi-person-circle {
+.input-form-control-fullname:focus ~ .reg-user-icon {
   color: black;
 }
 
@@ -740,7 +740,7 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
-.bi-envelope-fill {
+.reg-email-icon {
   position: absolute;
   top: 58%;
   right: 4%;
@@ -749,7 +749,7 @@ h3.grids-titles {
   transition: all 0.35s;
 }
 
-.input-form-control-emailRegister:focus ~ .bi-envelope-fill {
+.input-form-control-emailRegister:focus ~ .reg-email-icon {
   color: black;
 }
 
@@ -799,7 +799,7 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
-.bi-eye-slash-fill {
+.reg-psw-icon {
   position: absolute;
   top: 58%;
   right: 4%;
@@ -808,7 +808,7 @@ h3.grids-titles {
   transition: all 0.35s;
 }
 
-.input-form-control-pswRegister:focus ~ .bi-eye-slash-fill {
+.input-form-control-pswRegister:focus ~ .reg-psw-icon {
   color: black;
 }
 
@@ -947,6 +947,9 @@ main div section div form p button {
 /* MAIN STYLING -- LOGIN -- */
 /*******************************/
 
+
+/*  ------------------    EMAIL    -------------------- */
+
 .form-wrapper-email {
   position: relative;
   display: flex;
@@ -988,6 +991,21 @@ main div section div form p button {
   color: black;
   transform: translateY(-2.875rem);
 }
+
+.login-user-icon {
+  position: absolute;
+  top: 28%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-email:focus ~ .login-user-icon {
+  color: black;
+}
+
+/*  ------------------    PASSWORD    -------------------- */
 
 .form-wrapper-psw {
   position: relative;
@@ -1043,6 +1061,21 @@ main div section div form p button {
   align-self: center;
   margin: 15px 0;
 }
+
+.login-psw-icon {
+  position: absolute;
+  top: 27%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-psw:focus ~ .login-psw-icon {
+  color: black;
+}
+
+/*-----------------------------------------------------*/
 
 .login-form-container {
   width: 85%;
@@ -1192,6 +1225,15 @@ footer a {
   .form-label-date {
     display: none;
   }
+
+  .login-psw-icon {
+    right: 10%;
+  }
+
+  .login-user-icon {
+    right: 10%;
+  }
+
 }
 
 /**************/
@@ -1213,6 +1255,15 @@ footer a {
   .form-label-date {
     display: none;
   }
+
+  .login-psw-icon {
+    right: 8%;
+  }
+
+  .login-user-icon {
+    right: 8%;
+  }
+
 }
 
 /********/
@@ -1339,6 +1390,14 @@ footer a {
 
   .container-payment-credit-card {
     display: flex;
+  }
+
+  .login-psw-icon {
+    right: 4%;
+  }
+
+  .login-user-icon {
+    right: 4%;
   }
 }
 
@@ -1573,6 +1632,14 @@ footer a {
 
   .container-payment-paypal {
     display: flex;
+  }
+
+  .login-psw-icon {
+    right: 3%;
+  }
+
+  .login-user-icon {
+    right: 3%;
   }
 }
 
