@@ -634,6 +634,95 @@ h3.grids-titles {
 /*******************************/
 /* MAIN STYLING -- REGISTER -- */
 /*******************************/
+.form-wrapper-fullname {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-fullname {
+  position: absolute;
+  top: 78%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-fullname {
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+.input-form-control-fullname:focus { 
+  border-color: black; 
+}
+
+.input-form-control-fullname:focus ~ .form-label-fullname {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
+}
+
+/*       HASTA ACÁ         */
+
+.form-wrapper-email-register {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-email-register {
+  position: absolute;
+  top: 85%;
+  left: 0.65rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-email-register {
+  height: inherit;
+  width: 100%;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  margin: 24px 3px;
+  transition: all 0.35s;
+}
+
+.input-form-control-email-register:focus { 
+  border-color: black; 
+}
+
+.input-form-control-email-register:focus ~ .form-label-email-register {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
+}
+
+/* HASTA ACÁ */
 
 .main-form {
   width: 100%;
@@ -658,13 +747,6 @@ h3.grids-titles {
   background-color: #f8f8f8;
 }
 
-main div section div form p input {
-  width: 100%;
-  margin: 25px 0;
-  padding: 23px;
-  border: none;
-  text-align: left;
-}
 
 main div section div form p button {
   width: 100%;
