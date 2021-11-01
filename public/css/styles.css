@@ -1134,6 +1134,12 @@ main div section div form p button {
   color: rgb(114, 114, 114);
   align-self: center;
   text-align: center;
+  transition: all 0.35s;
+}
+
+.privacy-policy:hover {
+  color: black;
+
 }
 
 .login-form {
