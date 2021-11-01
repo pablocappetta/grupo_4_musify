@@ -773,6 +773,33 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
+/*  -------------   DATE  ------------  */
+
+.form-wrapper-date {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+
+.input-form-control-date {
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+
 /*    -------------------------------------------------------------    */
 
 .main-form {
