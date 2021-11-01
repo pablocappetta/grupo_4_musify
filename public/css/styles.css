@@ -833,6 +833,7 @@ h3.grids-titles {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
+  gap: 7px;
 }
 
 
@@ -845,8 +846,8 @@ main div section div form p button {
 
 .btn-form-signin {
   background-color: #ff424d;
-  margin-top: 20px;
-  margin-bottom: 35px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   transition: all 0.35s;
 }
 
