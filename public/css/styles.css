@@ -635,7 +635,7 @@ h3.grids-titles {
 /* MAIN STYLING -- REGISTER -- */
 /*******************************/
 
-/*       FULL NAME         */
+/*  ------------     FULL NAME   -------------      */
 
 .form-wrapper-fullname {
   position: relative;
@@ -681,7 +681,7 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
-/*       EMAIL         */
+/*  -----------------     EMAIL   -----------------      */
 
 .form-wrapper-emailRegister {
   position: relative;
@@ -727,7 +727,53 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
-/*         PASSWORD         */
+/*    ---------     PASSWORD    -----------     */
+
+.form-wrapper-pswRegister {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-pswRegister {
+  position: absolute;
+  top: 78%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-pswRegister {
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+.input-form-control-pswRegister:focus { 
+  border-color: black; 
+}
+
+.input-form-control-pswRegister:focus ~ .form-label-pswRegister {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
+}
+
+/*    -------------------------------------------------------------    */
 
 .main-form {
   width: 100%;
