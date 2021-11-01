@@ -14,26 +14,45 @@
               method="POST"
               class="register-form-container"
             >
-              <p>
+              <div class="form-wrapper-fullname">
                 <input
+                  class="input-form-control-fullname"
                   type="text"
                   name="name"
-                  placeholder="Full name"
                   required
                   minlength="8"
                   maxlength="32"
                 />
-              </p>
-              <p>
+                <div class="form-label-fullname">
+                  Full name
+                </div>
+              </div>
+              <div>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="E-mail address"
                   required
                 />
-              </p>
-              <p>
+                <div class="form-label">
+                  Email
+                </div>
+              </div>
+              <div>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  min="8"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])"
+                />
+                <div class="form-label">
+                  Password
+                </div>
+                <!-- RegEx PATTERN: 1 Uppercase, 1 Lowercase, 1 Number, 1 Symbol, symbol required -->
+              </div>
+              <div>
                 <!-- <label class="form-title" for="birth-date">Birth date</label> -->
                 <input
                   type="date"
@@ -43,7 +62,7 @@
                   id="birth-date"
                   required
                 />
-              </p>
+              </div>
               <!-- <p>
                 <label for="photo">Profile Picture </label>
                 <input
@@ -54,18 +73,6 @@
                   required
                 />
               </p> -->
-              <p>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  required
-                  min="8"
-                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])"
-                />
-                <!-- RegEx PATTERN: 1 Uppercase, 1 Lowercase, 1 Number, 1 Symbol, symbol required -->
-              </p>
               <p class="form-btn-container">
                 <button type="submit" class="btn-form-signin">
                   <a href="/#">Sign Up</a>
