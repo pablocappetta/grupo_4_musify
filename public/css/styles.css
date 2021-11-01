@@ -1234,6 +1234,18 @@ footer a {
     right: 10%;
   }
 
+  .reg-user-icon {
+    right: 13%;
+  }
+
+  .reg-email-icon {
+    right: 13%;
+  }
+
+  .reg-psw-icon {
+    right: 13%;
+  }
+
 }
 
 /**************/
@@ -1264,6 +1276,17 @@ footer a {
     right: 8%;
   }
 
+  .reg-user-icon {
+    right: 10%;
+  }
+
+  .reg-email-icon {
+    right: 10%;
+  }
+
+  .reg-psw-icon {
+    right: 10%;
+  }
 }
 
 /********/
@@ -1398,6 +1421,18 @@ footer a {
 
   .login-user-icon {
     right: 4%;
+  }
+
+  .reg-user-icon {
+    right: 5%;
+  }
+
+  .reg-email-icon {
+    right: 5%;
+  }
+
+  .reg-psw-icon {
+    right: 5%;
   }
 }
 
