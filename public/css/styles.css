@@ -681,6 +681,19 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
+.bi-person-circle {
+  position: absolute;
+  top: 58%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-fullname:focus ~ .bi-person-circle {
+  color: black;
+}
+
 /*  -----------------     EMAIL   -----------------      */
 
 .form-wrapper-emailRegister {
@@ -725,6 +738,19 @@ h3.grids-titles {
   background: #f8f8f8;
   color: black;
   transform: translateY(-2.875rem);
+}
+
+.bi-envelope-fill {
+  position: absolute;
+  top: 58%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-emailRegister:focus ~ .bi-envelope-fill {
+  color: black;
 }
 
 /*    ---------     PASSWORD    -----------     */
@@ -773,6 +799,19 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
+.bi-eye-slash-fill {
+  position: absolute;
+  top: 58%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-pswRegister:focus ~ .bi-eye-slash-fill {
+  color: black;
+}
+
 /*  -------------   DATE  ------------  */
 
 .form-wrapper-date {
@@ -781,6 +820,16 @@ h3.grids-titles {
   height: 4rem;
 }
 
+.form-label-date {
+  position: absolute;
+  top: 78%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
 
 .input-form-control-date {
   height: 50px;
@@ -799,16 +848,15 @@ h3.grids-titles {
 
 }
 
-.input-form-control-date:focus {
-  color:black;
-  border-color: black;
+.input-form-control-date:focus { 
+  border-color: black; 
 }
 
-.input-form-control-date:hover {
-  color:black;
-  border-color: black;
+.input-form-control-date:focus ~ .form-label-date {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
 }
-
 
 /*    -------------------------------------------------------------    */
 
@@ -835,7 +883,6 @@ h3.grids-titles {
   background-color: #f8f8f8;
   gap: 7px;
 }
-
 
 main div section div form p button {
   width: 100%;
@@ -899,6 +946,7 @@ main div section div form p button {
 /*******************************/
 /* MAIN STYLING -- LOGIN -- */
 /*******************************/
+
 .form-wrapper-email {
   position: relative;
   display: flex;
@@ -1140,6 +1188,10 @@ footer a {
   .mobile-button-log-in {
     margin-right: 0px;
   }
+
+  .form-label-date {
+    display: none;
+  }
 }
 
 /**************/
@@ -1156,6 +1208,10 @@ footer a {
   .flex-second-column-top-main {
     text-align: center;
     padding-top: 18px;
+  }
+
+  .form-label-date {
+    display: none;
   }
 }
 
