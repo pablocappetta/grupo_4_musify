@@ -635,6 +635,231 @@ h3.grids-titles {
 /* MAIN STYLING -- REGISTER -- */
 /*******************************/
 
+/*  ------------     FULL NAME   -------------      */
+
+.form-wrapper-fullname {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-fullname {
+  position: absolute;
+  top: 78%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-fullname {
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+.input-form-control-fullname:focus { 
+  border-color: black; 
+}
+
+.input-form-control-fullname:focus ~ .form-label-fullname {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
+}
+
+.reg-user-icon {
+  position: absolute;
+  top: 58%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-fullname:focus ~ .reg-user-icon {
+  color: black;
+}
+
+/*  -----------------     EMAIL   -----------------      */
+
+.form-wrapper-emailRegister {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-emailRegister {
+  position: absolute;
+  top: 78%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-emailRegister {
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+.input-form-control-emailRegister:focus { 
+  border-color: black; 
+}
+
+.input-form-control-emailRegister:focus ~ .form-label-emailRegister {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
+}
+
+.reg-email-icon {
+  position: absolute;
+  top: 58%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-emailRegister:focus ~ .reg-email-icon {
+  color: black;
+}
+
+/*    ---------     PASSWORD    -----------     */
+
+.form-wrapper-pswRegister {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-pswRegister {
+  position: absolute;
+  top: 78%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-pswRegister {
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+.input-form-control-pswRegister:focus { 
+  border-color: black; 
+}
+
+.input-form-control-pswRegister:focus ~ .form-label-pswRegister {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
+}
+
+.reg-psw-icon {
+  position: absolute;
+  top: 58%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-pswRegister:focus ~ .reg-psw-icon {
+  color: black;
+}
+
+/*  -------------   DATE  ------------  */
+
+.form-wrapper-date {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-label-date {
+  position: absolute;
+  top: 78%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: #888;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+
+.input-form-control-date {
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: #888;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+
+}
+
+.input-form-control-date:focus { 
+  border-color: black; 
+}
+
+.input-form-control-date:focus ~ .form-label-date {
+  background: #f8f8f8;
+  color: black;
+  transform: translateY(-2.875rem);
+}
+
+/*    -------------------------------------------------------------    */
+
 .main-form {
   width: 100%;
 }
@@ -656,14 +881,7 @@ h3.grids-titles {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
-}
-
-main div section div form p input {
-  width: 100%;
-  margin: 25px 0;
-  padding: 23px;
-  border: none;
-  text-align: left;
+  gap: 7px;
 }
 
 main div section div form p button {
@@ -675,8 +893,8 @@ main div section div form p button {
 
 .btn-form-signin {
   background-color: #ff424d;
-  margin-top: 20px;
-  margin-bottom: 35px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   transition: all 0.35s;
 }
 
@@ -728,6 +946,10 @@ main div section div form p button {
 /*******************************/
 /* MAIN STYLING -- LOGIN -- */
 /*******************************/
+
+
+/*  ------------------    EMAIL    -------------------- */
+
 .form-wrapper-email {
   position: relative;
   display: flex;
@@ -770,6 +992,21 @@ main div section div form p button {
   transform: translateY(-2.875rem);
 }
 
+.login-user-icon {
+  position: absolute;
+  top: 28%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-email:focus ~ .login-user-icon {
+  color: black;
+}
+
+/*  ------------------    PASSWORD    -------------------- */
+
 .form-wrapper-psw {
   position: relative;
   display: flex;
@@ -778,7 +1015,7 @@ main div section div form p button {
 
 .form-label-psw {
   position: absolute;
-  top: 85%;
+  top: 48%;
   left: 0.65rem;
   transform: translateY(-50%);
   color: #888;
@@ -788,7 +1025,7 @@ main div section div form p button {
 }
 
 .input-form-control-psw {
-  height: inherit;
+  height: 60px;
   width: 100%;
   align-items: center;
   border: 2px solid #888;
@@ -798,7 +1035,7 @@ main div section div form p button {
   color: black;
   font-size: 1rem;
   text-indent: 1rem;
-  margin: 24px 3px;
+  margin: 0 0 23px 0px;
   transition: all 0.35s;
 }
 
@@ -825,6 +1062,21 @@ main div section div form p button {
   margin: 15px 0;
 }
 
+.login-psw-icon {
+  position: absolute;
+  top: 27%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.input-form-control-psw:focus ~ .login-psw-icon {
+  color: black;
+}
+
+/*-----------------------------------------------------*/
+
 .login-form-container {
   width: 85%;
   max-width: 920px;
@@ -841,7 +1093,7 @@ main div section div form p button {
 
 .btn-form-login1 {
   background-color: #ff424d;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 35px;
   transition: all 0.35s;
 }
@@ -882,6 +1134,11 @@ main div section div form p button {
   color: rgb(114, 114, 114);
   align-self: center;
   text-align: center;
+  transition: all 0.35s;
+}
+
+.privacy-policy:hover {
+  color: black;
 }
 
 .login-form {
@@ -969,6 +1226,30 @@ footer a {
   .mobile-button-log-in {
     margin-right: 0px;
   }
+
+  .form-label-date {
+    display: none;
+  }
+
+  .login-psw-icon {
+    right: 10%;
+  }
+
+  .login-user-icon {
+    right: 10%;
+  }
+
+  .reg-user-icon {
+    right: 13%;
+  }
+
+  .reg-email-icon {
+    right: 13%;
+  }
+
+  .reg-psw-icon {
+    right: 13%;
+  }
 }
 
 /**************/
@@ -985,6 +1266,30 @@ footer a {
   .flex-second-column-top-main {
     text-align: center;
     padding-top: 18px;
+  }
+
+  .form-label-date {
+    display: none;
+  }
+
+  .login-psw-icon {
+    right: 8%;
+  }
+
+  .login-user-icon {
+    right: 8%;
+  }
+
+  .reg-user-icon {
+    right: 10%;
+  }
+
+  .reg-email-icon {
+    right: 10%;
+  }
+
+  .reg-psw-icon {
+    right: 10%;
   }
 }
 
@@ -1112,6 +1417,26 @@ footer a {
 
   .container-payment-credit-card {
     display: flex;
+  }
+
+  .login-psw-icon {
+    right: 4%;
+  }
+
+  .login-user-icon {
+    right: 4%;
+  }
+
+  .reg-user-icon {
+    right: 5%;
+  }
+
+  .reg-email-icon {
+    right: 5%;
+  }
+
+  .reg-psw-icon {
+    right: 5%;
   }
 }
 
@@ -1346,6 +1671,14 @@ footer a {
 
   .container-payment-paypal {
     display: flex;
+  }
+
+  .login-psw-icon {
+    right: 3%;
+  }
+
+  .login-user-icon {
+    right: 3%;
   }
 }
 
