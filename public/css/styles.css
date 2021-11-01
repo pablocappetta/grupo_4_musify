@@ -634,6 +634,9 @@ h3.grids-titles {
 /*******************************/
 /* MAIN STYLING -- REGISTER -- */
 /*******************************/
+
+/*       FULL NAME         */
+
 .form-wrapper-fullname {
   position: relative;
   display: flex;
@@ -678,18 +681,18 @@ h3.grids-titles {
   transform: translateY(-2.875rem);
 }
 
-/*       HASTA ACÁ         */
+/*       EMAIL         */
 
-.form-wrapper-email-register {
+.form-wrapper-emailRegister {
   position: relative;
   display: flex;
   height: 4rem;
 }
 
-.form-label-email-register {
+.form-label-emailRegister {
   position: absolute;
-  top: 85%;
-  left: 0.65rem;
+  top: 78%;
+  left: 0.6rem;
   transform: translateY(-50%);
   color: #888;
   padding: 0.25rem 0.5rem;
@@ -697,32 +700,34 @@ h3.grids-titles {
   transition: all 0.35s;
 }
 
-.input-form-control-email-register {
-  height: inherit;
-  width: 100%;
+.input-form-control-emailRegister {
+  height: 50px;
   align-items: center;
   border: 2px solid #888;
   border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
   outline: none;
   background: transparent;
   color: black;
   font-size: 1rem;
   text-indent: 1rem;
-  margin: 24px 3px;
   transition: all 0.35s;
+
 }
 
-.input-form-control-email-register:focus { 
+.input-form-control-emailRegister:focus { 
   border-color: black; 
 }
 
-.input-form-control-email-register:focus ~ .form-label-email-register {
+.input-form-control-emailRegister:focus ~ .form-label-emailRegister {
   background: #f8f8f8;
   color: black;
   transform: translateY(-2.875rem);
 }
 
-/* HASTA ACÁ */
+/*         PASSWORD         */
 
 .main-form {
   width: 100%;
