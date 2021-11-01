@@ -792,11 +792,21 @@ h3.grids-titles {
   padding: 23px;
   outline: none;
   background: transparent;
-  color: black;
+  color: #888;
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
 
+}
+
+.input-form-control-date:focus {
+  color:black;
+  border-color: black;
+}
+
+.input-form-control-date:hover {
+  color:black;
+  border-color: black;
 }
 
 
