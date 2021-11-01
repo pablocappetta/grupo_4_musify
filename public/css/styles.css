@@ -997,7 +997,7 @@ main div section div form p button {
 
 .form-label-psw {
   position: absolute;
-  top: 85%;
+  top: 48%;
   left: 0.65rem;
   transform: translateY(-50%);
   color: #888;
@@ -1007,7 +1007,7 @@ main div section div form p button {
 }
 
 .input-form-control-psw {
-  height: inherit;
+  height: 60px;
   width: 100%;
   align-items: center;
   border: 2px solid #888;
@@ -1017,7 +1017,7 @@ main div section div form p button {
   color: black;
   font-size: 1rem;
   text-indent: 1rem;
-  margin: 24px 3px;
+  margin: 0 0 23px 0px;
   transition: all 0.35s;
 }
 
@@ -1060,7 +1060,7 @@ main div section div form p button {
 
 .btn-form-login1 {
   background-color: #ff424d;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 35px;
   transition: all 0.35s;
 }
