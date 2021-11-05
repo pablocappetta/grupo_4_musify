@@ -43,11 +43,11 @@
         <section class="top-new-arrivals">
           <% productSent.forEach(product => { %>
           <article class="product-new-arrivals">
+            <a href="/store/product/<%= product.id %>">
             <i class="starred-icon bi bi-eye"></i>
+            </a>
             <div class="container-products-new-arrivals">
-              <a href="/store/product/<%= product.id %>">
               <img class="product-image" src="/img/cart-img/<%= product.imageProduct %>"/>
-              </a>
               <p class="details"><%= product.name %></p>
             </div>
           </article>
