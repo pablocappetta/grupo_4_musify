@@ -9,6 +9,8 @@ const app = express();
 // ************ Middlewares ************
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(express.urlencoded({ extended: false })); // Para poder tomar los parámetros desde el POST
+app.use(express.json()); // Para poder trabajar con stringify y demás
 
 //process.env.PORT -> Heroku PORT
 app.listen(process.env.PORT || 42133, () => {

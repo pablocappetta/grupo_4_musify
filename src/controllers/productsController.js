@@ -37,6 +37,27 @@ const productsController = {
   create: (req, res) => {
     let archivo = path.join(__dirname, "../views/products/product-create-form");
     res.render(archivo);
+
+    const nuevoArchivo = {
+      id: products[products.length - 1].id + 1,
+      name: req.body.name,
+      price: req.body.price,
+      discount: req.body.discount,
+      producer: req.body.producer,
+      genre: req.body.genre,
+      descriptionProduct: req.body.descriptionProduct,
+      descriptionProducer: req.body.descriptionProducer,
+      imageProduct: "article72.jpg",
+      imageProducer: "6_singular_sounds.jpg",
+      popularity: 0,
+    };
+
+    products.push(nuevoArchivo);
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+    // @pablo: Hay que revisar esto para hacer que si el ID se crea correctamente, nos redirija hacia la ruta en la web
+    res.redirect("/store/product/4");
   },
 
   // Edit - Form to edit products
