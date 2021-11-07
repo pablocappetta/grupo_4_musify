@@ -66,9 +66,18 @@ const productsController = {
       __dirname,
       "../views/products/product-edit-form-id"
     );
+
+    // FIX: broken PUT route
     res.render(archivo, {
       productSent: products,
     });
+
+    const id = req.params.id;
+    const product = products.find(product => { 
+      return product.id == id;
+    });
+
+    res.redirect("../views/products/product-edit-form", {product: product});
   },
 
   // Update - Method to update

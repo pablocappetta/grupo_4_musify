@@ -15,19 +15,6 @@
             </h2>
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <label for="id" class="form-label">Product ID:</label>
-          <select name="id" id="id" class="form-input">
-            <% productSent.forEach(product => { %>
-            <option
-              value="<%=
-            product.id %>"
-            >
-              <%= product.id %>
-            </option>
-            <% }) %>
-          </select>
-        </div>
         <div class="col-12">
           <form
             action="/store/edit/<%=
@@ -35,7 +22,19 @@
             method="POST"
           >
             <!-- @nacuna: We need to research what conditional to use so this form action takes the Product ID picked above to edit the page-->
-
+            <div class="col-12 col-md-6">
+              <label for="id" class="form-label">Product ID:</label>
+              <select name="id" id="id" class="form-input">
+                <% productSent.forEach(product => { %>
+                <option
+                  value="<%=
+                product.id %>"
+                >
+                  <%= product.id %>
+                </option>
+                <% }) %>
+              </select>
+            </div>
             <div class="row product-detail">
               <div class="col-12">
                 <button type="submit" class="buy-now-button">Go!</button>
