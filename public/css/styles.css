@@ -124,7 +124,7 @@ header {
   height: 25px;
   border: 0;
   margin-left: 4px;
-} 
+}
 
 .desktop-button-cart {
   display: none;
@@ -668,11 +668,10 @@ h3.grids-titles {
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
-
 }
 
-.input-form-control-fullname:focus { 
-  border-color: black; 
+.input-form-control-fullname:focus {
+  border-color: black;
 }
 
 .input-form-control-fullname:focus ~ .form-label-fullname {
@@ -727,11 +726,10 @@ h3.grids-titles {
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
-
 }
 
-.input-form-control-emailRegister:focus { 
-  border-color: black; 
+.input-form-control-emailRegister:focus {
+  border-color: black;
 }
 
 .input-form-control-emailRegister:focus ~ .form-label-emailRegister {
@@ -786,11 +784,10 @@ h3.grids-titles {
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
-
 }
 
-.input-form-control-pswRegister:focus { 
-  border-color: black; 
+.input-form-control-pswRegister:focus {
+  border-color: black;
 }
 
 .input-form-control-pswRegister:focus ~ .form-label-pswRegister {
@@ -845,11 +842,10 @@ h3.grids-titles {
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
-
 }
 
-.input-form-control-date:focus { 
-  border-color: black; 
+.input-form-control-date:focus {
+  border-color: black;
 }
 
 .input-form-control-date:focus ~ .form-label-date {
@@ -947,7 +943,6 @@ main div section div form p button {
 /* MAIN STYLING -- LOGIN -- */
 /*******************************/
 
-
 /*  ------------------    EMAIL    -------------------- */
 
 .form-wrapper-email {
@@ -979,11 +974,10 @@ main div section div form p button {
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
-
 }
 
-.input-form-control-email:focus { 
-  border-color: black; 
+.input-form-control-email:focus {
+  border-color: black;
 }
 
 .input-form-control-email:focus ~ .form-label-email {
@@ -1039,8 +1033,8 @@ main div section div form p button {
   transition: all 0.35s;
 }
 
-.input-form-control-psw:focus { 
-  border-color: black; 
+.input-form-control-psw:focus {
+  border-color: black;
 }
 
 .input-form-control-psw:focus ~ .form-label-psw {
@@ -1201,7 +1195,7 @@ footer .web-footer__container-flex {
   text-align: center;
   align-items: center;
   place-content: center;
-} 
+}
 
 .copyright {
   display: flex;
@@ -1531,7 +1525,7 @@ footer a {
   }
 
   header {
-    padding: 10px 27px;
+    padding: 10px 21px;
   }
 
   input {
