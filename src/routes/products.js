@@ -13,12 +13,12 @@ router.get("/store/product/:id", productsController.product);
 router.get("/store", productsController.index);
 
 /*** CREATE PRODUCTS ***/
-router.get("/store/create", productsController.create);
+router.get("/store/create/", productsController.create);
 // @pablo: Hay que ver esto para entender cómo hacer un redirect hacia el ID una vez que fue creado
 router.post("/store/create/:id/", productsController.create);
 
 /*** EDIT ONE PRODUCT ***/
-router.get("/store/edit/", productsController.edit);
+router.get("/store/edit/:id", productsController.edit);
 router.put("/store/edit/:id/", productsController.update);
 
 /*** DELETE ONE PRODUCT***/

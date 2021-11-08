@@ -13,20 +13,17 @@
             <h2 class="products-title">Form to edit a product</h2>
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <label for="id" class="form-label">Select Product ID:</label>
-          <select name="id" id="id" class="form-input">
-            <% productSent.forEach(product => { %>  
-            <option value="<%=
-            product.id %>"><%=
-            product.id %></option>
-            <% }) %>
-          </select>
-        </div>
         <div class="col-12">
           <form action="/store/edit/<%=
           productSent.id %>?_method=PUT"" method="POST"> <!-- @nacuna: We need to research what conditional to use so this form action takes the Product ID picked above to edit the page-->
-            <div class="row product-detail">
+              <div class="col-12 col-md-6">
+                <label for="id" class="form-label">Select Product ID:</label>
+                <select name="id" id="id" class="form-input"> 
+                  <option value="<%= productSent.id %>"><%=
+                  productSent.id %></option>
+                </select>
+              </div>
+              <div class="row product-detail">
               <div class="col-12 col-md-6">
                 <label for="name" class="form-label">Product Name:</label>
                 <input
@@ -46,6 +43,7 @@
                   name="price"
                   placeholder="E.g: 9.99"
                   class="form-input"
+                  value="<%= productSent.price %>"
                 />
               </div>
               <div class="col-12 col-md-6">
@@ -56,12 +54,13 @@
                   name="discount"
                   placeholder="Ej: 15"
                   class="form-input"
+                  value="<%= productSent.discount %>"
                 />
               </div>
               <div class="col-12 col-md-6">
                 <label for="genre" class="form-label">Genre:</label>
                 <select name="genre" id="genre" class="form-input">
-                  <option value="">Choose</option>
+                  <option value="<%= productSent.genre %>" selected><%= productSent.genre %></option>
                   <option value="Ambient">Ambient</option>
                   <option value="Hip-Hop">Hip-Hop</option>
                   <option value="Cinematic">Cinematic</option>
@@ -77,6 +76,8 @@
                   name="descriptionProduct"
                   id="descriptionProduct"
                   class="form-input"
+                  placeholder="<%= productSent.descriptionProduct %>"
+                  value="<%= productSent.descriptionProduct %>"
                 ></textarea>
               </div>
               <div class="col-12">
@@ -87,6 +88,8 @@
                   name="descriptionProducer"
                   id="descriptionProducer"
                   class="form-input"
+                  placeholder="<%= productSent.descriptionProducer %>"
+                  value="<%= productSent.descriptionProducer %>"
                 ></textarea>
               </div>
               <div class="col-12">
@@ -94,6 +97,12 @@
               </div>
             </div>
           </form>
+          <form
+          action="/store/delete/<%= productSent.id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type="submit">Delete product</button>
+        </form>
         </div>
       </div>
     </main>

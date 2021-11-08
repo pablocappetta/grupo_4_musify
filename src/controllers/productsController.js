@@ -36,8 +36,10 @@ const productsController = {
   // Create - Form to create products
   create: (req, res) => {
     let archivo = path.join(__dirname, "../views/products/product-create-form");
-    res.render(archivo);
-
+    res.render(archivo, {
+      products: products
+    });
+  
     const nuevoArchivo = {
       id: products[products.length - 1].id + 1,
       name: req.body.name,
@@ -57,27 +59,26 @@ const productsController = {
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
     // @pablo: Hay que revisar esto para hacer que si el ID se crea correctamente, nos redirija hacia la ruta en la web
-    res.redirect("/store/product/4");
+    res.send("Producto " + req.params.id + " creado");
   },
 
   // Edit - Form to edit products
   edit: (req, res) => {
     let archivo = path.join(
       __dirname,
-      "../views/products/product-edit-form-id"
+      "../views/products/product-edit-form"
     );
-
-    // FIX: broken PUT route
-    res.render(archivo, {
-      productSent: products,
-    });
 
     const id = req.params.id;
     const product = products.find(product => { 
       return product.id == id;
     });
 
-    res.redirect("../views/products/product-edit-form", {product: product});
+        // FIX: broken PUT route
+        res.render(archivo, {
+          productSent: product,
+          products: products
+        });
   },
 
   // Update - Method to update
