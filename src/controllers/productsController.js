@@ -64,20 +64,19 @@ const productsController = {
   edit: (req, res) => {
     let archivo = path.join(
       __dirname,
-      "../views/products/product-edit-form-id"
+      "../views/products/product-edit-form"
     );
-
-    // FIX: broken PUT route
-    res.render(archivo, {
-      productSent: products,
-    });
 
     const id = req.params.id;
     const product = products.find(product => { 
       return product.id == id;
     });
 
-    res.redirect("../views/products/product-edit-form", {product: product});
+        // FIX: broken PUT route
+        res.render(archivo, {
+          productSent: product,
+          products: products
+        });
   },
 
   // Update - Method to update
