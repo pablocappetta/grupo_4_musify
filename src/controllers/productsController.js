@@ -36,7 +36,9 @@ const productsController = {
   // Create - Form to create products
   create: (req, res) => {
     let archivo = path.join(__dirname, "../views/products/product-create-form");
-    res.render(archivo);
+    res.render(archivo, {
+      products: products
+    });
   
     const nuevoArchivo = {
       id: products[products.length - 1].id + 1,
