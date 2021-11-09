@@ -77,7 +77,6 @@ const productsController = {
       return product.id == id;
     });
 
-        // FIX: broken PUT route
         res.render(archivo, {
           productSent: product,
           products: products
@@ -86,9 +85,9 @@ const productsController = {
 
   // Method to update
 	update: (req, res) => {
-		// Editamos el producto que llegó por parametro su ID
+		// Editing the product that arrived via req.params.id 
 		let id = req.params.id;
-		let productToEdit = products.find(product => {
+		let product = products.find(product => {
 			return product.id == id;
 		});
 
@@ -127,7 +126,7 @@ const productsController = {
 		});
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
-		res.redirect("/products");
+		res.redirect("/store");
 	}
 };
 

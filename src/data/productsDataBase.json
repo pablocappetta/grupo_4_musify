@@ -1,5 +1,16 @@
 [
  {
+  "0": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 1,
   "name": "Flow",
   "price": 8.99,
@@ -13,6 +24,17 @@
   "popularity": 5
  },
  {
+  "1": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 2,
   "name": "Trap King",
   "price": 19.99,
@@ -26,6 +48,17 @@
   "popularity": 5
  },
  {
+  "2": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 3,
   "name": "After Hour",
   "price": 29.99,
@@ -39,6 +72,17 @@
   "popularity": 5
  },
  {
+  "3": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 4,
   "name": "Rugged Trap Essentials 2",
   "price": 19.99,
@@ -52,6 +96,17 @@
   "popularity": 5
  },
  {
+  "4": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 5,
   "name": "Smashed",
   "price": 35.99,
@@ -65,6 +120,17 @@
   "popularity": 5
  },
  {
+  "5": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 6,
   "name": "Adhera Records Vol.1",
   "price": 49.99,
@@ -78,6 +144,17 @@
   "popularity": 5
  },
  {
+  "6": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 7,
   "name": "#TechHouse by Function Loops",
   "price": 39.99,
@@ -91,6 +168,17 @@
   "popularity": 5
  },
  {
+  "7": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 8,
   "name": "The Astro",
   "price": 29.99,
@@ -104,6 +192,17 @@
   "popularity": 5
  },
  {
+  "8": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 9,
   "name": "Tropical by Singular Sounds",
   "price": 39.99,
@@ -117,6 +216,17 @@
   "popularity": 5
  },
  {
+  "9": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 10,
   "name": "Drum & Bass Essentials by Skifonix",
   "price": 4.99,
@@ -130,6 +240,17 @@
   "popularity": 5
  },
  {
+  "10": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 11,
   "name": "Essential Bundle",
   "price": 39.99,
@@ -143,6 +264,17 @@
   "popularity": 5
  },
  {
+  "11": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 12,
   "name": "Compass - Cinematic Underworld",
   "price": 25.49,
@@ -156,6 +288,17 @@
   "popularity": 5
  },
  {
+  "12": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 13,
   "name": "Dark Hip Hop",
   "price": 11.49,
@@ -169,6 +312,17 @@
   "popularity": 5
  },
  {
+  "13": {
+   "id": "8",
+   "name": "The Astro",
+   "price": "29.99",
+   "discount": "2",
+   "genre": "Hip Hop",
+   "descriptionProduct": "Prueba de modificación",
+   "descriptionProducer": "Prueba de modificación",
+   "imageProduct": "article72.jpg",
+   "imageProducer": "6_singular_sounds.jpg"
+  },
   "id": 14,
   "name": "Starfall - Urban Atmospheric",
   "price": 49.99,
