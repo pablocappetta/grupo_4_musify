@@ -84,15 +84,51 @@ const productsController = {
         });
   },
 
-  // Update - Method to update
-  update: (req, res) => {
-    res.send("Producto " + req.params.id + " editado");
-  },
+  // Method to update
+	update: (req, res) => {
+		// Editamos el producto que llegó por parametro su ID
+		let id = req.params.id;
+		let productToEdit = products.find(product => {
+			return product.id == id;
+		});
 
-  // Delete - Delete one product from DB
-  destroy: (req, res) => {
-    res.send("Producto " + req.params.id + " eliminado");
-  },
+		let editedProduct = {
+      id: id,
+      name: req.body.name,
+      price: req.body.price,
+      discount: req.body.discount,
+      producer: req.body.producer,
+      genre: req.body.genre,
+      descriptionProduct: req.body.descriptionProduct,
+      descriptionProducer: req.body.descriptionProducer,
+      imageProduct: "article72.jpg",
+      imageProducer: "6_singular_sounds.jpg",
+      popularity: req.body.popularity
+		}
+		
+		/* Array modification with the edited product */
+		products.forEach((producto, index) => {
+			if (product.id == id){
+				producto[index] = editedProduct;
+			}
+		});
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/store");
+	},
+
+	// Delete - Method to erase a registry from DB
+	destroy : (req, res) => {
+		// Delete product that was brought by the req
+		let id = req.params.id
+		/* New array with filter method - excludes the desired ID and overwrites the JSON */
+		let finalProducts = products.filter(product => {
+			return product.id != id
+		});
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
+		res.redirect("/products");
+	}
 };
 
 module.exports = productsController;
