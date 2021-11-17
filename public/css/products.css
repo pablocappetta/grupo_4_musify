@@ -38,6 +38,19 @@
   color: white;
 }
 
+.btn-edit-product {
+  background-color: #141518;
+  color: white;
+  border-radius: 35px;
+  border: none;
+  line-height: 22px;
+  font-weight: 900;
+  margin-top: 14px;
+  font-size: 16px;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.35s;
+}
+
 .first-column__product {
   flex: 0.4;
   margin: auto;
