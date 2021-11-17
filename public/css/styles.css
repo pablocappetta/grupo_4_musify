@@ -632,11 +632,9 @@ p.store-commends-name-person {
 }
 
 .container-join-us {
-  padding: 10px;
-  max-width: 1024px;
-  margin: auto;
-  display: flex;
-  justify-content: flex-end;
+  padding: 36px;
+  max-width: 100%;
+  background-color: #141518;
 }
 
 h2.grids-titles {
