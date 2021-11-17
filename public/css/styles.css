@@ -601,8 +601,11 @@ p.commends-name-person {
 }
 
 .container-join-us {
-  padding: 36px;
-  max-width: 100%;
+  padding: 10px;
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
 }
 
 h2.grids-titles {
