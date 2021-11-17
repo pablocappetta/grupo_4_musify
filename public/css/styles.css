@@ -595,6 +595,37 @@ p.commends-name-person {
   font-weight: bold;
 }
 
+/* ============ STORE TESTIMONIALS ============ */
+.container-store-commends {
+  text-align: center;
+  padding: 18px;
+}
+
+.section-store-commends {
+  display: flex;
+  justify-content: flex-start;
+  padding: 18px;
+  text-align: left;
+}
+
+.store-person-commend-img {
+  width: 95px;
+  height: 95px;
+  margin-bottom: 25px;
+  border-radius: 47.5px;
+  transition: box-shadow 0.35s;
+}
+
+p.store-commends-descriptions {
+  font-weight: 300;
+  margin-bottom: 15px;
+  opacity: 80%;
+}
+
+p.store-commends-name-person {
+  font-weight: bold;
+}
+
 .section-join-us {
   text-align: center;
   max-width: 100%;
