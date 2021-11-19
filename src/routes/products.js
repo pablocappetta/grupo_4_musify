@@ -7,22 +7,22 @@ const productsController = require("../controllers/productsController");
 router.get("/cart", productsController.cart);
 
 /*** GET PRODUCT DETAILS ***/
-router.get("/store/product/:id", productsController.product);
+router.get("/product/:id", productsController.product);
 
 /*** GET STORE PRODUCTS ***/
 router.get("/store", productsController.index);
 
 /*** CREATE PRODUCTS ***/
-router.get("/store/create/", productsController.create);
+router.get("/create", productsController.create);
 // @pablo: Hay que ver esto para entender cómo hacer un redirect hacia el ID una vez que fue creado
-router.post("/store/create/", productsController.store);
+router.post("/create", productsController.store);
 
 /*** EDIT ONE PRODUCT ***/
-router.get("/store/edit/:id", productsController.edit);
-router.put("/store/edit/:id/", productsController.update);
+router.get("/edit/:id", productsController.edit);
+router.put("/edit/:id", productsController.update);
 
 /*** DELETE ONE PRODUCT***/
-router.delete("/store/delete/:id", productsController.destroy);
+router.delete("/delete/:id", productsController.destroy);
 
 // Tengo que exportar el router
 module.exports = router;

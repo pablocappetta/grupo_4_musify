@@ -62,7 +62,7 @@ const productsController = {
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
     // @pablo: Hay que revisar esto para hacer que si el ID se crea correctamente, nos redirija hacia la ruta en la web
-    res.redirect("/store");
+    res.redirect("/products/store");
   },
 
   // Edit - Form to edit products

@@ -19,7 +19,7 @@
         </div>
         <section class="section-edit-store">
           <div class="container-edit-store">
-            <a href="/products/store/edit/<%= productSent.id %>" class="btn-edit-product">Edit this product</a>
+            <a href="/products/edit/<%= productSent.id %>" class="btn-edit-product">Edit this product</a>
           </div>
         </section>
         <div class="top-section__product">
@@ -90,7 +90,7 @@
           <% productLoop.forEach(product => { %> <% if(product.producer ==
           productSent.producer) { %>
           <article class="items-flex__artist">
-            <a href="/products/store/product/<%= product.id %>">
+            <a href="/products/product/<%= product.id %>">
               <img
                 class="main-image-product"
                 src="/img/cart-img/<%= product.imageProduct %>"
