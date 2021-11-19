@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="col-12">
-          <form action="/edit/<%=
+          <form action="/products/edit/<%=
           productSent.id %>?_method=PUT"" method="POST"> <!-- @nacuna: We need to research what conditional to use so this form action takes the Product ID picked above to edit the page-->
               <div class="col-12 col-md-6">
                 <label for="id" class="form-label">Select Product ID:</label>
@@ -98,7 +98,7 @@
             </div>
           </form>
           <form
-          action="/delete/<%= productSent.id %>?_method=DELETE"
+          action="/products/delete/<%= productSent.id %>?_method=DELETE"
           method="POST"
         >
           <button type="submit">Delete product</button>

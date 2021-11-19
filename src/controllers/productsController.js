@@ -48,7 +48,6 @@ const productsController = {
         name: req.body.name,
         price: req.body.price,
         discount: req.body.discount,
-        producer: req.body.producer,
         genre: req.body.genre,
         descriptionProduct: req.body.descriptionProduct,
         descriptionProducer: req.body.descriptionProducer,
@@ -87,6 +86,8 @@ const productsController = {
 	update: (req, res) => {
 		// Editing the product that arrived via req.params.id 
 		let id = req.params.id;
+
+    // Multer 
 		let product = products.find(product => {
 			return product.id == id;
 		});
@@ -96,24 +97,24 @@ const productsController = {
       name: req.body.name,
       price: req.body.price,
       discount: req.body.discount,
-      producer: req.body.producer,
       genre: req.body.genre,
       descriptionProduct: req.body.descriptionProduct,
       descriptionProducer: req.body.descriptionProducer,
-      imageProduct: "article72.jpg",
+      imageProduct: "article72.jpg", // Multer
       imageProducer: "6_singular_sounds.jpg",
       popularity: req.body.popularity
 		}
 		
 		/* Array modification with the edited product */
 		products.forEach((producto, index) => {
-			if (product.id == id){
-				producto[index] = editedProduct;
+			if (producto.id == id){
+				products[index] = editedProduct;
 			}
 		});
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/store");
+
+		res.redirect("/products/store");
 	},
 
 	// Delete - Method to erase a registry from DB
