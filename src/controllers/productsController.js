@@ -51,7 +51,7 @@ const productsController = {
         genre: req.body.genre,
         descriptionProduct: req.body.descriptionProduct,
         descriptionProducer: req.body.descriptionProducer,
-        imageProduct: "article72.jpg",
+        imageProduct: req.body.imageProduct,
         imageProducer: "6_singular_sounds.jpg",
         popularity: 0,
     };
