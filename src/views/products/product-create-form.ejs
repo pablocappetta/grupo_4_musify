@@ -16,7 +16,7 @@
         <section>
           <div class="main-form">
             <!-- @pablo: Hay que revisar esto para poder gestionar bien el post y hacer un redirect si es que el ID se creó correctamente -->
-            <form action="/products/create" method="POST">
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
               <div class="row product-detail">
                 <div class="col-12 col-md-6">
                   <label for="name" class="form-label">Product Name:</label>
@@ -39,11 +39,11 @@
                   />
                 </div>
                 <div class="col-12 col-md-6">
-                  <label for="product-image" class="form-label">Upload an image:</label>
+                  <label for="imageProduct" class="form-label">Upload an image:</label>
                   <input
                     type="file"
-                    id="product-image"
-                    name="product-image"
+                    id="imageProduct"
+                    name="imageProduct"
                     accept="image/*, .pdf"
                     class="form-input"
                   />

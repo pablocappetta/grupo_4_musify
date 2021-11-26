@@ -1,10 +1,29 @@
 //
 const express = require("express");
 const router = express.Router();
+const multer = require('multer');
+
 const productsController = require("../controllers/usersController");
 
-// Si la solicitud es GET y la ruta '/' llamamos a la funcion index de productsController
-// router.get("/cart", productsController.cart);
+/* === CONFIGURACIONES DE MULTER PARA ALMACENAMIENTO DE IMGS === */
+const multerDiskStorage = multer.diskStorage({
 
-/*** GET PRODUCT DETAILS ***/
-// router.get("/product/:id", productsController.product);
+    destination:(req, file, callback) => {
+        let folder = path.join(__dirname, '../public/img/producer-img'); // Multer guardará acá las fotos enviadas por el form
+        callback(null, folder);
+    },
+
+    fileName: (req, file, callback) => {
+        let imageName = Date.now() + path.extname(file.originalname);
+        callback(null, imageName);
+    } 
+});
+
+let fileUpload = multer({storage: multerDiskStorage});
+
+
+
+// Agrego el multer como middleware de ruta
+router.post("/", fileUpload.single(""), productsController.cart);
+
+
