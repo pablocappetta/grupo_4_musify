@@ -3,12 +3,13 @@ const express = require("express");
 const router = express.Router();
 const productsController = require("../controllers/productsController");
 const multer = require("multer");
+const path = require('path');
 
 /* === CONFIGURACIONES DE MULTER PARA ALMACENAMIENTO DE IMGS === */
 const multerDiskStorage = multer.diskStorage({
 
     destination:(req, file, callback) => {
-        let folder = path.join(__dirname, '../public/img/store-img'); // Multer guardará acá las fotos enviadas por el form
+        let folder = path.join(__dirname, '../../public/img/store-img'); // Multer guardará acá las fotos enviadas por el form
         callback(null, folder);
     },
 
