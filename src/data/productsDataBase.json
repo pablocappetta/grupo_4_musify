@@ -180,29 +180,5 @@
   "imageProduct": "article72.jpg",
   "imageProducer": "6_singular_sounds.jpg",
   "popularity": 5
- },
- {
-  "id": 15,
-  "name": "Hermetica",
-  "price": "250",
-  "discount": "20",
-  "genre": "Cinematic",
-  "descriptionProduct": "MULTER",
-  "descriptionProducer": "MULTER",
-  "imageProduct": "abccb7461d582dc8737dd1aacc67f32f.jpg",
-  "imageProducer": "6_singular_sounds.jpg",
-  "popularity": 0
- },
- {
-  "id": 16,
-  "name": "Producto de prueba",
-  "price": "25",
-  "discount": "2",
-  "genre": "Hip-Hop",
-  "descriptionProduct": "PRUEBA",
-  "descriptionProducer": "PRUEBA",
-  "imageProduct": "cb8a95a5f22c3e85060f411039afe4b6",
-  "imageProducer": "6_singular_sounds.jpg",
-  "popularity": 0
  }
 ]
