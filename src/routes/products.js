@@ -38,7 +38,7 @@ router.post("/create", fileUpload.single("imageProduct"), productsController.sto
 
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit/:id", productsController.edit);
-router.put("/edit/:id", productsController.update);
+router.put("/edit/:id", fileUpload.single("imageProduct"), productsController.update); // Multer como Middleware
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/delete/:id", productsController.destroy);
