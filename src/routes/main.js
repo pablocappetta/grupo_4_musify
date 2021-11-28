@@ -5,8 +5,6 @@ const mainController = require("../controllers/mainController");
 
 // Si la solicitud es GET y la ruta '/' llamamos a la funcion index de mainController
 router.get("/", mainController.index);
-router.get("/login", mainController.login);
-router.get("/register", mainController.register);
 router.get("/contact", mainController.contact);
 router.get("/about", mainController.about);
 

@@ -25,6 +25,8 @@ app.set("views", path.join(__dirname, "/views")); // Defines path to the views f
 // ************ Routes ************
 const mainRouter = require("./routes/main");
 const productsRouter = require("./routes/products");
+const usersRouter = require("./routes/users");
 
 app.use("/", mainRouter);
+app.use('/', usersRouter);
 app.use("/products", productsRouter);
