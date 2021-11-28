@@ -9,39 +9,11 @@
   "image": ""
  },
  {
-  "id": "1",
-  "firstName": "Roque",
-  "lastName": "McGuy",
-  "email": "mcguy@gmail.com",
-  "password": "lilisland",
-  "category": "buyer",
-  "image": ""
- },
- {
-  "id": "3",
-  "firstName": "Valentina",
-  "lastName": "Pereyra Iraola",
-  "email": "v.pi@gmail.com",
-  "password": "dummypsw",
-  "category": "vendor",
-  "image": ""
- },
- {
-  "id": "4",
-  "firstName": "Pablo",
-  "lastName": "Guillotina",
-  "email": "guillota@gmail.com",
-  "password": "contraseñadepablo",
-  "category": "vendor",
-  "image": ""
- },
- {
-  "id": "5",
-  "firstName": "Luis",
-  "lastName": "Pérez",
-  "email": "l.p35@gmail.com",
-  "password": "losramonesmania",
-  "category": "buyer",
-  "image": ""
+  "id": "01",
+  "firstName": "Pedro",
+  "lastName": "McDonalds",
+  "email": "pedro.mc@gmail.com",
+  "password": "$2a$10$zNe2D7FtTKb2wZ0NsYpmVO5CbxleWh.J9YHGCWg2l9nftXM.JPWRq",
+  "category": "Vendor"
  }
 ]
