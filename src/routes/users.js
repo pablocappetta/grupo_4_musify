@@ -24,7 +24,7 @@ const multerDiskStorage = multer.diskStorage({
 let fileUpload = multer({storage: multerDiskStorage});
 
 router.get("/login", usersController.login);
-router.get("/register", usersController.register);
+router.get("/register", fileUpload.single("image"), usersController.register);
 
 
 // Agrego el multer como middleware de ruta
