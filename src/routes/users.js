@@ -4,9 +4,10 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 
-const productsController = require("../controllers/usersController");
+const usersController = require("../controllers/usersController");
 
 /* === CONFIGURACIONES DE MULTER PARA ALMACENAMIENTO DE IMGS === */
+
 const multerDiskStorage = multer.diskStorage({
 
     destination:(req, file, callback) => {
@@ -22,9 +23,12 @@ const multerDiskStorage = multer.diskStorage({
 
 let fileUpload = multer({storage: multerDiskStorage});
 
+router.get("/login", usersController.login);
+router.get("/register", usersController.register);
 
 
 // Agrego el multer como middleware de ruta
-router.post("/", fileUpload.single(""), productsController.cart);
+//router.post("/", fileUpload.single(""), productsController.cart);
 
-
+// Tengo que exportar el router
+module.exports = router;

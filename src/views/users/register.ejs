@@ -13,20 +13,49 @@
               action="/register"
               method="POST"
               class="register-form-container"
+              enctype="multipart/form-data"
             >
               <div class="form-wrapper-fullname">
                 <input
                   class="input-form-control-fullname"
                   type="text"
-                  name="name"
+                  name="firstName"
+                  required
+                  minlength="2"
+                  maxlength="18"
+                />
+                <div class="form-label-fullname">
+                  First name
+                </div>
+                <i class="bi bi-person-circle reg-user-icon"></i>
+              </div>
+              <div class="form-wrapper-fullname">
+                <input
+                  class="input-form-control-fullname"
+                  type="text"
+                  name="lastName"
                   required
                   minlength="8"
                   maxlength="32"
                 />
                 <div class="form-label-fullname">
-                  Full name
+                  Last name
                 </div>
                 <i class="bi bi-person-circle reg-user-icon"></i>
+              </div>
+              <div class="form-wrapper-fullname">
+                <input
+                  class="input-form-control-fullname"
+                  type="text"
+                  name="category"
+                  required
+                  minlength="8"
+                  maxlength="32"
+                />
+                <div class="form-label-fullname">
+                  Category
+                </div>
+                <i class="bi bi-person-lines-fill"></i>
               </div>
               <div class="form-wrapper-emailRegister">
                 <input
@@ -57,9 +86,10 @@
                 <i class="bi bi-eye-slash-fill reg-psw-icon"></i>
                 <!-- RegEx PATTERN: 1 Uppercase, 1 Lowercase, 1 Number, 1 Symbol, symbol required -->
               </div>
-              <div class="form-wrapper-date">
-                <!-- <label class="form-title" for="birth-date">Birth date</label> -->
-                <input
+              <!-- @felix: queda comentado para reintegrarlo después en la db -->
+              <!-- <div class="form-wrapper-date">
+                 <label class="form-title" for="birth-date">Birth date</label> 
+                 <input
                   class="input-form-control-date"
                   type="date"
                   name="birth-date"
@@ -70,18 +100,18 @@
                 />
                 <div class="form-label-date">
                   Birth date
-                </div>
-              </div>
-              <!-- <p>
-                <label for="photo">Profile Picture </label>
+                </div> 
+               </div> --> 
+              <p>
+                <label for="image">Profile Picture </label>
                 <input
                   type="file"
-                  name="photo"
+                  name="image"
                   id="photo"
-                  accept=".jpg"
+                  accept="image/*"
                   required
                 />
-              </p> -->
+              </p>
               <p class="form-btn-container">
                 <button type="submit" class="btn-form-signin">
                   <a href="/#">Sign Up</a>
