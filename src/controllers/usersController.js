@@ -14,7 +14,7 @@ const usersController = {
 
   signup: (req, res) => {
     if (req.file) {
-        const nuevoArchivo = {
+        const nuevoUser = {
           id: users[users.length - 1].id + 1,
           firstName: req.body.firstName,
           lastName: req.body.lastName,
@@ -24,9 +24,11 @@ const usersController = {
           image: req.file.image,
         };
   
-        users.push(nuevoArchivo);
-  
+        users.push(nuevoUser);
+        
+        console.log(users)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+        
       } else {
         let archivo = path.join(__dirname, "../views/products/product-create-form");
         res.render(archivo, {
