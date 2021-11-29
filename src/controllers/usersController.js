@@ -1,48 +1,94 @@
-// utilizo libreria path para obtener la ruta
-const fs = require("fs");
+/* Package used */
+const fs = require("fs");                       // utilizo libreria path para obtener la ruta
 const path = require("path");
+const modelUsers = require("../model/modelUsers");    /* Function related to the user -> JSON */
+const bcryptjs = require('bcryptjs');
 
-const usersFilePath = path.join(__dirname, "../data/usersDatabase.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+/* Define constant */
+const users = modelUsers.getData();          /* JSON -> Object array */
 
+/* object: usersController */
 const usersController = {
 
+  /* Register form */
   register: (req, res) => {
-    let archivo = path.join(__dirname, "../views/users/register");
-    res.render(archivo, {users:users});
+    let file = path.join(__dirname, "../views/users/register");
+    res.render(file, {users:users});
   },
 
   signup: (req, res) => {
-    if (req.file) {
-        const nuevoUser = {
-          id: users[users.length - 1].id + 1,
-          firstName: req.body.firstName,
-          lastName: req.body.lastName,
-          email: req.body.email,
-          password: req.body.password,
-          category: req.body.category,
-          image: req.file.image,
-        };
-  
-        users.push(nuevoUser);
-        
-        console.log(users)
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        
-      } else {
-        let archivo = path.join(__dirname, "../views/products/product-create-form");
-        res.render(archivo, {
-          users: users,
+
+    /* check if the mail is registered */
+    if (modelUsers.findByField('email',req.body.email))
+    {
+        /* msg error email registered  */
+        return res.render("../views/users/register", {
+          errors : {
+            msg : "email is already exist"
+          }
         });
-      }
-  
-      res.redirect("/products/store");
+    } 
+    else
+    {
+      /* create new user */
+      const newUser = {
+        ...req.body,                                            /* Get body object */ 
+        password: bcryptjs.hashSync(req.body.password, 10),     /* Encryption hash 10 characters */
+        image: req.file.filename                                /* image */
+      };
+      modelUsers.create(newUser);
+    }
+      // Redirect to main form
+      res.redirect("/");
   },
 
   login: (req, res) => {
-    let archivo = path.join(__dirname, "../views/users/login");
-    res.render(archivo);
+    let file = path.join(__dirname, "../views/users/login");
+    res.render(file);
   },
+
+  loginProcess: (req,res)=>{
+    let userToLogin = modelUsers.findByField('email',req.body.email);
+
+    /* check email user exist */
+    if (userToLogin){ 
+      let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+      if (passwordOk){
+        delete userToLogin.password;                      /* the password is removed for security */
+        req.session.userLogged = userToLogin;             /* Copy user to session */
+        return res.redirect("/profile");                  /* Redirect URL */
+      }
+
+        /* msg error password  */
+        return res.render("../views/users/login", {
+          errors : {
+            msg : "password incorrect"
+          }
+        });
+
+    }
+    
+    /* msg error email */
+    return res.render("../views/users/login", {
+      errors : {
+        msg : "This email no is register"
+      }
+    });
+
+  },
+
+  profile:(req,res) => {
+    return res.render("../views/users/userProfile",{
+      user: req.session.userLogged       /* Receive profile logged */
+    });
+  },
+
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
+
 };
 
 module.exports = usersController;

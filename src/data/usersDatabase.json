@@ -1,6 +1,6 @@
 [
  {
-  "id": "0",
+  "id": 0,
   "firstName": "Marcos",
   "lastName": "Jiménez",
   "email": "marcos.j@gmail.com",
@@ -9,7 +9,7 @@
   "image": ""
  },
  {
-  "id": "1",
+  "id": 1,
   "firstName": "Roque",
   "lastName": "McGuy",
   "email": "mcguy@gmail.com",
@@ -18,7 +18,7 @@
   "image": ""
  },
  {
-  "id": "3",
+  "id": 2,
   "firstName": "Valentina",
   "lastName": "Pereyra Iraola",
   "email": "v.pi@gmail.com",
@@ -27,7 +27,7 @@
   "image": ""
  },
  {
-  "id": "4",
+  "id": 3,
   "firstName": "Pablo",
   "lastName": "Guillotina",
   "email": "guillota@gmail.com",
@@ -36,12 +36,20 @@
   "image": ""
  },
  {
-  "id": "5",
+  "id": 4,
   "firstName": "Luis",
   "lastName": "Pérez",
   "email": "l.p35@gmail.com",
   "password": "losramonesmania",
   "category": "buyer",
   "image": ""
+ },
+ {
+  "id": 5,
+  "firstName": "Diego",
+  "lastName": "Maradona",
+  "category": "Vendedor",
+  "email": "eldiegote@gmail.com",
+  "password": "$2a$10$AnVHxZLHOKEUSYJIPe6rHOCM64BXmxKvDn1SEB7S9TLy7dHCacLBW"
  }
 ]
