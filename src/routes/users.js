@@ -25,7 +25,7 @@ router.post("/register", fileUpload.single('image'), usersController.signup);
 router.post("/login", usersController.loginProcess);
 
 // Profile user
-router.get("/profile", usersController.profile);
+router.get("/profile", userMiddleware.authMiddleware, usersController.profile);
 
 // Logout
 router.get('/logout/', usersController.logout);

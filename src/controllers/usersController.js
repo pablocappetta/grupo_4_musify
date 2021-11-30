@@ -3,6 +3,7 @@ const fs = require("fs");                       // utilizo libreria path para ob
 const path = require("path");
 const modelUsers = require("../model/modelUsers");    /* Function related to the user -> JSON */
 const bcryptjs = require('bcryptjs');
+const {validationResult} = require('express-validator');
 
 /* Define constant */
 const users = modelUsers.getData();          /* JSON -> Object array */
@@ -10,13 +11,21 @@ const users = modelUsers.getData();          /* JSON -> Object array */
 /* object: usersController */
 const usersController = {
 
-  /* Register form */
   register: (req, res) => {
     let file = path.join(__dirname, "../views/users/register");
     res.render(file, {users:users});
   },
 
   signup: (req, res) => {
+
+    const resultValidation = validationResult(req);
+    /* put errors in register form */
+		if (resultValidation.errors.length > 0) {
+			return res.render('../views/users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 
     /* check if the mail is registered */
     if (modelUsers.findByField('email',req.body.email))
@@ -25,7 +34,8 @@ const usersController = {
         return res.render("../views/users/register", {
           errors : {
             msg : "email is already exist"
-          }
+          },
+          oldData: req.body
         });
     } 
     else
@@ -56,6 +66,12 @@ const usersController = {
       if (passwordOk){
         delete userToLogin.password;                      /* the password is removed for security */
         req.session.userLogged = userToLogin;             /* Copy user to session */
+        
+        /* key-value */
+        if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+        
         return res.redirect("/profile");                  /* Redirect URL */
       }
 
