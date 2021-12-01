@@ -24,6 +24,11 @@
                   required
                 />
                   <div class="form-label-email"> Email </div>
+                  <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                      <%= errors.email.msg %>
+                    </div>
+                  <% } %>
                   <i class="bi bi-person-circle login-user-icon"></i>
               </div>
               <div class="form-wrapper-psw">

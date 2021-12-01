@@ -28,7 +28,7 @@ router.post("/login", usersController.loginProcess);
 router.get("/profile", userMiddleware.authMiddleware, usersController.profile);
 
 // Logout
-router.get('/logout/', usersController.logout);
+router.get('/logout', usersController.logout);
 
 
 // Tengo que exportar el router

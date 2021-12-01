@@ -40,6 +40,8 @@ const usersController = {
     } 
     else
     {
+
+      console.log(req.file);
       /* create new user */
       const newUser = {
         ...req.body,                                            /* Get body object */ 
