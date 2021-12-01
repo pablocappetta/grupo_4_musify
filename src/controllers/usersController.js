@@ -65,7 +65,8 @@ const usersController = {
     /* check email user exist */
     if (userToLogin){ 
       let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-      if (passwordOk){
+      if (passwordOk)
+      {
         delete userToLogin.password;                      /* the password is removed for security */
         req.session.userLogged = userToLogin;             /* Copy user to session */
         

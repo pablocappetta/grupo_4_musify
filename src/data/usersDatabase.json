@@ -9,6 +9,7 @@
   "image": ""
  },
  {
+<<<<<<< HEAD
   "id": 1,
   "firstName": "Roque",
   "lastName": "McGuy",
@@ -52,5 +53,13 @@
   "email": "eldiegote@gmail.com",
   "password": "$2a$10$1NcaFoYPvH/s0YyvvXx.kuJdBLSxGWO72.qot0NmgR8Ka4.1NwYz2",
   "image": "1638317475180_img.jpg"
+=======
+  "id": "01",
+  "firstName": "Pedro",
+  "lastName": "McDonalds",
+  "email": "pedro.mc@gmail.com",
+  "password": "$2a$10$zNe2D7FtTKb2wZ0NsYpmVO5CbxleWh.J9YHGCWg2l9nftXM.JPWRq",
+  "category": "Vendor"
+>>>>>>> 3570921da781e9e12541150abc67c777057b8fe7
  }
 ]
