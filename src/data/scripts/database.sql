@@ -15,8 +15,10 @@ CREATE TABLE `Products` (
 	`users_id` NOT NULL AUTO_INCREMENT, 
 	`genre_id` NOT NULL AUTO_INCREMENT, 
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`users_id`) REFERENCES `Users`(`id`)
-	FOREIGN KEY (`genre_id`) REFERENCES `Genres`(`id`)
+	KEY `products_users_id` (`users_id`),
+  	KEY `products_genre_id` (`genre_id`),
+	CONSTRAINT `products_users_id` FOREIGN KEY (`users_id`) REFERENCES `Users`(`id`)
+	CONSTRAINT `products_genre_id` FOREIGN KEY (`genre_id`) REFERENCES `Genres`(`id`)
 );
 
 DROP TABLE IF EXISTS `Users`;
@@ -30,7 +32,7 @@ CREATE TABLE `Users` (
 	`image_producer` VARCHAR(2048),
 	`category_id` NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id`)
-	FOREIGN KEY (`category_id`) REFERENCES `User_category`(`id`)
+	CONSTRAINT FOREIGN KEY (`category_id`) REFERENCES `User_category`(`id`)
 );
 
 DROP TABLE IF EXISTS `Genres`;
@@ -54,6 +56,6 @@ CREATE TABLE `Cart` (
 	`users_id` NOT NULL AUTO_INCREMENT,
 	`products_id` NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id`)
-	FOREIGN KEY (`users_id`) REFERENCES `Users`(`id`),
-	FOREIGN KEY (`products_id`) REFERENCES `Products`(`id`)
+	CONSTRAINT FOREIGN KEY (`users_id`) REFERENCES `Users`(`id`),
+	CONSTRAINT FOREIGN KEY (`products_id`) REFERENCES `Products`(`id`)
 );
