@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Genres';
+    let alias = 'Users';
 
     let cols = {
         id: {
@@ -7,18 +7,40 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        genre_name: {
+        first_name: {
+            type: dataTypes.STRING,
+            allowNull: false,
+        },
+        last_name: {
+            type: dataTypes.STRING,
+            allowNull: false,
+        },
+        email: {
             type: dataTypes.STRING,
             allowNull: false,
             unique: true
+        },
+        password: {
+            type: dataTypes.STRING,
+            allowNull: false,
+        },
+        description_producer: {
+            type: dataTypes.STRING,
+        },
+        image_producer: {
+            type: dataTypes.STRING,
+        },
+        category_id: {
+            type: dataTypes.INTEGER,
+            autoIncrement: true
         }
     };
 
     let config = {
-        tableName: 'genres',
+        tableName: 'Users',
         timestamps: false
     }
 
-    const Genres = sequelize.define(alias, cols, config);
-    return Genres;
+    const Users = sequelize.define(alias, cols, config);
+    return Users;
 }

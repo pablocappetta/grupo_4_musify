@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Genres';
+    let alias = 'UserCategory';
 
     let cols = {
         id: {
@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        genre_name: {
+        user_type: {
             type: dataTypes.STRING,
             allowNull: false,
             unique: true
@@ -15,10 +15,10 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        tableName: 'genres',
+        tableName: 'UserCategory',
         timestamps: false
     }
 
-    const Genres = sequelize.define(alias, cols, config);
-    return Genres;
+    const UserCategory = sequelize.define(alias, cols, config);
+    return UserCategory;
 }

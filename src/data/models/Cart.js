@@ -10,23 +10,24 @@ module.exports = (sequelize, dataTypes) => {
         price: {
             type: dataTypes.FLOAT,
             allowNull: false,
-            unique: true
         },
         users_id: {
-            type: dataTypes.STRING,
+            type: dataTypes.INTEGER,
             allowNull: false,
+            autoIncrement: true
         },
         products_id: {
-            type: dataTypes.STRING,
+            type: dataTypes.INTEGER,
             allowNull: false,
+            autoIncrement: true
         }
     };
 
     let config = {
-        tableName: 'cart',
+        tableName: 'Cart',
         timestamps: false
     }
 
     const Cart = sequelize.define(alias, cols, config);
-    return Genres;
+    return Cart;
 }
