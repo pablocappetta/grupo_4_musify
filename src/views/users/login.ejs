@@ -23,10 +23,13 @@
                   spellcheck="false"
                   required
                 />
-                <div class="form-label-email">
-                  Email
-                </div>
-                <i class="bi bi-person-circle login-user-icon"></i>
+                  <div class="form-label-email"> Email </div>
+                  <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                      <%= errors.email.msg %>
+                    </div>
+                  <% } %>
+                  <i class="bi bi-person-circle login-user-icon"></i>
               </div>
               <div class="form-wrapper-psw">
                 <input
@@ -41,13 +44,14 @@
                 </div>
                 <i class="bi bi-eye-slash-fill login-psw-icon"></i>
               </div>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="remember_user">Remember my user
+              </label>
               <p class="psw-container">
                   <a href="/#" class="forgot-psw"> Forgot your password?</a>
               </p>
               <p class="form-btn-container">
-                <button type="submit" class="btn-form-login1">
-                  <a href="/#">Log In</a>
-                </button>
+                <button type="submit" class="btn-form-login1"> Log In </button>
                 <div class="login-separation-container">
                     <p class="login-separation">
                         Or

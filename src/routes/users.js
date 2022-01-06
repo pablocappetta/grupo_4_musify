@@ -1,31 +1,33 @@
-//
+// Packages
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
-const path = require("path");
-const { check } = require("express-validator");
+const path = require('path');
 
+// Controller
 const usersController = require("../controllers/usersController");
 
-/* === CONFIGURACIONES DE MULTER PARA ALMACENAMIENTO DE IMGS === */
+// Middlewares
+const fileUpload = require('../middlewares/multerMiddleware');      /* Middleware to upload images with multer pkg */
+const userMiddleware = require('../middlewares/userMiddleware');    /* Middleware user state => is logged?, registered? etc */
 
-const multerDiskStorage = multer.diskStorage({
-  destination: (req, file, callback) => {
-    let folder = path.join(__dirname, "../../public/img/producer-img"); // Multer guardará acá las fotos enviadas por el form
-    callback(null, folder);
-  },
+// Form register
+router.get("/register",userMiddleware.guestMiddleware , usersController.register);
 
-  fileName: (req, file, callback) => {
-    let imageName = Date.now() + path.extname(file.originalname);
-    callback(null, imageName);
-  },
-});
+// Form Login
+router.get("/login",userMiddleware.guestMiddleware ,usersController.login);
 
-let fileUpload = multer({ storage: multerDiskStorage });
+// Create user register
+router.post("/register", fileUpload.single('image'), usersController.signup);
 
-router.get("/login", usersController.login);
-router.get("/register", usersController.register);
-router.post("/register", fileUpload.single("image"), usersController.signup);
+// Process login
+router.post("/login", usersController.loginProcess);
+
+// Profile user
+router.get("/profile", userMiddleware.authMiddleware, usersController.profile);
+
+// Logout
+router.get('/logout', usersController.logout);
+
 
 // Tengo que exportar el router
 module.exports = router;

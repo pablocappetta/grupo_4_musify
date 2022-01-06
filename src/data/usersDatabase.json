@@ -1,6 +1,6 @@
 [
  {
-  "id": "0",
+  "id": 0,
   "firstName": "Marcos",
   "lastName": "Jiménez",
   "email": "marcos.j@gmail.com",
@@ -9,11 +9,48 @@
   "image": ""
  },
  {
-  "id": "01",
-  "firstName": "Pedro",
-  "lastName": "McDonalds",
-  "email": "pedro.mc@gmail.com",
-  "password": "$2a$10$zNe2D7FtTKb2wZ0NsYpmVO5CbxleWh.J9YHGCWg2l9nftXM.JPWRq",
-  "category": "Vendor"
+  "id": 1,
+  "firstName": "Roque",
+  "lastName": "McGuy",
+  "email": "mcguy@gmail.com",
+  "password": "lilisland",
+  "category": "buyer",
+  "image": ""
+ },
+ {
+  "id": 2,
+  "firstName": "Valentina",
+  "lastName": "Pereyra Iraola",
+  "email": "v.pi@gmail.com",
+  "password": "dummypsw",
+  "category": "vendor",
+  "image": ""
+ },
+ {
+  "id": 3,
+  "firstName": "Pablo",
+  "lastName": "Guillotina",
+  "email": "guillota@gmail.com",
+  "password": "contraseñadepablo",
+  "category": "vendor",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "firstName": "Luis",
+  "lastName": "Pérez",
+  "email": "l.p35@gmail.com",
+  "password": "losramonesmania",
+  "category": "buyer",
+  "image": ""
+ },
+ {
+  "id": 5,
+  "firstName": "Diego",
+  "lastName": "Maradona",
+  "category": "Vendedor",
+  "email": "eldiegote@gmail.com",
+  "password": "$2a$10$1NcaFoYPvH/s0YyvvXx.kuJdBLSxGWO72.qot0NmgR8Ka4.1NwYz2",
+  "image": "1638317475180_img.jpg"
  }
 ]

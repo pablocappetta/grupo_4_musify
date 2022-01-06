@@ -1,16 +1,22 @@
 // ************ Require's ************
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
+const cookies = require('cookie-parser');
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // ************ express() ************
 const app = express();
 
 // ************ Middlewares ************
+app.use(session({secret : "secret", resave: false, saveUninitialized: false})); // Use session (cross all soft)
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false })); // Para poder tomar los parámetros desde el POST
 app.use(express.json()); // Para poder trabajar con stringify y demás
+app.use(cookies());       // Para trabajar con las cookies
+app.use(userLoggedMiddleware);
 
 //process.env.PORT -> Heroku PORT
 app.listen(process.env.PORT || 42133, () => {
