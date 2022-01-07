@@ -103,6 +103,7 @@ h3.title-product-name {
   font-weight: 700;
   font-size: 12px;
   transition: all 0.35s;
+  padding: 0;
 }
 
 .container-producer {
@@ -556,8 +557,8 @@ p.description__artist {
     height: 2.5rem;
     width: 6rem;
     position: absolute;
-    right: 8%;
-    top: 30%;
+    right: 4%;
+    top: 22%;
   }
 
   /********************** top-section__product ******************************/
