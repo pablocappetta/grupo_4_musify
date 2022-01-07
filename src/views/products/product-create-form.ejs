@@ -16,7 +16,11 @@
         <section>
           <div class="main-form">
             <!-- @pablo: Hay que revisar esto para poder gestionar bien el post y hacer un redirect si es que el ID se creó correctamente -->
-            <form action="/products/create" method="POST" enctype="multipart/form-data">
+            <form
+              action="/products/create"
+              method="POST"
+              enctype="multipart/form-data"
+            >
               <div class="row product-detail">
                 <div class="col-12 col-md-6">
                   <label for="name" class="form-label">Product Name:</label>
@@ -24,7 +28,7 @@
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="E.g: Romeo Santos sample pack"
+                    placeholder="E.g: Romeo Santos Sample Pack"
                     class="form-input"
                   />
                 </div>
@@ -34,12 +38,14 @@
                     type="text"
                     id="price"
                     name="price"
-                    placeholder="E.g: 9.99"
+                    placeholder="E.g: $9.99"
                     class="form-input"
                   />
                 </div>
                 <div class="col-12 col-md-6">
-                  <label for="imageProduct" class="form-label">Upload an image:</label>
+                  <label for="imageProduct" class="form-label"
+                    >Upload an image:</label
+                  >
                   <input
                     type="file"
                     id="imageProduct"
@@ -54,7 +60,7 @@
                     type="text"
                     id="discount"
                     name="discount"
-                    placeholder="Ej: 15"
+                    placeholder="E.g: $15"
                     class="form-input"
                   />
                 </div>

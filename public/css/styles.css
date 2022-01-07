@@ -631,7 +631,7 @@ p.store-commends-name-person {
   max-width: 100%;
 }
 
-.container-edit-store{
+.container-edit-store {
   padding: 10px;
   max-width: 1024px;
   margin: auto;
@@ -712,6 +712,7 @@ h3.grids-titles {
   font-size: 1rem;
   text-indent: 1rem;
   transition: all 0.35s;
+  flex-shrink: 0;
 }
 
 .input-form-control-fullname:focus {
@@ -783,6 +784,15 @@ h3.grids-titles {
 }
 
 .reg-email-icon {
+  position: absolute;
+  top: 58%;
+  right: 4%;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.35s;
+}
+
+.reg-category-icon {
   position: absolute;
   top: 58%;
   right: 4%;
@@ -1198,6 +1208,15 @@ main div section div form p button {
   margin-bottom: 25px;
 }
 
+.form-check-label {
+  display: flex;
+  justify-content: center;
+}
+
+.form-check-input {
+  margin-right: 1rem;
+}
+
 /******************/
 /* FOOTER STYLING */
 /******************/
@@ -1285,6 +1304,10 @@ footer a {
     right: 13%;
   }
 
+  .reg-category-icon {
+    right: 13%;
+  }
+
   .reg-psw-icon {
     right: 13%;
   }
@@ -1323,6 +1346,10 @@ footer a {
   }
 
   .reg-email-icon {
+    right: 10%;
+  }
+
+  .reg-category-icon {
     right: 10%;
   }
 
@@ -1473,8 +1500,20 @@ footer a {
     right: 5%;
   }
 
+  .reg-category-icon {
+    right: 5%;
+  }
+
   .reg-psw-icon {
     right: 5%;
+  }
+
+  .form-check-input {
+    width: 1rem;
+    height: 20px;
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 0.1rem;
   }
 }
 
@@ -1578,6 +1617,14 @@ footer a {
     width: 425px;
     height: 20px;
     border-radius: 10px;
+  }
+
+  .form-check-input {
+    width: 1rem;
+    height: 20px;
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 0.1rem;
   }
 
   article.product-new-arrivals {
