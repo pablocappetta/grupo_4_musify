@@ -40,7 +40,15 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'Users',
         timestamps: false
     }
+    
+    const users = sequelize.define(alias, cols, config);
 
-    const Users = sequelize.define(alias, cols, config);
-    return Users;
+    users.associate = function(models) {
+        users.hasOne(models.Cart, { // models.User -> User es el valor de alias en Users.js
+            as: "cart", // El nombre del modelo pero en plural
+            foreignKey: "user_id"
+        })
+    }
+    
+    return users;
 }

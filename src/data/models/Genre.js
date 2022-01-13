@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const Genres = sequelize.define(alias, cols, config);
+    const genres = sequelize.define(alias, cols, config);
     
     /*
     Cart.associate = function(models) {
@@ -30,5 +30,5 @@ module.exports = (sequelize, dataTypes) => {
     }
     */
     
-    return Genres;
+    return genres;
 }

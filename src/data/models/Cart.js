@@ -28,20 +28,18 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const Cart = sequelize.define(alias, cols, config);
+    const cart = sequelize.define(alias, cols, config);
 
-    /*
-    Cart.associate = function(models) {
-        Cart.hasMany(models.Movie, { // models.Movies -> Movie es el valor de alias en movie.js
-            as: "movies", // El nombre del modelo pero en plural
-            foreignKey: "genre_id"
+    cart.associate = function(models) {
+        cart.hasOne(models.User, { // models.User -> User es el valor de alias en Users.js
+            as: "users", // El nombre del modelo pero en plural
+            foreignKey: "user_id"
         })
-    }
-    */
+    };
 
 
 
-    return Cart;
+    return cart;
 
 
 

@@ -48,6 +48,6 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const Products = sequelize.define(alias, cols, config);
-    return Products;
+    const products = sequelize.define(alias, cols, config);
+    return products;
 }

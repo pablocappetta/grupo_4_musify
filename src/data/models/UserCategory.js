@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'UserCategory';
 
     let cols = {
-        
+
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
@@ -21,6 +21,6 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const UserCategory = sequelize.define(alias, cols, config);
-    return UserCategory;
+    const userCategory = sequelize.define(alias, cols, config);
+    return userCategory;
 }
