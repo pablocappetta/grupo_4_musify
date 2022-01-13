@@ -31,6 +31,15 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+/*
+    Cart.associate = function(models) {
+        Cart.hasMany(models.Movie, { // models.Movies -> Movie es el valor de alias en movie.js
+            as: "movies", // El nombre del modelo pero en plural
+            foreignKey: "genre_id"
+        })
+    }
+    */
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

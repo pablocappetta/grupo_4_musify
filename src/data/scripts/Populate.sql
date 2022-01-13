@@ -46,5 +46,3 @@ INSERT INTO musify_db.users (first_name, last_name, email, password, description
 ("1John","1Fisherman","fishermansito@gmail.com", "12345", "Fisherman from New Zeland is a producer cool ride shape", "1_producerUser.jpg", 1 ),
 ("Charlie","Coleman","colemanch@gmail.com", "nave12", "Charlie is from US", "2_producerUser.jpg", 2);
 
-
- 

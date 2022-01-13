@@ -29,5 +29,20 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Cart = sequelize.define(alias, cols, config);
+
+    /*
+    Cart.associate = function(models) {
+        Cart.hasMany(models.Movie, { // models.Movies -> Movie es el valor de alias en movie.js
+            as: "movies", // El nombre del modelo pero en plural
+            foreignKey: "genre_id"
+        })
+    }
+    */
+
+
+
     return Cart;
+
+
+
 }
