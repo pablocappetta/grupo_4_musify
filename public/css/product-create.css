@@ -1,11 +1,10 @@
 .product-form-container {
   width: 85%;
   max-width: 720px;
-  margin: 40px 60px;
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 12px 20px;
+  padding: 12px 40px;
   /*border: 1px solid #ccc;*/
   border-radius: 4px;
   /*background-color: #f8f8f8;*/
@@ -25,15 +24,19 @@ label {
   border: solid 2px #ff5f67;
 }
 
-button {
+.buy-now-button {
   background-color: #ff424d;
   color: white;
   border-radius: 35px;
+  height: 42px;
+  width: 85px;
   border: solid 2px #ff424d;
   line-height: 34px;
   font-weight: 700;
-  font-size: 12px;
-  padding: 0rem 2.5rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 9px;
   transition: all 0.35s;
 }
 
