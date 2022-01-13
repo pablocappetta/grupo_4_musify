@@ -7,17 +7,17 @@
       <%- include ('../partials/header') %>
     </div>
     <main>
-      <div class="container products-wrapper">
+      <div class="container-products-wrapper">
         <div class="row">
           <div class="col-12">
-            <h2 class="products-title">Form to edit a product</h2>
+            <h2 class="products-title">Edit product</h2>
           </div>
         </div>
         <div class="col-12">
           <form action="/products/edit/<%=
           productSent.id %>?_method=PUT"" method="POST"> <!-- @nacuna: We need to research what conditional to use so this form action takes the Product ID picked above to edit the page-->
               <div class="col-12 col-md-6">
-                <label for="id" class="form-label">Select Product ID:</label>
+                <label for="id" class="form-label">Product ID</label>
                 <select name="id" id="id" class="form-input"> 
                   <option value="<%= productSent.id %>"><%=
                   productSent.id %></option>
@@ -25,7 +25,7 @@
               </div>
               <div class="row product-detail">
               <div class="col-12 col-md-6">
-                <label for="name" class="form-label">Product Name:</label>
+                <label for="name" class="form-label">Product Name</label>
                 <input
                   type="text"
                   id="name"
@@ -36,7 +36,7 @@
                 />
               </div>
               <div class="col-12 col-md-6">
-                <label for="price" class="form-label">Price:</label>
+                <label for="price" class="form-label">Price</label>
                 <input
                   type="text"
                   id="price"
@@ -47,7 +47,7 @@
                 />
               </div>
               <div class="col-12 col-md-6">
-                <label for="discount" class="form-label">Discount:</label>
+                <label for="discount" class="form-label">Discount</label>
                 <input
                   type="text"
                   id="discount"
@@ -58,7 +58,7 @@
                 />
               </div>
               <div class="col-12 col-md-6">
-                <label for="genre" class="form-label">Genre:</label>
+                <label for="genre" class="form-label">Genre</label>
                 <select name="genre" id="genre" class="form-input">
                   <option value="<%= productSent.genre %>" selected><%= productSent.genre %></option>
                   <option value="Ambient">Ambient</option>
@@ -70,7 +70,7 @@
               </div>
               <div class="col-12">
                 <label for="description" class="form-label"
-                  >Product Description:</label
+                  >Product Description</label
                 >
                 <textarea
                   name="descriptionProduct"
@@ -83,7 +83,7 @@
               <!-- @félix: Habría que ver como hacer para que si el usuario no ingresa ninguna imagen en el update -->
               <!-- mantenga la anterior. El put va a sobreescribir -->
               <div class="col-12 col-md-6">
-                <label for="imageProduct" class="form-label">Update an image:</label>
+                <label for="imageProduct" class="form-label">Update an image</label>
                 <input
                   type="file"
                   id="imageProduct"
@@ -112,7 +112,7 @@
           action="/products/delete/<%= productSent.id %>?_method=DELETE"
           method="POST"
         >
-          <button type="submit">Delete product</button>
+          <button type="submit" class="delete-product-button">Delete product</button>
         </form>
         </div>
       </div>
