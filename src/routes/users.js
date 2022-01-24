@@ -29,5 +29,13 @@ router.get("/profile", userMiddleware.authMiddleware, usersController.profile);
 router.get('/logout', usersController.logout);
 
 
+// ---------------------------------------------------------------------------------
+// Test
+// ---------------------------------------------------------------------------------
+router.get('/test', usersController.test);
+
+
+
+
 // Tengo que exportar el router
 module.exports = router;

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Products';
+    let alias = 'Product';
 
     let cols = {
         id: {
@@ -35,19 +35,37 @@ module.exports = (sequelize, dataTypes) => {
         },
         users_id: {
             type: dataTypes.INTEGER,
-            autoIncrement: true
+            //autoIncrement: true
         },
         genre_id: {
             type: dataTypes.INTEGER,
-            autoIncrement: true
+            //autoIncrement: true
         }
     };
 
     let config = {
-        tableName: 'Products',
+        tableName: 'Products',                      // Table Name in DataBase
         timestamps: false
     }
 
     const products = sequelize.define(alias, cols, config);
+
+    
+    // ** Associations ** //
+    products.associate = function(models) {
+        products.belongsTo(models.Genre, {          // value from alias 
+            as: "genero",                           // Relationship name
+            foreignKey: "genre_id"                  // Foreing Key from colums
+        });
+
+        products.belongsToMany(models.Cart, {
+            as: "carts",
+            through: "cartsproducts",
+            foreignKey: "id",
+            otherKey:"cartId",
+            timestamps: false
+        });
+    }
+    
     return products;
 }

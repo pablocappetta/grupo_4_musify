@@ -49,14 +49,21 @@ CREATE TABLE `Products` (
 	CONSTRAINT `products_genre_id` FOREIGN KEY (`genre_id`) REFERENCES `Genres`(`id`)
 );
 
-
 DROP TABLE IF EXISTS `Cart`;
 CREATE TABLE `Cart` (
 	`id` INTEGER NOT NULL AUTO_INCREMENT,
 	`price` FLOAT NOT NULL,
 	`users_id` INTEGER NOT NULL,
-	`products_id` INTEGER NOT NULL,
 	PRIMARY KEY (`id`),
-	CONSTRAINT FOREIGN KEY (`users_id`) REFERENCES `Users`(`id`),
-	CONSTRAINT FOREIGN KEY (`products_id`) REFERENCES `Products`(`id`)
+	CONSTRAINT FOREIGN KEY (`users_id`) REFERENCES `Users`(`id`)
+);
+
+DROP TABLE IF EXISTS `cartsProducts`;
+CREATE TABLE `cartsProducts` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT,
+   `cartId` INTEGER NOT NULL,
+   `productId` INTEGER NOT NULL,
+   PRIMARY KEY (`id`),
+   CONSTRAINT FOREIGN KEY (`cartId`) REFERENCES `Cart`(`id`),
+   CONSTRAINT FOREIGN KEY (`productId`) REFERENCES `Products`(`id`)
 );

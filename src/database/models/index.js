@@ -5,7 +5,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
 
 let sequelize;
@@ -30,15 +30,6 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
-
-/*
-    Cart.associate = function(models) {
-        Cart.hasMany(models.Movie, { // models.Movies -> Movie es el valor de alias en movie.js
-            as: "movies", // El nombre del modelo pero en plural
-            foreignKey: "genre_id"
-        })
-    }
-    */
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

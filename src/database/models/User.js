@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Users';
+    let alias = 'User';
 
     let cols = {
         id: {
@@ -32,23 +32,30 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_id: {
             type: dataTypes.INTEGER,
-            autoIncrement: true
+            //autoIncrement: true
         }
     };
 
-    let config = {
-        tableName: 'Users',
+    let config = {  
+        tableName: 'users',                         // Table Name in DataBase
         timestamps: false
     }
     
-    const users = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias, cols, config);
+  
+    // ** Associations ** //
+    User.associate = function(models) {
+        User.belongsTo(models.UserCategory, {       // value from alias   
+            as: "UserCategory",                     // Relationship name
+            foreignKey: "category_id"               // Foreing Key from colums
+        });  
 
-    users.associate = function(models) {
-        users.hasOne(models.Cart, { // models.User -> User es el valor de alias en Users.js
-            as: "cart", // El nombre del modelo pero en plural
-            foreignKey: "user_id"
-        })
+        User.belongsTo(models.Cart, {
+            as: "cart",
+            foreignKey: "users_id"
+        });
+
     }
-    
-    return users;
+
+    return User;
 }

@@ -1,8 +1,10 @@
 // utilizo libreria path para obtener la ruta
 const fs = require("fs");
 const path = require("path");
-const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
+const productsFilePath = path.join(__dirname, "../database/productsDataBase.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+let db = require("../database/models");
 
 const productsController = {
   index: (req, res) => {
@@ -34,10 +36,20 @@ const productsController = {
 
   // Create - Form to create products
   create: (req, res) => {
-    let archivo = path.join(__dirname, "../views/products/product-create-form");
-    res.render(archivo, {
-      products: products,
-    });
+    let file = path.join(__dirname, "../views/products/product-create-form");
+    console.log("aca estoy create");
+    
+    /* OLD METHOD JSON */
+    // res.render(file, {
+    //   products: products,
+    // });
+
+    /* WITH DATABASE */
+    db.Product.findAll()
+      .then(function(products){
+        console.log(products);
+        //return res.render(file, {products:products});
+      })
   },
 
   // Create - Form to create products | Multer form validation
@@ -140,7 +152,43 @@ const productsController = {
       JSON.stringify(finalProducts, null, " ")
     );
     res.redirect("/store");
+  }
+
+
+  // ************************************************************************************** //
+  /*
+  createProduct: (req,res) => {
+    let file = path.join(__dirname, "../views/products/product-create-form")
+    return res.render(file); 
   },
+
+  saveProduct: (req,res) => {
+    db.Product.create({
+      // Columns from db
+      id: req.body,
+      product_name: req.body.productName,
+      price: req.body.price,
+      discount: req.body.discount,
+      producer: req.body.producer,
+      product_description: req.body.description,
+      product_image: req.body.image,
+      popularity: req.body.popularity
+    });
+
+    res.render("/product");
+
+  }
+  */
+
+
+
+
+
+
+
+
+
+
 };
 
 module.exports = productsController;

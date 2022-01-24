@@ -10,6 +10,7 @@ const path = require('path');
       cb(null, Date.now() + '_img' + path.extname(file.originalname));      
     }
 })
+
 const uploadFile = multer({ storage });
 
 
