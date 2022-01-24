@@ -37,7 +37,6 @@ const productsController = {
   // Create - Form to create products
   create: (req, res) => {
     let file = path.join(__dirname, "../views/products/product-create-form");
-    console.log("aca estoy create");
     
     /* OLD METHOD JSON */
     // res.render(file, {
@@ -47,13 +46,28 @@ const productsController = {
     /* WITH DATABASE */
     db.Product.findAll()
       .then(function(products){
-        console.log(products);
-        //return res.render(file, {products:products});
+        return res.render(file, {products:products});
       })
   },
 
   // Create - Form to create products | Multer form validation
   store: (req, res) => {
+    db.Product.create({
+      /*id:,
+      product_name: req.body.name,
+      price: req.body.price,
+      discount: req.body.discount,
+      producer: req.body.,
+      product_description: req.body.,
+      product_image: req.body.imageProduct,
+      popularity: req.body.,
+      users_id: req.body.,
+      product 
+      genre_id: req.body.genre
+      */
+    });
+
+    /* OLD VERSION WITH JSON
     if (req.file) {
       const nuevoArchivo = {
         id: products[products.length - 1].id + 1,
@@ -79,6 +93,7 @@ const productsController = {
     }
 
     res.redirect("/products/store");
+    */
   },
 
   // Edit - Form to edit products

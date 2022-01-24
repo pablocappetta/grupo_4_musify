@@ -19,6 +19,7 @@ const multerDiskStorage = multer.diskStorage({
     } 
 });
 
+
 let fileUpload = multer({storage: multerDiskStorage});
 
 // Si la solicitud es GET y la ruta '/' llamamos a la funcion index de productsController
@@ -42,16 +43,6 @@ router.put("/edit/:id", fileUpload.single("imageProduct"), productsController.up
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/delete/:id", productsController.destroy);
-
-
-//************************************ CRUD ************************************/
-
-/*** CREATE PRODUCT ***/
-/*
-router.get("/createProduct", productsController.createProduct);
-router.post("/createProduct", productsController.saveProduct);
-*/
-
 
 // Tengo que exportar el router
 module.exports = router;
