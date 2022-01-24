@@ -53,8 +53,8 @@ const productsController = {
   // Create - Form to create products | Multer form validation
   store: (req, res) => {
     db.Product.create({
-      /*id:,
-      product_name: req.body.name,
+      id:,
+      product_name: req.body.product_name,
       price: req.body.price,
       discount: req.body.discount,
       producer: req.body.,
