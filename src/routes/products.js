@@ -19,6 +19,7 @@ const multerDiskStorage = multer.diskStorage({
     } 
 });
 
+
 let fileUpload = multer({storage: multerDiskStorage});
 
 // Si la solicitud es GET y la ruta '/' llamamos a la funcion index de productsController

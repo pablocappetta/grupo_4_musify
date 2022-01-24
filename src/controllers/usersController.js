@@ -5,6 +5,12 @@ const modelUsers = require("../model/modelUsers");    /* Function related to the
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 
+// ---------------------------------------------------------------------------------
+// use Database
+// ---------------------------------------------------------------------------------
+let db = require("../database/models");
+
+
 /* Define constant */
 const users = modelUsers.getData();          /* JSON -> Object array */
 
@@ -19,9 +25,13 @@ const usersController = {
   signup: (req, res) => {
 
     const resultValidation = validationResult(req);
+
+    let file = path.join(__dirname, "../views/users/register");
+
     /* put errors in register form */
 		if (resultValidation.errors.length > 0) {
-			return res.render('../views/users/register', {
+      
+			return res.render(file, {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
@@ -31,7 +41,7 @@ const usersController = {
     if (modelUsers.findByField('email',req.body.email))
     {
         /* msg error email registered  */
-        return res.render("../views/users/register", {
+        return res.render(file, {
           errors : {
             msg : "email is already exist"
           },
@@ -62,6 +72,8 @@ const usersController = {
   loginProcess: (req,res)=>{
     let userToLogin = modelUsers.findByField('email',req.body.email);
 
+    let file = path.join(__dirname, "../views/users/login");
+
     /* check email user exist */
     if (userToLogin){ 
       let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -79,7 +91,7 @@ const usersController = {
       }
 
         /* msg error password  */
-        return res.render("../views/users/login", {
+        return res.render(file, {
           errors : {
             msg : "password incorrect"
           }
@@ -97,7 +109,8 @@ const usersController = {
   },
 
   profile:(req,res) => {
-    return res.render("../views/users/userProfile",{
+    let file = path.join(__dirname, "../views/users/userProfile");
+    return res.render(file, {
       user: req.session.userLogged       /* Receive profile logged */
     });
   },
@@ -106,7 +119,18 @@ const usersController = {
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
-	}
+	},
+
+
+  // ---------------------------------------------------------------------------------
+  test: (req, res) => {
+   /* db.UserCategory.findAll()
+      .then(function(UserCategory){
+        return res.render ("test", {UserCategory : UserCategory})
+      })*/
+  }
+
+
 
 };
 

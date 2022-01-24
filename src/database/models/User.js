@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Users';
+    let alias = 'User';
 
     let cols = {
         id: {
@@ -32,15 +32,30 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_id: {
             type: dataTypes.INTEGER,
-            autoIncrement: true
+            //autoIncrement: true
         }
     };
 
-    let config = {
-        tableName: 'Users',
+    let config = {  
+        tableName: 'users',                         // Table Name in DataBase
         timestamps: false
     }
+    
+    const User = sequelize.define(alias, cols, config);
+  
+    // ** Associations ** //
+    User.associate = function(models) {
+        User.belongsTo(models.UserCategory, {       // value from alias   
+            as: "UserCategory",                     // Relationship name
+            foreignKey: "category_id"               // Foreing Key from colums
+        });  
 
-    const Users = sequelize.define(alias, cols, config);
-    return Users;
+        User.belongsTo(models.Cart, {
+            as: "cart",
+            foreignKey: "users_id"
+        });
+
+    }
+
+    return User;
 }

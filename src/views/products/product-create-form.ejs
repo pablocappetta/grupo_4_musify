@@ -13,6 +13,18 @@
             <h2 class="products-title">Add a new product</h2>
           </div>
         </div>
+
+        <label for = ""> product name </label>
+          <select name="productsname">
+            <% for (let i = 0; i < products.length; i++){ %>
+              <option value ="<%=products[i].id%>">
+                <%=products[i].product_name%>
+              </option>
+            <% } %>
+          </select>
+        </label>
+        
+
         <section>
           <div class="main-form">
             <!-- @pablo: Hay que revisar esto para poder gestionar bien el post y hacer un redirect si es que el ID se creó correctamente -->
