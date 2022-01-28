@@ -10,10 +10,11 @@ const usersController = require("../controllers/usersController");
 const fileUpload = require('../middlewares/multerMiddleware');      /* Middleware to upload images with multer pkg */
 const userMiddleware = require('../middlewares/userMiddleware');    /* Middleware user state => is logged?, registered? etc */
 const registerValidator = require('../middlewares/validateRegisterMiddleware'); /*  Middle validates registration => captures errors to send them to the views */
+const loginValidator = require('../middlewares/validateLoginMiddleware'); /*  Middle validates login => captures errors to send them to the views */
 
 // Login
-router.get("/login",userMiddleware.guestMiddleware ,usersController.login);
-router.post("/login", usersController.loginProcess);
+router.get("/login", userMiddleware.guestMiddleware ,usersController.login);
+router.post("/login", loginValidator, usersController.loginProcess);
 
 // Create user register
 router.get("/register",userMiddleware.guestMiddleware, usersController.register);
