@@ -1,0 +1,36 @@
+{
+  "name": "musify",
+  "version": "0.0.1",
+  "description": "- 🎺 Empower your tracks with studio-class kits\r - 🖥️ Connect with producers around the world\r - ⚡ Share your knowledge and make profits out of it",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablocappetta/grupo_4_musify.git"
+  },
+  "author": "Pablo Cappetta, Nicolas Acuña, Diego Cejas, Felix Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablocappetta/grupo_4_musify/issues"
+  },
+  "homepage": "https://github.com/pablocappetta/grupo_4_musify#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.13.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^7.0.0-alpha.1"
+  },
+  "keywords": []
+}

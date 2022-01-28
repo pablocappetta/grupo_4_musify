@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head') %>
+  <!-- Corremos los partials -->
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../partials/header') %>
+    </div>
+    <main>
+      <div class="color-fix-desktop-top">
+        <section class="margin-fix-for-desktop-main section-top-view">
+          <div class="flex-first-column-main">
+            <h2 class="grids-titles">Redefine your style</h2>
+            <p class="grids-descriptions">
+              Let your most passionate fans know how much you care about unique
+              sounds.
+            </p>
+            <div class="main-button-separator">
+              <a href="/register" class="mobile-button-sign-up-main"
+                >Get started</a
+              >
+            </div>
+          </div>
+          <div class="flex-second-column-top-main">
+            <img src="../img/img-musician.jpg" class="top-bar-image" />
+            <img
+              src="../img/img-grid (8).jpg"
+              class="top-bar-image-alt-desktop"
+            />
+          </div>
+        </section>
+      </div>
+      <div class="section-payment-methods">
+        <div class="container-payment-methods">
+          <div class="container-payment-credit-card">
+            <i class="icon-payment bi bi-credit-card"></i>
+            <div class="container-payment-details">
+              <h4>Credit card</h4>
+              <p>Visa, AMEX, MasterCard</p>
+            </div>
+          </div>
+          <div class="container-payment-paypal">
+            <i class="icon-payment bi bi-wallet"></i>
+            <div class="container-payment-details">
+              <h4>PayPal</h4>
+              <p>Pay with your PayPal account</p>
+            </div>
+          </div>
+          <div class="container-payment-crypto">
+            <i class="icon-payment bi bi-currency-bitcoin"></i>
+            <div class="container-payment-details">
+              <h4>BTC</h4>
+              <p>Transfer from your wallet</p>
+            </div>
+          </div>
+          <div class="container-payment-cash">
+            <i class="icon-payment bi bi-currency-dollar"></i>
+            <div class="container-payment-details">
+              <h4>Mercado Pago</h4>
+              <p>We got you, fellow Argies!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-home-grids">
+        <h3 class="grids-titles">New arrivals</h3>
+        <section class="top-new-arrivals">
+          <% for(let index = 0; index < products.length; index++){ %> 
+          <article class="product-new-arrivals">
+            <a class="starred-icon" href="/products/product/1">
+              <i class="bi bi-eye"></i>
+            </a>
+            <div class="container-products-new-arrivals">
+              <img class="product-image" src="../img/cart-img/<%=products[index].product_image%>" />
+              <p class="details"><%= products[index].product_name%></p>
+            </div>
+          </article>
+          <% } %>
+        </section>
+      </section>
+
+      <section class="section-middle-grid">
+        <div class="container-middle-grid">
+          <h3 class="grids-titles">Dominate your sound.</h3>
+          <p class="grids-descriptions">
+            Be your own super-producer. Join us and be part of the Musify
+            family. Sharing is caring, is what they say. Check the most liked
+            libraries!
+          </p>
+          <!-- <img class="main-image-grid" src="../img/img-studio.jpg" /> -->
+          <section class="most-liked-libraries">
+            <% for(let index = 0; index < products.length; index++){ %> 
+            <article class="product">
+              <a class="starred-icon" href="/products/product/11">
+                <i class="bi bi-eye"></i>
+              </a>
+              <div class="container-products">
+                <img
+                  class="product-image"
+                  src="../img/cart-img/<%=products[index].product_image%>"
+                />
+                <div class="container-details-products">
+                  <p class="prices"><%=products[index].price%></p>
+                  <p class="discounts"><%=products[index].discount%> OFF</p>
+                  <!-- <i class="starred-icon bi bi-lightning-charge"></i> -->
+                </div>
+                <p class="details">Essentials Bundle</p>
+              </div>
+            </article>
+            <% } %>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-home-commends">
+        <div class="container-commends-main">
+          <img class="person-commend-img" src="../img/img-person.jpg" />
+          <p class="commends-descriptions">
+            "I literally cried because a website like this never existed before.
+            It's fantastic and I'm more powerful now."
+          </p>
+          <p class="commends-name-person">Wanda Romanoff</p>
+        </div>
+        <div class="container-commends-main">
+          <img class="person-commend-img" src="../img/img-person (2).jpg" />
+          <p class="commends-descriptions">
+            "Yeah, I'm the green guy. And I'm not in the mood... Mind your own
+            business, kiddo."
+          </p>
+          <p class="commends-name-person">Bruce Banner</p>
+        </div>
+        <div class="container-commends-main">
+          <img class="person-commend-img" src="../img/img-person (3).jpg" />
+          <p class="commends-descriptions">
+            "This page is so cool that not even Thanos can break it with his
+            famous finger snap. Thank you, devs!"
+          </p>
+          <p class="commends-name-person">Tony Stark</p>
+        </div>
+      </section>
+      <section class="section-join-us">
+        <div class="container-join-us">
+          <h2 class="grids-titles">Are you ready to be part of the family?</h2>
+          <a href="/register" class="mobile-button-sign-up-main">Get started</a>
+        </div>
+      </section>
+    </main>
+    <%- include ('../partials/footer') %>
+  </body>
+</html>

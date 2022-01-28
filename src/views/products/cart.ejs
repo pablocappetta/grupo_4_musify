@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head') %>
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../partials/header') %>
+    </div>
+
+    <main>
+        <div class="color-fix-desktop-top">
+            <!-- <div class="cart-video-top-view"><iframe src="https://player.vimeo.com/video/456574185?background=1" class="video"></iframe></div> -->
+            <section class="margin-fix-for-desktop-main section-top-view">
+                <div class="flex-first-column-main"> 
+                    <h2 class="grids-titles">Cart</h2>
+                    <p class="grids-descriptions">
+                        <a href="/"> Home </a>/ Your Shopping Cart
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- SECCION CART -->
+            
+                
+            <div class="cart-checkout">
+                
+                    
+                    <!-- Cart text -->
+                    <div class="top-text-item-cart">
+                        <h3 class="cart-title">Items</h3>
+                    </div>
+                <!-- <section class="cart-main-section"> -->
+                <form action="/cart" method="post" class="form-cart-processed">
+                    <!----------------------------------------------------------------------------------------->
+                    <section class="cart-top-section">
+                        <div class="item-cart">                              
+                            <!-- Poduct name -->
+                            <div class="product-name">
+                                <div class="product-cancel"><i class="bi bi-x"></i></div>                       <!-- X -->
+                                <div class="product-img">                                                       <!-- IMGAGEN -->
+                                    <img src="../img/cart-img/article1.png">             
+                                </div>
+                                <div class="product-info">                              
+                                    <a class="article-description" href="/">Legends Only Bundle (Every Kit)</a>  <!-- INFO -->  
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="article-quantity">
+                                <!-- <div> -->
+                                    <div>
+                                        <button type="button" class="button-down">
+                                            <i class="fas fa-caret-down"></i>
+                                        </button>
+                                        <input type="text" class="text-quantity" value="1" min="1" id="text-quantity">
+                                        <button type="button" class="button-up">
+                                            <i class="fas fa-caret-up"></i>
+                                        </button>
+                                    </div>
+                                <!-- </div> -->
+                            </div>
+                            <!--  -->
+                            <div class="article-price">
+                                <p class="price">$154.00</p>
+                            </div>
+                            <!--  -->
+                        </div>
+
+                        <!----------------------------------------------------------------------------------------->
+                        <div class="item-cart">                                
+                            <!-- Poduct name -->
+                            <div class="product-name">
+                                <div class="product-cancel"><i class="bi bi-x"></i></div>
+                                <div class="product-img">
+                                    <img src="../img/cart-img/article2.png">
+                                </div>
+                                <div class="product-info">
+                                    <a class="article-description" href="/">Trap Therapy - Trap & R&B Sample Pack</a>    
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="article-quantity">
+                                <!-- <div> -->
+                                    <div>
+                                        <button type="button" class="button-down">
+                                            <i class="fas fa-caret-down"></i>
+                                        </button>
+                                        <input type="text" class="text-quantity" value="1" min="1" id="text-quantity">
+                                        <button type="button" class="button-up">
+                                            <i class="fas fa-caret-up"></i>
+                                        </button>
+                                    </div>
+                                <!-- </div> -->
+                            </div>
+                            <!--  -->
+                            <div class="article-price">
+                                <p class="price">$ 24.99</p>
+                            </div>
+                        </div>
+                        <!----------------------------------------------------------------------------------------->
+                        <div class="item-cart">                                
+                            <!-- Poduct name -->
+                            <div class="product-name">
+                                <div class="product-cancel"><i class="bi bi-x"></i></div>
+                                <div class="product-img">
+                                    <img src="../img/cart-img/article3.jpg">
+                                </div>
+                                <div class="product-info">
+                                    <a class="article-description" href="/">Trap Therapy - Trap & R&B Sample Pack</a>    
+                                </div>
+                            </div>
+                            <div class="article-quantity">
+                                <!-- <div> -->
+                                    <div>
+                                        <button type="button" class="button-down">
+                                            <i class="fas fa-caret-down"></i>
+                                        </button>
+                                        <input type="text" class="text-quantity" value="1" min="1" id="text-quantity">
+                                        <button type="button" class="button-up">
+                                            <i class="fas fa-caret-up"></i>
+                                        </button>
+                                    </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="article-price">
+                                <p class="price">$ 24.99</p>
+                            </div>
+                        </div> 
+
+                        <div class="cart-bottom">
+                            <button class="button-shopping"><a href="/products"> Continue Shopping</a></button>
+                            <input type="submit" class="submit" name="sd" value="Update Cart">
+                        </div>
+                    
+                    </section>
+                    
+                    <section class="bottom-section">
+                        
+
+                        <!-- PAYMENT METHOD -->
+                        <div class="cart-total">
+                            
+                            <div class="cart-total-title-text">
+                                <h3>Cart totals</h3>
+                            </div>
+                            
+                            <div class="cart-total-bottom">
+                                <h3 class="cart-note">Cart Note</h3>
+                                <label class="cart-total-label">Special instructions for seller</label>
+                                <textarea class="cart-total-textarea"></textarea>
+                            </div>
+                            
+                            <div class="cart-total-info">
+                                <p class="cart-total-text">Total</p>
+                                <p class="cart-total-price">$203.98</p>
+                            </div>
+                             
+                            <div class="cart-total-proceed">
+                                <a href="/">Proceed to checkout</a>
+                            </div>  
+                              
+                            <div class="payment-method">
+                              <div class="paypal-logo">
+                                <a href="/">
+                                    <img src="../img/cart-img/paypal-logo.png">
+                                </a>
+                              </div> 
+                              <div class="mercadopago-logo">
+                                <a href="/">
+                                  <img src="../img/cart-img/Mercadopago.png">
+                                </a>
+                              </div> 
+                              <div class="card-logo">
+                                <a href="/">
+                                  <img src="../img/cart-img/visa-master-amex.png">
+                                </a>
+                              </div>  
+                            </div>
+                            
+                        </div>
+                    </section>
+                
+                </form>
+            </div>
+    </main>
+ 
+    <%- include ('../partials/footer') %>
+    </body>
+</html>

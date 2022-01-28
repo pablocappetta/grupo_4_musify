@@ -1,0 +1,94 @@
+.container-products-wrapper {
+  width: 85%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 12px 40px;
+  /*border: 1px solid #ccc;*/
+  border-radius: 4px;
+  /*background-color: #f8f8f8;*/
+  gap: 7px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  background-color: rgba(0, 0, 0, 0.014);
+}
+
+label {
+  color: rgb(255, 66, 77);
+}
+
+.buy-now-button:hover {
+  background-color: #ff5f67;
+  border: solid 2px #ff5f67;
+}
+
+.buy-now-button {
+  background-color: #ff424d;
+  color: white;
+  border-radius: 35px;
+  height: 42px;
+  width: 85px;
+  border: solid 2px #ff424d;
+  line-height: 34px;
+  font-weight: 700;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 9px;
+  transition: all 0.35s;
+}
+
+.delete-product-button {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-radius: 35px;
+  height: 42px;
+  border: solid 2px transparent;
+  line-height: 34px;
+  font-weight: 700;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 9px;
+  transition: all 0.35s;
+  margin-top: 14px;
+}
+
+.col-12 {
+  text-align: center;
+}
+
+.products-title {
+  font-size: 24px;
+  margin-left: 17px;
+  margin-right: 17px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: rgb(255, 66, 77);
+  text-align: center;
+}
+
+.form-wrapper {
+  position: relative;
+  display: flex;
+  height: 4rem;
+}
+
+.form-input {
+  height: 50px;
+  align-items: center;
+  text-align: left;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 1.25rem 0;
+  padding: 0.75rem;
+  outline: none;
+  /*background: transparent;*/
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+}

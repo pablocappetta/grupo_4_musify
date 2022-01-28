@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head') %>
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../partials/header') %>
+    </div>
+    <main>
+      <section class="top-section">
+        <div class="top-section__title">
+          <div class="top-flex-column">
+            <h4 class="top-title-product-name">Home / Store / Flow</h4>
+            <p class="title-icons">
+              <i class="far fa-star"></i>
+              <i class="fas fa-shopping-cart"></i>
+              $0.00
+            </p>
+          </div>
+        </div>
+        <section class="section-edit-store">
+          <div class="container-edit-store">
+            <a href="/products/edit/<%= productSent.id %>" class="btn-edit-product">Edit this product</a>
+          </div>
+        </section>
+        <div class="top-section__product">
+          <div class="flex-container__product">
+            <div class="first-column__product">
+              <img
+                class="main-image-product"
+                src="/img/cart-img/<%= productSent.imageProduct %>"
+                class="top-bar-image-alt-desktop"
+              />
+            </div>
+            <div class="second-column__product">
+              <div class="title-and-price-row">
+                <h3 class="title-product-name"><%= productSent.name %></h3>
+                <h3 class="title-product-price">$<%= productSent.price %></h3>
+                <div class="add-to-cart-div">
+                  <button type="submit" class="add-to-cart-button">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div class="container-producer">
+                <h4 class="title-producer">
+                  Made by:
+                  <a href="/producer" class="link-producer"
+                    ><%= productSent.producer %></a
+                  >
+                </h4>
+                <h4 class="title-genre">
+                  Genre:
+                  <a href="/genre" class="link-genre"
+                    ><%= productSent.genre %></a
+                  >
+                </h4>
+              </div>
+              <p class="product-description">
+                <%= productSent.descriptionProduct %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mid-section-artist">
+        <div class="header-flex__artist">
+          <div class="first-column__artist">
+            <img
+              class="profile-photo__artist"
+              src="/img/producer-img/<%= productSent.imageProducer %>"
+            />
+          </div>
+          <div class="second-column-flex__artist">
+            <h1 class="name__artist"><%= productSent.producer %></h1>
+            <div class="container-tags__artist">
+              <h3 class="title-common-tags__artist">Most common tags:</h3>
+              <% productLoop.forEach(product => { %> <% if(product.producer ==
+              productSent.producer) { %>
+              <h4 class="tag__artist">
+                <a href="/genre" class="link-genre"><%= product.genre %></a>
+              </h4>
+              <% } %> <% }) %>
+            </div>
+            <p class="description__artist">
+              <%= productSent.descriptionProducer %>
+            </p>
+          </div>
+        </div>
+        <div class="products-flex__artist">
+          <% productLoop.forEach(product => { %> <% if(product.producer ==
+          productSent.producer) { %>
+          <article class="items-flex__artist">
+            <a href="/products/product/<%= product.id %>">
+              <img
+                class="main-image-product"
+                src="/img/cart-img/<%= product.imageProduct %>"
+                class="top-bar-image-alt-desktop"
+              />
+            </a>
+            <h4><%= product.name %></h4>
+            <h4 class="timer-item__artist">$<%= product.price %></h4>
+          </article>
+          <% } %> <% }) %>
+        </div>
+      </section>
+      <section class="bottom-section-recommendations">
+        <div class="bottom-container-recommendations">
+          <h3 class="grids-titles">Our recommendations</h3>
+          <!-- <img class="main-image-grid" src="../img/img-studio.jpg" /> -->
+          <section class="most-liked-libraries">
+            <article class="product">
+              <div class="container-products">
+                <img class="product-image" src="/img/cart-img/article69.jpg" />
+                <div class="container-details-products__recommended">
+                  <p class="prices">$39.99</p>
+                  <p class="discounts">10% OFF</p>
+                  <!-- <i class="starred-icon bi bi-lightning-charge"></i> -->
+                </div>
+                <p class="details__recommended">Essentials Bundle</p>
+              </div>
+            </article>
+            <article class="product">
+              <div class="container-products">
+                <img class="product-image" src="/img/cart-img/article73.jpg" />
+                <div class="container-details-products__recommended">
+                  <p class="prices">$25.49</p>
+                  <p class="discounts">30% OFF</p>
+                  <!-- <i class="starred-icon bi bi-lightning-charge"></i> -->
+                </div>
+                <p class="details__recommended">
+                  Compass - Cinematic Underworld
+                </p>
+              </div>
+            </article>
+            <article class="product">
+              <div class="container-products">
+                <img class="product-image" src="/img/cart-img/article71.jpg" />
+                <div class="container-details-products__recommended">
+                  <p class="prices">$11.49</p>
+                  <p class="discounts">50% OFF</p>
+                  <!-- <i class="starred-icon bi bi-lightning-charge"></i> -->
+                </div>
+                <p class="details__recommended">Dark Hip Hop</p>
+              </div>
+            </article>
+            <article class="product">
+              <div class="container-products">
+                <img class="product-image" src="/img/cart-img/article72.jpg" />
+                <div class="container-details-products__recommended">
+                  <p class="prices">$49.99</p>
+                  <p class="discounts">5% OFF</p>
+                  <!-- <i class="starred-icon bi bi-lightning-charge"></i> -->
+                </div>
+                <p class="details__recommended">Starfall - Urban Atmospheric</p>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+    <%- include ('../partials/footer') %>
+  </body>
+</html>

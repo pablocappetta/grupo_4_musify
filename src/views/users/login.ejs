@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head') %>
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../partials/header') %>
+    </div>
+    <main>
+      <div class="main-form">
+        <section>
+          <div class="main-form-structure">
+            <form
+              action="/login"
+              method="POST"
+              class="login-form-container"
+            >
+              <div class="form-wrapper-email">
+                <input
+                  class="input-form-control-email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  spellcheck="false"
+                  required
+                />
+                  <div class="form-label-email"> Email </div>
+                  <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                      <%= errors.email.msg %>
+                    </div>
+                  <% } %>
+                  <i class="bi bi-person-circle login-user-icon"></i>
+              </div>
+              <div class="form-wrapper-psw">
+                <input
+                  class="input-form-control-psw"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                />
+                <div class="form-label-psw">
+                    Password
+                </div>
+                <i class="bi bi-eye-slash-fill login-psw-icon"></i>
+              </div>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="remember_user">Remember my user
+              </label>
+              <p class="psw-container">
+                  <a href="/#" class="forgot-psw"> Forgot your password?</a>
+              </p>
+              <p class="form-btn-container">
+                <button type="submit" class="btn-form-login1"> Log In </button>
+                <div class="login-separation-container">
+                    <p class="login-separation">
+                        Or
+                    </p>
+                </div>
+                <button type="submit" class="btn-form-login">
+                  <a class="btn-text-login" href="https://www.facebook.com/"
+                    >Log In with Facebook</a
+                  >
+                </button>
+                <button type="submit" class="btn-form-login">
+                  <a
+                    class="btn-text-login"
+                    href="https://accounts.google.com/signin/v2/identifier?hl=es-419&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                    >Log In with Google</a
+                  >
+                </button>
+              </p>
+            </form>
+          </div>
+          <div class="text-signup-container">
+            <p class="login-form">
+              New to Musify?
+              <a href="/register" class="hiper-signup"> Sign Up. </a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include ('../partials/footer') %>
+  </body>
+</html>

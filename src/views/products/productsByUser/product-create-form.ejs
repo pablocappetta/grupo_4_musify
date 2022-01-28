@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../../partials/head') %>
+  <!-- Corremos los partials -->
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../../partials/header') %>
+    </div>
+    <main>
+      <div class="product-form-container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="products-title">Add a new product</h2>
+          </div>
+        </div>
+        <section>
+          <div class="main-form">
+            <!-- @pablo: Hay que revisar esto para poder gestionar bien el post y hacer un redirect si es que el ID se creó correctamente -->
+            <form
+              action="/products/create"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <div class="row product-detail">
+                <div class="col-12 col-md-6">
+                  <label for="product_name" class="form-label">Product Name</label>
+                  <input
+                    type="text"
+                    id="product_name"
+                    name="product_name"
+                    placeholder="E.g: Romeo Santos Sample Pack"
+                    class="form-input"
+                  />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="price" class="form-label">Price</label>
+                  <input
+                    type="text"
+                    id="price"
+                    name="price"
+                    placeholder="E.g: $9.99"
+                    class="form-input"
+                  />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="imageProduct" class="form-label"
+                    >Upload an image</label
+                  >
+                  <input
+                    type="file"
+                    id="imageProduct"
+                    name="imageProduct"
+                    accept="image/*, .pdf"
+                    class="form-input"
+                  />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="discount" class="form-label">Discount</label>
+                  <input
+                    type="text"
+                    id="discount"
+                    name="discount"
+                    placeholder="E.g: $15"
+                    class="form-input"
+                  />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="genre" class="form-label">Genre</label>
+                  <select name="genre" id="genre" class="form-input">
+                    <% for(let index = 0; index < genres.length; index++){ %>
+                      <option value = "<%= genres[index].id%>">
+                        <%= genres[index].genre_name%> 
+                      </option>
+                    <% } %>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="description" class="form-label"
+                    >Product Description</label
+                  >
+                  <textarea
+                    name="descriptionProduct"
+                    id="descriptionProduct"
+                    class="form-input"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <label for="producer" class="form-label"
+                    >Producer</label
+                  >
+                  <textarea
+                    name="producer"
+                    id="producer"
+                    class="form-input"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="buy-now-button">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include ('../../partials/footer') %>
+  </body>
+</html>

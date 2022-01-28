@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../../partials/head') %>
+  <!-- Corremos los partials -->
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../../partials/header') %>
+    </div>
+    <main>
+      <div class="product-form-container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="products-title">Edit your product</h2>
+          </div>
+        </div>
+        <section>
+          <div class="main-form">
+            <h1> List Product </h1>
+            <ul>
+                <% for(let index = 0; index < productsByUser.length; index++){ %> 
+                    <li>
+                        <a href = "/products/edit/<%= productsByUser[index].id %>">
+                            <%= productsByUser[index].product_name %>        
+                        </a>
+                    </li> 
+                <% } %>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include ('../../partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head') %>
+  <body>
+    <div class="color-fix-desktop-top">
+      <%- include ('../partials/header') %>
+    </div>
+    <main>
+      <div class="main-form">
+        <section>
+          <div class="main-form-structure">
+            <form
+              action="/register"
+              method="POST"
+              class="register-form-container"
+              enctype="multipart/form-data"
+            >
+              <div class="form-wrapper-fullname">
+                <input
+                  class="input-form-control-fullname"
+                  type="text"
+                  name="first_name"
+                  required
+                  minlength="2"
+                  maxlength="18"
+                />
+                <div class="form-label-fullname">
+                  First name
+                </div>
+                <i class="bi bi-person-circle reg-user-icon"></i>
+              </div>
+
+              <div class="form-wrapper-fullname">
+                <input
+                  class="input-form-control-fullname"
+                  type="text"
+                  name="last_name"
+                  required
+                  minlength="8"
+                  maxlength="32"
+                />
+                <div class="form-label-fullname">
+                  Last name
+                </div>
+                <i class="bi bi-person-circle reg-user-icon"></i>
+              </div>
+
+              <div class="form-wrapper-fullname">
+                <!-- <input
+                  class="input-form-control-fullname"
+                  type="text"
+                  name="category"
+                  required
+                  minlength="8"
+                  maxlength="32"
+                /> -->
+                <select name="category" id="category" class="form-input">
+                  <% for(let index = 0; index < usersCategory.length; index++){ %>
+                    <option value = "<%= usersCategory[index].id%>">
+                      <%= usersCategory[index].user_type%> 
+                    </option>
+                  <% } %>
+                </select>
+                <div class="form-label-fullname">
+                  Category
+                </div>
+                <i class="bi bi-person-lines-fill reg-category-icon"></i>
+              </div>
+
+              <div class="form-wrapper-emailRegister">
+                <input
+                  class="input-form-control-emailRegister"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+                <div class="form-label-emailRegister">
+                  Email
+                </div>
+                <i class="bi bi-envelope-fill reg-email-icon"></i>
+              </div>
+
+              <div class="form-wrapper-pswRegister">
+                <input
+                  class="input-form-control-pswRegister"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  min="8"
+                />
+                <div class="form-label-pswRegister">
+                  Password
+                </div>
+                <i class="bi bi-eye-slash-fill reg-psw-icon"></i>
+                <!-- RegEx PATTERN: 1 Uppercase, 1 Lowercase, 1 Number, 1 Symbol, symbol required -->
+              </div>
+              <!-- @felix: queda comentado para reintegrarlo después en la db -->
+              <!-- <div class="form-wrapper-date">
+                 <label class="form-title" for="birth-date">Birth date</label> 
+                 <input
+                  class="input-form-control-date"
+                  type="date"
+                  name="birth-date"
+                  value="2021-09-24"
+                  max="2022-12-31"
+                  id="birth-date"
+                  required
+                />
+                <div class="form-label-date">
+                  Birth date
+                </div> 
+               </div> --> 
+              <p>
+                <label for="image">Profile Picture </label>
+                <input
+                  type="file"
+                  name="image"
+                  id="photo"
+                  required
+                />
+              </p>
+              <p class="form-btn-container">
+                <button type="submit" class="btn-form-signin">
+                  Sign Up
+                </button>
+                <div class="login-separation-container">
+                    <p class="login-separation">
+                        Or
+                    </p>
+                </div>
+                <button type="submit" class="btn-form-signup">
+                  <a class="btn-text-signup" href="https://www.facebook.com/"
+                    >Sign Up with Facebook</a
+                  >
+                </button>
+                <button type="submit" class="btn-form-signup">
+                  <a
+                    class="btn-text-signup"
+                    href="https://accounts.google.com/signin/v2/identifier?hl=es-419&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                    >Sign Up with Google</a
+                  >
+                </button>
+              </p>
+              <p class="privacy-policy">
+                By signing up, you agree to Musify's Terms of Use, Privacy Policy
+                and Cookie Policy.
+              </p>
+            </form>
+          </div>
+          <div class="text-login-container">
+            <p class="login-form">
+              Already have an account?
+              <a href="/login" class="hiper-login"> Log in. </a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include ('../partials/footer') %>
+  </body>
+</html>
