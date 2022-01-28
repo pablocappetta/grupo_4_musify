@@ -7,10 +7,10 @@ const path = require('path');
 const usersController = require("../controllers/usersController");
 
 // Middlewares
-const fileUpload = require('../middlewares/multerMiddleware');      /* Middleware to upload images with multer pkg */
-const userMiddleware = require('../middlewares/userMiddleware');    /* Middleware user state => is logged?, registered? etc */
-const registerValidator = require('../middlewares/validateRegisterMiddleware'); /*  Middle validates registration => captures errors to send them to the views */
-const loginValidator = require('../middlewares/validateLoginMiddleware'); /*  Middle validates login => captures errors to send them to the views */
+const fileUpload = require('../middlewares/multer/multerMiddleware');      /* Middleware to upload images with multer pkg */
+const userMiddleware = require('../middlewares/session/userMiddleware');    /* Middleware user state => is logged?, registered? etc */
+const registerValidator = require('../middlewares/validations/validateRegisterMiddleware'); /*  Middle validates registration => captures errors to send them to the views */
+const loginValidator = require('../middlewares/validations/validateLoginMiddleware'); /*  Middle validates login => captures errors to send them to the views */
 
 // Login
 router.get("/login", userMiddleware.guestMiddleware ,usersController.login);

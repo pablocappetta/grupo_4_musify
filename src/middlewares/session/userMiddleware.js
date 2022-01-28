@@ -1,3 +1,7 @@
+/*
+	-  Redirecting A Logged (Or Not) User To Registration / Login -
+*/
+
 const userMiddleware = {
 
         /* if exist user logged => no show register form or user form*/

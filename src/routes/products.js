@@ -4,7 +4,7 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 
 // Middlewares
-const fileUpload = require('../middlewares/multerProductMiddleware');      /* Middleware to upload images with multer pkg */
+const fileUpload = require('../middlewares/multer/multerProductMiddleware');      /* Middleware to upload images with multer pkg */
 
 
 // Si la solicitud es GET y la ruta '/' llamamos a la funcion index de productsController
