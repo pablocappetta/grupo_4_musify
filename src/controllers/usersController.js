@@ -20,7 +20,6 @@ const usersController = {
     db.UserCategory.findAll().then(function (usersCategory) {
       res.render(file, { usersCategory: usersCategory });
     });
-
   },
 
   signup: (req, res) => {
@@ -42,11 +41,17 @@ const usersController = {
 
     // put errors in register form
     if (resultValidation.errors.length > 0) {
-      return res.render(file, {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
+      db.UserCategory
+        .findAll()
+        .then(function (usersCategory) {
+          return res.render(file, {
+            usersCategory : usersCategory,
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
       });
     }
+
     // Redirect to main form
     res.redirect("/");
   },

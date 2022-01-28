@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",                     // User in DataBase 
-    "password": "smootie98",                // Password in DataBase
+    "password": null,                // Password in DataBase
     "database": "musify_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

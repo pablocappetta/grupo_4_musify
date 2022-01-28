@@ -1,5 +1,5 @@
 const path = require('path');
-const { body } = require('express-validator');
+const { body, check } = require('express-validator');
 
 module.exports = [
 	body('first_name')
@@ -16,7 +16,7 @@ module.exports = [
 		.withMessage('You must write a valid email format'),
 	body('password')
 		.notEmpty()
-		.isStrongPassword()
+		.isLength({ min : 8 })
 		.withMessage('You have to enter a password'),
     body('category')
 		.notEmpty()
@@ -26,8 +26,6 @@ module.exports = [
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
-
-		
 		if (!file) {
 			// console.log("JODER TÍO HE QUEDADO ATRAPADO EN LA MIDDLEWARE");
 			throw new Error('You have to upload an image');

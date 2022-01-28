@@ -49,8 +49,8 @@
                 /> -->
                 <select name="category" id="category" class="form-input">
                   <% for(let index = 0; index < usersCategory.length; index++){ %>
-                    <option value = "<%= usersCategory[index].id%>">
-                      <%= usersCategory[index].user_type%> 
+                    <option value = "<%= usersCategory[index].id %>">
+                      <%= usersCategory[index].user_type %> 
                     </option>
                   <% } %>
                 </select>
@@ -77,29 +77,13 @@
                   type="password"
                   name="password"
                   id="password"
+                  required
                 />
                 <div class="form-label-pswRegister">
                   Password
                 </div>
                 <i class="bi bi-eye-slash-fill reg-psw-icon"></i>
-                <!-- RegEx PATTERN: 1 Uppercase, 1 Lowercase, 1 Number, 1 Symbol, symbol required -->
               </div>
-              <!-- @felix: queda comentado para reintegrarlo después en la db -->
-              <!-- <div class="form-wrapper-date">
-                 <label class="form-title" for="birth-date">Birth date</label> 
-                 <input
-                  class="input-form-control-date"
-                  type="date"
-                  name="birth-date"
-                  value="2021-09-24"
-                  max="2022-12-31"
-                  id="birth-date"
-                  required
-                />
-                <div class="form-label-date">
-                  Birth date
-                </div> 
-               </div> --> 
               <p>
                 <label for="image">Profile Picture </label>
                 <input
