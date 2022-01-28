@@ -41,14 +41,12 @@ const usersController = {
 
     // put errors in register form
     if (resultValidation.errors.length > 0) {
-      db.UserCategory
-        .findAll()
-        .then(function (usersCategory) {
-          return res.render(file, {
-            usersCategory : usersCategory,
-            errors: resultValidation.mapped(),
-            oldData: req.body,
-          });
+      db.UserCategory.findAll().then(function (usersCategory) {
+        return res.render(file, {
+          usersCategory: usersCategory,
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        });
       });
     }
 
@@ -63,6 +61,8 @@ const usersController = {
 
   loginProcess: (req, res) => {
     let file = path.join(__dirname, "../views/users/login");
+    const resultValidation = validationResult(req);
+
     db.User.findAll().then(function (users) {
       let array = JSON.parse(JSON.stringify(users)); // Transform data to Array
       const userToLogin = array.filter(function (user) {
@@ -77,6 +77,7 @@ const usersController = {
           userToLogin[0].password
         );
         if (passwordOk) {
+          // Security process - erasing psw from user session
           delete userToLogin.password;
           req.session.userLogged = userToLogin[0];
 
@@ -87,56 +88,15 @@ const usersController = {
           return res.redirect("/profile"); /* Redirect URL */
         }
 
-        /* msg error password  */
-        return res.render(file, {
-          errors: {
-            msg: "password incorrect",
-          },
-        });
+        // Put errors in login form
+        if (resultValidation.errors.length > 0) {
+          res.render(file, {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
+        }
       }
-
-      /* msg error email */
-      return res.render("../views/users/login", {
-        errors: {
-          msg: "This email no is register",
-        },
-      });
     });
-
-    // let userToLogin = modelUsers.findByField('email',req.body.email);
-    // let file = path.join(__dirname, "../views/users/login");
-
-    // /* check email user exist */
-    // if (userToLogin){
-    //   let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-    //   if (passwordOk)
-    //   {
-    //     delete userToLogin.password;                      /* the password is removed for security */
-    //     req.session.userLogged = userToLogin;             /* Copy user to session */
-
-    //     /* key-value */
-    //     if(req.body.remember_user) {
-    // 			res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-    // 		}
-
-    //     return res.redirect("/profile");                  /* Redirect URL */
-    //   }
-
-    //     /* msg error password  */
-    //     return res.render(file, {
-    //       errors : {
-    //         msg : "password incorrect"
-    //       }
-    //     });
-
-    // }
-
-    // /* msg error email */
-    // return res.render("../views/users/login", {
-    //   errors : {
-    //     msg : "This email no is register"
-    //   }
-    // });
   },
 
   profile: (req, res) => {
