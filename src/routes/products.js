@@ -6,6 +6,7 @@ const productsController = require("../controllers/productsController");
 // Middlewares
 const fileUpload = require('../middlewares/multer/multerProductMiddleware');      /* Middleware to upload images with multer pkg */
 const createValidation = require('../middlewares/validations/validateCreateMiddleware');      /* Middleware validate the create form */
+const editValidation = require('../middlewares/validations/validateEditMiddleware');      /* Middleware validate the edit prod form */
 
 
 // Si la solicitud es GET y la ruta '/' llamamos a la funcion index de productsController
@@ -26,7 +27,7 @@ router.post("/create", fileUpload.single("imageProduct"), createValidation, prod
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit", productsController.listProduct);
 router.get("/edit/:id", productsController.edit);
-router.post("/edit/:id", fileUpload.single("imageProduct"), productsController.update);
+router.post("/edit/:id", fileUpload.single("imageProduct"), editValidation, productsController.update);
 
 /*** DELETE ONE PRODUCT***/
 router.post("/delete/:id", productsController.destroy);
