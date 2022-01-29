@@ -1,3 +1,7 @@
+/*
+	-  Validating Logged User Session -
+*/
+
 const path = require('path');
 const { body, check } = require('express-validator');
 
@@ -39,3 +43,4 @@ module.exports = [
 		return true;
 	})
 ]
+

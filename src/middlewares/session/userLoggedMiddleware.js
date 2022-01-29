@@ -1,8 +1,9 @@
-const User = require('../model/modelUsers');
-
 /*
 	-  Validating Logged User Session -
 */
+
+const User = require('../../model/modelUsers');
+
 
 function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;

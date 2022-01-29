@@ -4,7 +4,7 @@ const session = require("express-session");
 const path = require("path");
 const cookies = require('cookie-parser');
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
-const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./src/middlewares/session/userLoggedMiddleware');
 
 // ************ express() ************
 const app = express();
@@ -16,7 +16,7 @@ app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el 
 app.use(express.urlencoded({ extended: false })); // Para poder tomar los parámetros desde el POST
 app.use(express.json()); // Para poder trabajar con stringify y demás
 app.use(cookies());       // Para trabajar con las cookies
-app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware); // REVISAR COOKIES
 
 //process.env.PORT -> Heroku PORT
 app.listen(process.env.PORT || 42133, () => {

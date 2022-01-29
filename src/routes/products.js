@@ -5,6 +5,7 @@ const productsController = require("../controllers/productsController");
 
 // Middlewares
 const fileUpload = require('../middlewares/multer/multerProductMiddleware');      /* Middleware to upload images with multer pkg */
+const createValidation = require('../middlewares/validations/validateCreateMiddleware');      /* Middleware validate the create form */
 
 
 // Si la solicitud es GET y la ruta '/' llamamos a la funcion index de productsController
@@ -20,7 +21,7 @@ router.get("/store", productsController.index);
 router.get("/create", productsController.create);
 
 // Multer como Middleware almacena la imagen en store-img
-router.post("/create", fileUpload.single("imageProduct"), productsController.store); 
+router.post("/create", fileUpload.single("imageProduct"), createValidation, productsController.store); 
 
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit", productsController.listProduct);
