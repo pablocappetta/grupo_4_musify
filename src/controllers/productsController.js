@@ -1,7 +1,10 @@
 // utilizo libreria path para obtener la ruta
 const fs = require("fs");
 const path = require("path");
-const productsFilePath = path.join(__dirname, "../database/productsDataBase.json");
+const productsFilePath = path.join(
+  __dirname,
+  "../database/productsDataBase.json"
+);
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 let db = require("../database/models");
@@ -36,26 +39,27 @@ const productsController = {
 
   // Create - Form to create products
   create: (req, res) => {
-    let file = path.join(__dirname, "../views/products/productsByUser/product-create-form");
-    
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-create-form"
+    );
+
     /* OLD METHOD JSON */
     // res.render(file, {
     //   products: products,
     // });
 
-    /* WITH DATABASE */ 
+    /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
     let reqGenres = db.Genre.findAll();
 
-    Promise.all([reqProduct, reqGenres])
-    .then(function([products, genres]){
-      res.render(file, {products : products, genres: genres});
+    Promise.all([reqProduct, reqGenres]).then(function ([products, genres]) {
+      res.render(file, { products: products, genres: genres });
     });
   },
 
   // Create - Form to create products | Multer form validation
   store: (req, res) => {
-
     /* OLD METHOD JSON 
     if (req.file) {
       const nuevoArchivo = {
@@ -84,48 +88,71 @@ const productsController = {
     res.redirect("/products/store");
     */
 
-    db.Product.create({ 
-      users_id : req.session.userLogged.id,
-      genre_id : req.body.genre,
+    const resultValidation = validationResult(req);
+    /* WITH DATABASE */
+    let reqProduct = db.Product.findAll();
+    let reqGenres = db.Genre.findAll();
+
+    db.Product.create({
+      users_id: req.session.userLogged.id,
+      genre_id: req.body.genre,
       product_name: req.body.product_name,
       price: req.body.price,
       discount: req.body.discount,
       producer: req.body.producer,
       product_description: req.body.descriptionProduct,
       product_image: req.file.filename,
-      popularity: 0
-    });     
+      popularity: 0,
+    });
+
+    // Create product validation form
+    if (resultValidation.errors.length > 0) {
+      Promise.all([reqProduct, reqGenres])
+        .then(function ([products, genres]) {
+          res.render(file, {
+            products: products,
+            genres: genres,
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
+      });
+    }
 
     res.redirect("/products/store");
-
   },
 
-  listProduct: (req, res) => { 
-    let file = path.join(__dirname, "../views/products/productsByUser/ProductsList");     // Path view
-    db.Product.findAll()
-      .then(function(products){
-          let array = JSON.parse(JSON.stringify(products));                               // Transform data to Array
-          const productsByUser = array.filter(function (products){                        // Filter products by user logged
-            if(products.users_id == req.session.userLogged.id){
-              return products;
-            }
-          });
-          res.render(file, {productsByUser : productsByUser});
-      }); 
+  listProduct: (req, res) => {
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/ProductsList"
+    ); // Path view
+    db.Product.findAll().then(function (products) {
+      let array = JSON.parse(JSON.stringify(products)); // Transform data to Array
+      const productsByUser = array.filter(function (products) {
+        // Filter products by user logged
+        if (products.users_id == req.session.userLogged.id) {
+          return products;
+        }
+      });
+      res.render(file, { productsByUser: productsByUser });
+    });
   },
 
   // Edit - Form to edit products
   edit: (req, res) => {
-    let file = path.join(__dirname, "../views/products/productsByUser/product-edit-form");   // path view
-    const id = req.params.id;                                                                // Primary key id product
-    
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-edit-form"
+    ); // path view
+    const id = req.params.id; // Primary key id product
+
     let reqGenres = db.Genre.findAll();
-    let reqProduct = db.Product.findByPk(id, {include:[{association: "genre"},
-                                                       {association: "user"}]})
-    Promise.all([reqProduct,reqGenres])
-      .then(function([product, genres]){
-        res.render(file, {product: product, genres: genres});
-      });
+    let reqProduct = db.Product.findByPk(id, {
+      include: [{ association: "genre" }, { association: "user" }],
+    });
+    Promise.all([reqProduct, reqGenres]).then(function ([product, genres]) {
+      res.render(file, { product: product, genres: genres });
+    });
 
     /* OLD METHOD JSON 
     // const product = products.find((product) => {
@@ -141,26 +168,24 @@ const productsController = {
 
   // Method to update
   update: (req, res) => {
-
     db.Product.update(
-      { 
-        users_id : req.session.userLogged.id,
-        genre_id : req.body.genre,
+      {
+        users_id: req.session.userLogged.id,
+        genre_id: req.body.genre,
         product_name: req.body.product_name,
         price: req.body.price,
         discount: req.body.discount,
         producer: req.body.producer,
         product_description: req.body.descriptionProduct,
-        product_image: "x",//req.file.filename,
-        popularity: 0
-      }, 
+        product_image: "x", //req.file.filename,
+        popularity: 0,
+      },
       {
-        where: {id : req.params.id}
+        where: { id: req.params.id },
       }
-    );     
+    );
 
     res.redirect("/products/edit/");
-
 
     /* OLD METHOD JSON 
     let product = products.find((product) => {
@@ -203,13 +228,12 @@ const productsController = {
 
   // Delete - Method to erase a registry from DB
   destroy: (req, res) => {
-
     db.Product.destroy({
-      where: {id: req.params.id}
+      where: { id: req.params.id },
     });
 
     res.redirect("/products/edit/");
-    
+
     /* OLD METHOD JSON 
     // Delete product that was brought by the req
     let id = req.params.id;
@@ -223,7 +247,7 @@ const productsController = {
       JSON.stringify(finalProducts, null, " ")
     );
     res.redirect("/store");*/
-  }
+  },
 };
 
 module.exports = productsController;
