@@ -107,14 +107,13 @@ const productsController = {
 
     // Create product validation form
     if (resultValidation.errors.length > 0) {
-      Promise.all([reqProduct, reqGenres])
-        .then(function ([products, genres]) {
-          res.render(file, {
-            products: products,
-            genres: genres,
-            errors: resultValidation.mapped(),
-            oldData: req.body,
-          });
+      Promise.all([reqProduct, reqGenres]).then(function ([products, genres]) {
+        res.render(file, {
+          products: products,
+          genres: genres,
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        });
       });
     }
 
@@ -168,6 +167,11 @@ const productsController = {
 
   // Method to update
   update: (req, res) => {
+    const resultValidation = validationResult(req);
+    /* WITH DATABASE */
+    let reqProduct = db.Product.findAll();
+    let reqGenres = db.Genre.findAll();
+
     db.Product.update(
       {
         users_id: req.session.userLogged.id,
@@ -184,6 +188,18 @@ const productsController = {
         where: { id: req.params.id },
       }
     );
+
+    // Edit product validation form
+    if (resultValidation.errors.length > 0) {
+      Promise.all([reqProduct, reqGenres]).then(function ([products, genres]) {
+        res.render(file, {
+          products: products,
+          genres: genres,
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        });
+      });
+    }
 
     res.redirect("/products/edit/");
 
