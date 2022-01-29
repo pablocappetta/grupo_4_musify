@@ -11,6 +11,7 @@ const fileUpload = require('../middlewares/multer/multerMiddleware');      /* Mi
 const userMiddleware = require('../middlewares/session/userMiddleware');    /* Middleware user state => is logged?, registered? etc */
 const registerValidator = require('../middlewares/validations/validateRegisterMiddleware'); /*  Middle validates registration => captures errors to send them to the views */
 const loginValidator = require('../middlewares/validations/validateLoginMiddleware'); /*  Middle validates login => captures errors to send them to the views */
+const profileEditValidator = require('../middlewares/validations/validateProfileEditMiddleware'); /*  Middle validates profile edition => captures errors to send them to the views */
 
 // Login
 router.get("/login", userMiddleware.guestMiddleware ,usersController.login);
@@ -25,7 +26,7 @@ router.get("/profile", userMiddleware.authMiddleware, usersController.profile);
 
 // Edit Profile
 router.get("/profile/edit/", usersController.editProfile);
-router.post("/profile/edit/:id", fileUpload.single('image'), usersController.update);
+router.post("/profile/edit/:id", fileUpload.single('image'), profileEditValidator, usersController.update);
 
 // Delete user
 router.post("/profile/delete/:id", usersController.destroy);
