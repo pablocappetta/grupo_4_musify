@@ -42,7 +42,7 @@ CREATE TABLE `Products` (
 	`price` FLOAT NOT NULL,
 	`discount` DECIMAL(5,2),
 	`producer` VARCHAR(255) NOT NULL,
-	`product_description` VARCHAR(255),
+	`product_description` VARCHAR(600),
 	`product_image` VARCHAR(255),
 	`popularity` INTEGER,
 	`users_id` INTEGER NOT NULL, 
