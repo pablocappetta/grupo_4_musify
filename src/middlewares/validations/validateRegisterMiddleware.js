@@ -1,5 +1,5 @@
 /*
-	-  Validating Logged User Session -
+	-  Validating Register Form -
 */
 
 const path = require('path');

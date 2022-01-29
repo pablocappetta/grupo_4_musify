@@ -39,7 +39,7 @@ const usersController = {
 
     console.log(resultValidation);
 
-    // put errors in register form
+    // Put errors in register form
     if (resultValidation.errors.length > 0) {
       db.UserCategory.findAll().then(function (usersCategory) {
         return res.render(file, {
@@ -132,6 +132,17 @@ const usersController = {
         where: { id: req.params.id },
       }
     );
+
+    // Put errors in profile edit form
+    if (resultValidation.errors.length > 0) {
+      db.User.findByPk(req.session.userLogged.id).then(function (user) {
+        res.render(file, {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          user: user,
+        });
+      });
+    }
 
     res.redirect("/profile/edit/");
   },
