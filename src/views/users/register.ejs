@@ -9,6 +9,9 @@
       <div class="main-form">
         <section>
           <div class="main-form-structure">
+
+            <ul class="errorsFront"></ul>
+      
             <form
               action="/register"
               method="POST"
@@ -20,33 +23,46 @@
                   class="input-form-control-fullname"
                   type="text"
                   name="first_name"
+                  id = "firstName"
                 />
                 <div class="form-label-fullname">
                   First name
                 </div>
                 <i class="bi bi-person-circle reg-user-icon"></i>
               </div>
-
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'first_name'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+            </small>
+               
               <div class="form-wrapper-fullname">
                 <input
                   class="input-form-control-fullname"
                   type="text"
                   name="last_name"
+                  id = "lastName";
                 />
                 <div class="form-label-fullname">
                   Last name
                 </div>
                 <i class="bi bi-person-circle reg-user-icon"></i>
               </div>
+              <small class = "text-danger">
+              <% if(typeof errors != 'undefined'){ %>
+                <% for(let index = 0; index< errors.length; index++){ %>
+                  <% if(errors[index].param == 'last_name'){ %>
+                    <%= errors[index].msg %> 
+                  <% } %>
+                <% } %>
+              <% } %> 
+            </small>
+
               <div class="form-wrapper-fullname">
-                <!-- <input
-                  class="input-form-control-fullname"
-                  type="text"
-                  name="category"
-                  required
-                  minlength="8"
-                  maxlength="32"
-                /> -->
                 <select name="category" id="category" class="form-input">
                   <% for(let index = 0; index < usersCategory.length; index++){ %>
                     <option value = "<%= usersCategory[index].id %>">
@@ -59,6 +75,16 @@
                 </div>
                 <i class="bi bi-person-lines-fill reg-category-icon"></i>
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'category'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small>
+ 
               <div class="form-wrapper-emailRegister">
                 <input
                   class="input-form-control-emailRegister"
@@ -71,7 +97,17 @@
                 </div>
                 <i class="bi bi-envelope-fill reg-email-icon"></i>
               </div>
-              <div class="form-wrapper-pswRegister">
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'email'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>  
+              </small>
+
+              <div class="form-wrapper-pswRegister"> 
                 <input
                   class="input-form-control-pswRegister"
                   type="password"
@@ -84,6 +120,34 @@
                 </div>
                 <i class="bi bi-eye-slash-fill reg-psw-icon"></i>
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'password'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>  
+              </small>
+
+              <div class="form-wrapper-pswRegister"> 
+                <textarea
+                  class="input-form-control-pswRegister" 
+                  name="description_producer"
+                  id="description_producer" 
+                ></textarea><div class="form-label-pswRegister">Description</div> 
+              </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'description_producer'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>  
+              </small>
+
+        
               <p>
                 <label for="image">Profile Picture </label>
                 <input
@@ -92,6 +156,16 @@
                   id="photo"
                 />
               </p>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'image'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>  
+              </small>
+
               <p class="form-btn-container">
                 <button type="submit" class="btn-form-signin">
                   Sign Up
@@ -129,6 +203,9 @@
         </section>
       </div>
     </main>
+
     <%- include ('../partials/footer') %>
+    <script src='../../../public/javascript/registerValidation.js'></script>
+
   </body>
 </html>

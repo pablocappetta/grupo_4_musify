@@ -6,10 +6,11 @@
       <%- include ('../../partials/header') %>
     </div>
     <main>
-        <h2> Welcome <%= user.firstName %> </h2>
-        <div> <%= user.email %> </div> 
-        <!-- %= user.image %>  -->
-        <img src = "..\..\public\img\usersImg\1642982366609_img.jpg">
+        
+        <div class = "profile-image">
+          <h2 class = "profile-title"> Welcome <%= user.first_name %> <%= user.last_name %></h2>
+          <img src = "../img/usersImg/<%= user.image_producer%>">
+        </div>
             
         <br>
 
@@ -42,19 +43,22 @@
                   method="GET"
                   class="register-form-container"
                   enctype="multipart/form-data">
-              <p class="form-btn-container">
-                <button type="submit" class="btn-form-signin">
-                  Edit your profile
-                </button>
-              </p> 
-            </form>
+                <p class="form-btn-container">
+                  <button type="submit" class="btn-form-signin">
+                    Edit your profile
+                  </button>
+                </p> 
+              </form>
+
+              <form method="GET" action="/logout" class="register-form-container">
+                <p class="form-btn-container">
+                  <button type="submit" class="btn-form-signin">Logout</button>
+                </p>
+              </form>
 
             </div>
           </section>
-        </div>
-        <form method="GET" action="/logout">
-          <button type="submit" class="btn-form-login">LOGOUT</button>
-        </form>
+        </div> 
     </main>
     <%- include ('../../partials/footer') %>
   </body>

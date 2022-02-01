@@ -7,6 +7,8 @@ const productsFilePath = path.join(
 );
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
+const { validationResult } = require("express-validator");
+
 let db = require("../database/models");
 
 const productsController = {
@@ -39,10 +41,7 @@ const productsController = {
 
   // Create - Form to create products
   create: (req, res) => {
-    let file = path.join(
-      __dirname,
-      "../views/products/productsByUser/product-create-form"
-    );
+    let file = path.join(__dirname,"../views/products/productsByUser/product-create-form");
 
     /* OLD METHOD JSON */
     // res.render(file, {
@@ -88,36 +87,38 @@ const productsController = {
     res.redirect("/products/store");
     */
 
-    const resultValidation = validationResult(req);
+    let file = path.join(__dirname, "../views/products/productsByUser/product-create-form");
+    const validation = validationResult(req);
     /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
     let reqGenres = db.Genre.findAll();
 
-    db.Product.create({
-      users_id: req.session.userLogged.id,
-      genre_id: req.body.genre,
-      product_name: req.body.product_name,
-      price: req.body.price,
-      discount: req.body.discount,
-      producer: req.body.producer,
-      product_description: req.body.descriptionProduct,
-      product_image: req.file.filename,
-      popularity: 0,
-    });
-
     // Create product validation form
-    if (resultValidation.errors.length > 0) {
+    if (validation.errors.length > 0) {
       Promise.all([reqProduct, reqGenres]).then(function ([products, genres]) {
         res.render(file, {
           products: products,
           genres: genres,
-          errors: resultValidation.mapped(),
+          errors: validation.errors,
           oldData: req.body,
         });
       });
     }
-
-    res.redirect("/products/store");
+    else
+    {
+      db.Product.create({
+        users_id: req.session.userLogged.id,
+        genre_id: req.body.genre,
+        product_name: req.body.product_name,
+        price: req.body.price,
+        discount: req.body.discount,
+        producer: req.body.producer,
+        product_description: req.body.descriptionProduct,
+        product_image: req.file.filename,
+        popularity: 0,
+      });
+      res.redirect("/products/store");
+    }
   },
 
   listProduct: (req, res) => {
@@ -167,41 +168,47 @@ const productsController = {
 
   // Method to update
   update: (req, res) => {
-    const resultValidation = validationResult(req);
+    let file = path.join(__dirname,"../views/products/productsByUser/product-edit-form"); // path view
+    const validation = validationResult(req);
+    
     /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
     let reqGenres = db.Genre.findAll();
 
-    db.Product.update(
-      {
-        users_id: req.session.userLogged.id,
-        genre_id: req.body.genre,
-        product_name: req.body.product_name,
-        price: req.body.price,
-        discount: req.body.discount,
-        producer: req.body.producer,
-        product_description: req.body.descriptionProduct,
-        product_image: "x", //req.file.filename,
-        popularity: 0,
-      },
-      {
-        where: { id: req.params.id },
-      }
-    );
+    console.log(validation);
 
     // Edit product validation form
-    if (resultValidation.errors.length > 0) {
-      Promise.all([reqProduct, reqGenres]).then(function ([products, genres]) {
+    if (validation.errors.length > 0) {
+      Promise.all([reqProduct, reqGenres]).then(function ([product, genres]) {
         res.render(file, {
-          products: products,
+          product: product,
           genres: genres,
-          errors: resultValidation.mapped(),
+          errors: validation.errors,
           oldData: req.body,
         });
       });
     }
-
-    res.redirect("/products/edit/");
+    else
+    {
+      db.Product.update(
+        {
+          users_id: req.session.userLogged.id,
+          genre_id: req.body.genre,
+          product_name: req.body.product_name,
+          price: req.body.price,
+          discount: req.body.discount,
+          producer: req.body.producer,
+          product_description: req.body.descriptionProduct,
+          product_image: "x", //req.file.filename,
+          popularity: 0,
+        },
+        {
+          where: { id: req.params.id },
+        }
+      ); 
+      res.redirect("/profile");
+    }
+  
 
     /* OLD METHOD JSON 
     let product = products.find((product) => {

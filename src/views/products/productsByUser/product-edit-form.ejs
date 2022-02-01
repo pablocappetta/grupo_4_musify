@@ -14,20 +14,29 @@
           </div>
         </div>
         <div class="col-12">
-          <form action="/products/edit/<%=
-          product.id %>" method="POST"> <!-- @nacuna: We need to research what conditional to use so this form action takes the Product ID picked above to edit the page-->
+          <form action="/products/edit/<%=product.id %>" method="POST" enctype="multipart/form-data">
             <div class="row product-detail">
+              
               <div class="col-12 col-md-6">
                 <label for="name" class="form-label">Product Name</label>
                 <input
                   type="text"
-                  id="name"
+                  id="product_name"
                   name="product_name"
                   placeholder="<%= product.product_name %>"
                   value="<%= product.product_name %>"
                   class="form-input"
                 />
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'product_name'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small>
 
               <div class="col-12 col-md-6">
                 <label for="price" class="form-label">Price</label>
@@ -40,6 +49,15 @@
                   value="<%= product.price %>"
                 />
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'price'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small>
 
               <div class="col-12 col-md-6">
                 <label for="discount" class="form-label">Discount</label>
@@ -52,6 +70,15 @@
                   value="<%= product.discount %>"
                 />
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'discount'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small>
 
               <div class="col-12 col-md-6">
                 <label for="genre" class="form-label">Genre</label>
@@ -66,33 +93,47 @@
 
               <div class="col-12">
                 <label for="description" class="form-label"
-                  >Product Description</label
-                >
+                  >Product Description</label>
                 <textarea
-                  name="product_description"
-                  id="product_description"
+                  name="descriptionProduct"
+                  id="descriptionProduct"
                   class="form-input"
                   placeholder="<%= product.product_description %>"
-                  value="<%= product.product_description %>"
-                ><%=product.product_description %></textarea>
+                  value="<%= product.product_description %>"><%=product.product_description %></textarea>
               </div>
-              <!-- @félix: Habría que ver como hacer para que si el usuario no ingresa ninguna imagen en el update -->
-              <!-- mantenga la anterior. El put va a sobreescribir -->
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'descriptionProduct'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small>
+
               <div class="col-12 col-md-6">
                 <label for="imageProduct" class="form-label">Update an image</label>
                 <input
                   type="file"
                   id="imageProduct"
-                  name="imageProduct"
-                  accept="image/*, .pdf"
+                  name="imageProduct" 
                   class="form-input"
                 />
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'imageProduct'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small>
 
               <div class="col-12">
-                <label for="description" class="form-label"
-                  >Artist Description:</label
-                >
+                <label for="description" class="form-label">
+                  Artist Description:
+                </label>
                 <textarea
                   name="producer"
                   id="producer"
@@ -101,16 +142,42 @@
                   value="<%= product.producer %>"
                 ><%=product.producer%></textarea>
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'producer'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small>
               
               <div class="col-12">
                 <button type="submit" class="buy-now-button">Save</button>
               </div>
+
             </div>
           </form>
 
-          <form action="/products/delete/<%= product.id %>" method="POST">
+          <form action="/products/delete/<%= product.id %>" class = "form-delete" method="POST">
             <button type="submit" class="delete-product-button">Delete product</button>
           </form>
+
+          <script type="text/javascript"> 
+            window.addEventListener("load", function(){
+              let formDelete = document.querySelector(".form-delete");
+              formDelete.addEventListener("submit", function(e){
+                let result = confirm('You are sure?');
+                if (result === true) {
+                    alert('your product was deleted');
+                    return;
+                } else { 
+                    alert('we will keep your product ;)');
+                    e.preventDefault();
+                }
+              }); 
+            });
+          </script>
 
           </div>
         </div>

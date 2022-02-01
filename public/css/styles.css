@@ -824,6 +824,8 @@ h3.grids-titles {
   transition: all 0.35s;
 }
 
+
+
 .input-form-control-pswRegister {
   height: 50px;
   align-items: center;
@@ -920,15 +922,19 @@ h3.grids-titles {
   align-content: center;
 }
 
+.profile-image{
+  width: 20%;
+}
+
 .register-form-container {
   width: 85%;
   max-width: 720px;
-  margin: 40px 60px;
+  /* margin: 40px 60px; */
   display: flex;
   flex-direction: column;
   align-self: center;
   padding: 12px 20px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 4px;
   background-color: #f8f8f8;
   gap: 7px;
@@ -1999,5 +2005,10 @@ footer a {
 
   article.product {
     flex: 25%;
+  }
+
+
+  .text-danger{
+    color:#ff424d;
   }
 }

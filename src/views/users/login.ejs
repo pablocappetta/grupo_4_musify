@@ -9,6 +9,9 @@
       <div class="main-form">
         <section>
           <div class="main-form-structure">
+
+            <ul class="errorsFront"></ul>
+
             <form
               action="/login"
               method="POST"
@@ -24,13 +27,18 @@
                   required
                 />
                   <div class="form-label-email"> Email </div>
-                  <% if (locals.errors && errors.email) { %>
-                    <div class="text-danger">
-                      <%= errors.email.msg %>
-                    </div>
-                  <% } %>
                   <i class="bi bi-person-circle login-user-icon"></i>
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'email'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>   
+              </small> 
+
               <div class="form-wrapper-psw">
                 <input
                   class="input-form-control-psw"
@@ -44,6 +52,16 @@
                 </div>
                 <i class="bi bi-eye-slash-fill login-psw-icon"></i>
               </div>
+              <small class = "text-danger">
+                <% if(typeof errors != 'undefined'){ %>
+                  <% for(let index = 0; index< errors.length; index++){ %>
+                    <% if(errors[index].param == 'password'){ %>
+                      <%= errors[index].msg %>
+                    <% } %>
+                  <% } %>
+                <% } %>  
+              </small>
+
               <label class="form-check-label">
                 <input type="checkbox" class="form-check-input" name="remember_user">Remember my user
               </label>
@@ -81,6 +99,9 @@
         </section>
       </div>
     </main>
+
     <%- include ('../partials/footer') %>
+    <script src='../../../public/javascript/loginValidation.js'></script>
+    
   </body>
 </html>

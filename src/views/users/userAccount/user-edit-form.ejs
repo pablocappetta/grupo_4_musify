@@ -13,91 +13,157 @@
               </div>
             </div>
             
+            <ul class="errorsFront"></ul>
 
             <div class="col-12">
-              <form action="/profile/edit/<%=user.id%>" method="POST"> <!-- @nacuna: We need to research what conditional to use so this form action takes the Product ID picked above to edit the page-->
+              <form 
+                action="/profile/edit/<%=user.id%>" 
+                class="form-edit" 
+                method="POST" 
+                enctype="multipart/form-data"
+              >
                   <div class="row product-detail">
-                  <div class="col-12 col-md-6">
-                    <label for="name" class="form-label">First Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="first_name"
-                      placeholder="<%= user.first_name %>"
-                      value="<%= user.first_name %>"
-                      class="form-input"
-                    />
-                  </div>
+                    <div class="col-12 col-md-6">
+                      <label for="name" class="form-label">First Name</label>
+                      <input
+                        type="text"
+                        id="first_name"
+                        name="first_name"
+                        placeholder="<%= user.first_name %>"
+                        value="<%= user.first_name %>"
+                        class="form-input"
+                      />
+                    </div>
+                    <small class = "text-danger">
+                      <% if(typeof errors != 'undefined'){ %>
+                        <% for(let index = 0; index< errors.length; index++){ %>
+                          <% if(errors[index].param == 'first_name'){ %>
+                            <%= errors[index].msg %>
+                          <% } %>
+                        <% } %>
+                      <% } %>  
+                    </small>
 
-                  <div class="col-12 col-md-6">
-                    <label for="last_name" class="form-label">Last Name</label>
-                    <input
-                      type="text"
-                      id="last_name"
-                      name="last_name"
-                      placeholder="<%= user.last_name %>"
-                      class="form-input"
-                      value="<%= user.last_name %>"
-                    />
-                  </div>
+                    <div class="col-12 col-md-6">
+                      <label for="last_name" class="form-label">Last Name</label>
+                      <input
+                        type="text"
+                        id="last_name"
+                        name="last_name"
+                        placeholder="<%= user.last_name %>"
+                        class="form-input"
+                        value="<%= user.last_name %>"
+                      />
+                    </div>
+                    <small class = "text-danger">
+                      <% if(typeof errors != 'undefined'){ %>
+                        <% for(let index = 0; index< errors.length; index++){ %>
+                          <% if(errors[index].param == 'last_name'){ %>
+                            <%= errors[index].msg %>
+                          <% } %>
+                        <% } %>
+                      <% } %>  
+                    </small>
 
-                  <div class="col-12 col-md-6">
-                    <label for="email" class="form-label">Email</label>
-                    <input
-                      type="text"
-                      id="email"
-                      name="email"
-                      placeholder=""
-                      class="form-input"
-                      value="<%= user.email %>"
-                    />
-                  </div>
+                    <div class="col-12 col-md-6">
+                      <label for="email" class="form-label">Email</label>
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder=""
+                        class="form-input"
+                        value="<%= user.email %>"
+                      />
+                    </div>
+                    <small class = "text-danger">
+                      <% if(typeof errors != 'undefined'){ %>
+                        <% for(let index = 0; index< errors.length; index++){ %>
+                          <% if(errors[index].param == 'email'){ %>
+                            <%= errors[index].msg %>
+                          <% } %>
+                        <% } %>
+                      <% } %>  
+                    </small>
 
-                  <div class="col-12 col-md-6">
-                    <label for="password" class="form-label">New Password</label>
-                    <input
-                        class="input-form-control-pswRegister"
-                        type="password"
-                        name="password"
-                        id="password"
-                        required
-                        min="8"
-                    />
-                  </div>
+                    <div class="col-12 col-md-6">
+                      <label for="password" class="form-label">New Password</label>
+                      <input
+                          class="input-form-control-pswRegister"
+                          type="password"
+                          name="password"
+                          id="password"
+                          required
+                          min="8"
+                      />
+                    </div>
+                    <small class = "text-danger">
+                      <% if(typeof errors != 'undefined'){ %>
+                        <% for(let index = 0; index< errors.length; index++){ %>
+                          <% if(errors[index].param == 'password'){ %>
+                            <%= errors[index].msg %>
+                          <% } %>
+                        <% } %>
+                      <% } %>  
+                    </small>
 
-                  <div class="col-12">
-                    <label for="description" class="form-label"
-                      >Producer Description</label
-                    >
-                    <textarea
-                      name="description_producer"
-                      id="description_producer"
-                      class="form-input"
-                      placeholder="<%= user.description_producer %>"
-                      value="<%= user.description_producer %>"
-                    ><%=user.description_producer %></textarea>
-                  </div>
+                    <div class="col-12">
+                      <label for="description" class="form-label"
+                        >Producer Description</label
+                      >
+                      <textarea
+                        name="description_producer"
+                        id="description_producer"
+                        class="form-input"
+                        placeholder="<%= user.description_producer %>"
+                        value="<%= user.description_producer %>"
+                      ><%=user.description_producer %></textarea>
+                    </div>
 
-                  <div class="col-12 col-md-6">
-                    <label for="image_producer" class="form-label">Update an image</label>
-                    <input
-                      type="file"
-                      id="image_producer"
-                      name="image_producer"
-                      accept="image/*, .pdf"
-                      class="form-input"
-                    />
-                  </div>
+                    <div class="col-12 col-md-6">
+                      <label for="image" class="form-label">Update an image</label>
+                      <input
+                        type="file"
+                        id="image_producer"
+                        name="image" 
+                        class="form-input"
+                      />
+                    </div>
+                    <small class = "text-danger">
+                      <% if(typeof errors != 'undefined'){ %>
+                        <% for(let index = 0; index< errors.length; index++){ %>
+                          <% if(errors[index].param == 'image_producer'){ %>
+                            <%= errors[index].msg %>
+                          <% } %>
+                        <% } %>
+                      <% } %>  
+                    </small>
                   
-                  <div class="col-12">
-                    <button type="submit" class="buy-now-button">Save</button>
+                    <div class="col-12">
+                      <button type="submit" class="buy-now-button">Save</button>
+                    </div>
                   </div>
-                </div>
               </form>
 
-            <form action="/profile/delete/<%= user.id %>" method = POST>
-              <button type="submit" class="delete-product-button">Delete User Account</button>
-            </form>
+              <form action="/profile/delete/<%= user.id %>" class="form-delete" method = POST>
+                <button type="submit" class="delete-product-button">Delete User Account</button>
+              </form>
+
+              <script type="text/javascript"> 
+                window.addEventListener("load", function(){
+                  let formDelete = document.querySelector(".form-delete");
+                  formDelete.addEventListener("submit", function(e){
+                    let result = confirm('You are sure?');
+                    if (result === true) {
+                        alert('your account was successfully deleted');
+                        return;
+                    } else { 
+                        alert('we will keep your account ;)');
+                        e.preventDefault();
+                    }
+                  }); 
+                });
+              </script>
 
             </div>
           </div>

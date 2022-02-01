@@ -8,6 +8,7 @@ const { body, check } = require('express-validator');
 module.exports = [
 	body('product_name')
 		.notEmpty()
+		.isLength({min : 5})
 		.withMessage('Your product needs a name!'),
 	body('price')
 		.notEmpty()
@@ -21,19 +22,20 @@ module.exports = [
 	body('genre')
 		.notEmpty()
 		.withMessage('You have to enter the product\'s genre.'),
-    body('product_description')
+    body('descriptionProduct')
 		.notEmpty()
+		.isLength({min : 20})
 		.withMessage('You have to write a brief description about the product.'),
 	body('producer')
 		.notEmpty()
+		.isLength({min : 5})
 		.withMessage('You have to enter who is the producer of this product.'),
+
 	body('imageProduct')
 		.custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
-
-		if (!file) {
-			// console.log("JODER TÍO HE QUEDADO ATRAPADO EN LA MIDDLEWARE");
+		let acceptedExtensions = ['.jpg', 'jpeg', '.png', '.gif']; 
+		if (!file) { 
 			throw new Error('Your product needs an image.');
 		} else {
 			let fileExtension = path.extname(file.originalname);

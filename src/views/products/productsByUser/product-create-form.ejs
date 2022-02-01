@@ -32,6 +32,16 @@
                     class="form-input"
                   />
                 </div>
+                <small class = "text-danger">
+                  <% if(typeof errors != 'undefined'){ %>
+                    <% for(let index = 0; index< errors.length; index++){ %>
+                      <% if(errors[index].param == 'product_name'){ %>
+                        <%= errors[index].msg %>
+                      <% } %>
+                    <% } %>
+                  <% } %>   
+                </small>
+
                 <div class="col-12 col-md-6">
                   <label for="price" class="form-label">Price</label>
                   <input
@@ -42,6 +52,16 @@
                     class="form-input"
                   />
                 </div>
+                <small class = "text-danger">
+                  <% if(typeof errors != 'undefined'){ %>
+                    <% for(let index = 0; index< errors.length; index++){ %>
+                      <% if(errors[index].param == 'price'){ %>
+                        <%= errors[index].msg %>
+                      <% } %>
+                    <% } %>
+                  <% } %>   
+                </small>
+
                 <div class="col-12 col-md-6">
                   <label for="imageProduct" class="form-label"
                     >Upload an image</label
@@ -54,16 +74,37 @@
                     class="form-input"
                   />
                 </div>
+                <small class = "text-danger">
+                  <% if(typeof errors != 'undefined'){ %>
+                    <% for(let index = 0; index< errors.length; index++){ %>
+                      <% if(errors[index].param == 'imageProduct'){ %>
+                        <%= errors[index].msg %>
+                      <% } %>
+                    <% } %>
+                  <% } %>   
+                </small>
+
+
                 <div class="col-12 col-md-6">
                   <label for="discount" class="form-label">Discount</label>
                   <input
                     type="text"
                     id="discount"
                     name="discount"
-                    placeholder="E.g: $15"
+                    placeholder="E.g: 10%"
                     class="form-input"
                   />
                 </div>
+                <small class = "text-danger">
+                  <% if(typeof errors != 'undefined'){ %>
+                    <% for(let index = 0; index< errors.length; index++){ %>
+                      <% if(errors[index].param == 'discount'){ %>
+                        <%= errors[index].msg %>
+                      <% } %>
+                    <% } %>
+                  <% } %>   
+                </small>
+
                 <div class="col-12 col-md-6">
                   <label for="genre" class="form-label">Genre</label>
                   <select name="genre" id="genre" class="form-input">
@@ -74,6 +115,7 @@
                     <% } %>
                   </select>
                 </div>
+
                 <div class="col-12">
                   <label for="description" class="form-label"
                     >Product Description</label
@@ -84,6 +126,16 @@
                     class="form-input"
                   ></textarea>
                 </div>
+                <small class = "text-danger">
+                  <% if(typeof errors != 'undefined'){ %>
+                    <% for(let index = 0; index< errors.length; index++){ %>
+                      <% if(errors[index].param == 'descriptionProduct'){ %>
+                        <%= errors[index].msg %>
+                      <% } %>
+                    <% } %>
+                  <% } %>   
+                </small>
+
                 <div class="col-12">
                   <label for="producer" class="form-label"
                     >Producer</label
@@ -94,9 +146,20 @@
                     class="form-input"
                   ></textarea>
                 </div>
+                <small class = "text-danger">
+                  <% if(typeof errors != 'undefined'){ %>
+                    <% for(let index = 0; index< errors.length; index++){ %>
+                      <% if(errors[index].param == 'producer'){ %>
+                        <%= errors[index].msg %>
+                      <% } %>
+                    <% } %>
+                  <% } %>   
+                </small>
+
                 <div class="col-12">
                   <button type="submit" class="buy-now-button">Save</button>
                 </div>
+                
               </div>
             </form>
           </div>
