@@ -6,7 +6,8 @@ const cookies = require('cookie-parser');
 const methodOverride = require("method-override"); 
 const userLoggedMiddleware = require('./src/middlewares/session/userLoggedMiddleware');
 
-// ************ express() ************
+// ************ Express() ************
+
 const app = express();
 
 // ************ Middlewares ************
@@ -18,10 +19,12 @@ app.use(express.json()); // Para poder trabajar con stringify y demás
 app.use(cookies());       // Para trabajar con las cookies
 app.use(userLoggedMiddleware); // REVISAR COOKIES
 
+const port = 42133;
+
 //process.env.PORT -> Heroku PORT
-app.listen(process.env.PORT || 42133, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("Server initiated in port 42133");
-  console.log("Hostname: http://localhost:42133");
+  console.log(`Hostname: http://localhost:${port}`);
 });
 
 // ************ Template Engine ************
@@ -37,3 +40,4 @@ app.use("/", mainRouter);
 app.use('/', usersRouter);
 app.use("/products", productsRouter);
 
+module.exports = port;

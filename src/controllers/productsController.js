@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
 let db = require("../database/models");
+let port = require("../../app.js");
 
 // ························································································ //
 
@@ -103,6 +104,7 @@ const productsController = {
       "../views/products/productsByUser/product-create-form"
     );
     const validation = validationResult(req);
+
     /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
     let reqGenres = db.Genre.findAll();
@@ -138,19 +140,62 @@ const productsController = {
   // --- List method FOR API ---
   list: (req, res) => {
     db.Product
-      .findAll()
+      .findAll({include: [
+        {association: "genre"}
+      ]})
       .then((products) => {
-        // JSON sends data in this format in order to allow API consumption
+        // JSON sends data in this format in order to allow API consumption \\
+
+        // ·························   countByCategory    ·························
+        let genreID = () => {
+          let generos = [];
+
+          for (let i = 0; i < products.length; i++) {
+            generos.push(products[i].genre.genre_name);
+          }
+
+          let generosReducer = generos.reduce((accumulator, current) => {
+            accumulator[current] = (accumulator[current] || 0) + 1;
+            return accumulator;
+          }, {});
+
+          return generosReducer;
+        };
+
+        // ·························   Product    ·························
+        let propProducts = () => {
+          let selectedProducts = [];
+          for (let i = 0; i < products.length; i++) {
+            selectedProducts.push({
+              id: products[i].id,
+              product_name: products[i].product_name, 
+              product_description: products[i].product_description, 
+              genre_name: products[i].genre.genre_name, 
+              details: `http://localhost:42133/products/api/${products[i].id}`}) 
+          }
+          return selectedProducts;
+        };
+
         return res.status(200).json({
-          total: products.length,
-          data: products,
-          status: 200,
-        });
-      })
-      .catch(err =>
-        handleError(err)
-      );
-  },
+          count: products.length,
+
+          countByCategory: genreID(),
+
+          products: propProducts(),
+
+          // ································································
+          // FX W/ LOOP TO ASSIGN OBJET DETAIL & REMOVE SOME DISPLAYING DATA:
+          // ································································
+          // products: () => {
+          //   for (let i = 0; i < products.length; i++) {
+          //     return JSON.stringify(products[i].id, products[i].product_name, products[i].product_description, {detail: `http://localhost:42133/products/api/${products[i].id}`});
+          //   }
+          // },        
+          // ································································
+          
+          status: 200
+        })
+  })},
 
   // --- Show method FOR API ---
   show: (req, res) => {
@@ -213,35 +258,21 @@ const productsController = {
           return res.status(200).json(product);
         }
         return res.status(200).json("There are no products that match your search.");
-
       })
       .catch(err =>
         handleError(err)
       );
   },
 
-  // // --- Modify method for creating a resource in the API ---
-  // modify: (req, res) => {
-  //   db.Product
-  //     .update({
-
-  //     })
-  //     .then((product) => {
-  //       return res.status(200).json({
-  //         data: product,
-  //         status: 200,
-  //         productUpdated: "Yes.",
-  //       });
-  //     });
-  // },
-
   // COLUMNS:
   // product_name, price, discount - NO, producer, product_description - NO
   // product_image - NO, popularity- NO, users_id, genre_id
 
+  // EXTRA
+  // Use DDBB consulting
+
   // PENDING ISSUES:
-  // How to shall we interact with FKs?
-  // How to modify an already existing product and patch method?
+  // Array con ppal relacion 1:M & detail -- pending review
 
   // ######################################################################### //
 

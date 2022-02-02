@@ -29,7 +29,7 @@ router.get("/edit", productsController.listProduct);
 router.get("/edit/:id", productsController.edit);
 router.post("/edit/:id", fileUpload.single("imageProduct"), editValidation, productsController.update);
 
-/*** DELETE ONE PRODUCT***/
+/*** DELETE ONE PRODUCT ***/
 router.post("/delete/:id", productsController.destroy);
 
 // -------------------------------------------     API     --------------------------------------------------------- //
