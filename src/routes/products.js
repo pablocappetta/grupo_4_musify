@@ -35,6 +35,7 @@ router.post("/delete/:id", productsController.destroy);
 // -------------------------------------------     API     --------------------------------------------------------- //
 
 router.get("/api", productsController.list); // Global endpoint
+router.get("/api/search", productsController.search); // Search a specific resource
 router.get("/api/:id", productsController.show); // Specific request
 router.post("/api", productsController.store); // Creating a resource 
 router.delete("/api/:id", productsController.delete); // Deleting a resource

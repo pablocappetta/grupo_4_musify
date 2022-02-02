@@ -187,9 +187,30 @@ const productsController = {
       });
   },
 
+  // --- Search method for the API ---
+  search: (req, res) => {
+    db.Product
+      .findAll({
+        where: {
+          // Like operator to search for a product by its name using our wild card operator (%)
+          product_name:  { [Op.like]: '%' + req.query.keyword + '%' }
+        }
+      })
+      .then((product) => {
+        if (product.length > 0) {
+          return res.status(200).json(product);
+        }
+        return res.status(200).json("There are no products that match your search.");
+
+      });
+  },
+
+  // COLUMNS:
   // product_name, price, discount - NO, producer, product_description - NO
-  // product_image - NO, popularity- NO -- How to shall we interact with FKs?
-  // users_id, genre_id
+  // product_image - NO, popularity- NO, users_id, genre_id
+
+  // PENDING ISSUES:
+  // How to shall we interact with FKs?
 
   // ######################################################################### //
 
