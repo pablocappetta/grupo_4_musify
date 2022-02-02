@@ -146,7 +146,10 @@ const productsController = {
           data: products,
           status: 200,
         });
-      });
+      })
+      .catch(err =>
+        handleError(err)
+      );
   },
 
   // --- Show method FOR API ---
@@ -158,7 +161,10 @@ const productsController = {
           data: product,
           status: 200,
         });
-      });
+      })
+      .catch(err =>
+        handleError(err)
+      );
   },
 
   // --- Store method for creating a resource in the API ---
@@ -171,7 +177,10 @@ const productsController = {
           status: 200,
           created: "Yes.",
         });
-      });
+      })
+      .catch(err =>
+        handleError(err)
+      );
   },
 
   // --- Delete method for the API ---
@@ -184,7 +193,10 @@ const productsController = {
       })
       .then((product) => {
         return res.json(product)
-      });
+      })
+      .catch(err =>
+        handleError(err)
+      );
   },
 
   // --- Search method for the API ---
@@ -202,8 +214,26 @@ const productsController = {
         }
         return res.status(200).json("There are no products that match your search.");
 
-      });
+      })
+      .catch(err =>
+        handleError(err)
+      );
   },
+
+  // // --- Modify method for creating a resource in the API ---
+  // modify: (req, res) => {
+  //   db.Product
+  //     .update({
+
+  //     })
+  //     .then((product) => {
+  //       return res.status(200).json({
+  //         data: product,
+  //         status: 200,
+  //         productUpdated: "Yes.",
+  //       });
+  //     });
+  // },
 
   // COLUMNS:
   // product_name, price, discount - NO, producer, product_description - NO
@@ -211,6 +241,7 @@ const productsController = {
 
   // PENDING ISSUES:
   // How to shall we interact with FKs?
+  // How to modify an already existing product and patch method?
 
   // ######################################################################### //
 
