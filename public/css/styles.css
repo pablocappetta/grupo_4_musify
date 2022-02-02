@@ -244,23 +244,6 @@ iframe {
   border-radius: 4px;
 }
 
-/* .icon-payment {
-  display: block;
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.212);
-  color: black;
-  border-radius: 1000px;
-  align-self: center;
-  padding-top: 3px;
-  margin-right: 16px;
-  margin-left: 8px;
-  text-align: center;
-  opacity: 80%;
-  transition: all 0.35s;
-} */
-
 .icon-payment {
   display: block;
   font-size: 20px;
@@ -325,18 +308,29 @@ iframe {
 
 .grids-titles {
   text-align: center;
-  font-size: 24px;
+  font-size: 36px;
   margin-left: 17px;
   margin-right: 17px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   color: rgb(255, 66, 77);
+  max-width: 35ch;
+  margin: auto;
 }
 
 .grids-descriptions {
   text-align: left;
   padding-top: 9px;
   padding-bottom: 18px;
+}
+
+.email-description {
+  color: white;
+}
+
+.email-description a {
+  color: #ff424d;
+  font-weight: bolder;
 }
 
 img {
@@ -674,6 +668,57 @@ h3.grids-titles {
 .mobile-button-sign-up-main:hover {
   background-color: #ff5f67;
   border: solid 2px #ff5f67;
+}
+
+.about-us-description {
+  text-align: center;
+  max-width: 75ch;
+  margin: auto;
+  padding: 18px;
+  color: white;
+}
+
+.contact-description {
+  text-align: center;
+  max-width: 75ch;
+  margin: auto;
+  padding: 18px;
+  color: white;
+}
+
+.about-us-description a {
+  color: #ff424d;
+  font-weight: bolder;
+}
+
+.container-about-us {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #141518;
+}
+
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #141518;
+  padding: 24px;
+}
+
+.contact-fill {
+  background-color: #141518;
+  height: 100px;
+}
+
+.container-about-us .grids-titles {
+  padding: 36px;
+  font-size: 36px;
+}
+
+.container-contact .grids-titles {
+  padding: 36px;
+  font-size: 36px;
 }
 
 /*******************************/
