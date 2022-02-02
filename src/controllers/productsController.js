@@ -1,17 +1,23 @@
-// utilizo libreria path para obtener la ruta
+// ··································· IMPORTS ············································ //
+
 const fs = require("fs");
 const path = require("path");
-const productsFilePath = path.join(
-  __dirname,
-  "../database/productsDataBase.json"
-);
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
 const { validationResult } = require("express-validator");
-
 let db = require("../database/models");
 
+// ························································································ //
+
+const Op = db.Sequelize.Op;
+
+// ························································································ //
+
+const productsFilePath = path.join(__dirname,"../database/productsDataBase.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+// ························································································ //
+
 const productsController = {
+
   index: (req, res) => {
     let archivo = path.join(__dirname, "../views/products/store");
     res.render(archivo, {
@@ -41,7 +47,10 @@ const productsController = {
 
   // Create - Form to create products
   create: (req, res) => {
-    let file = path.join(__dirname,"../views/products/productsByUser/product-create-form");
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-create-form"
+    );
 
     /* OLD METHOD JSON */
     // res.render(file, {
@@ -87,7 +96,10 @@ const productsController = {
     res.redirect("/products/store");
     */
 
-    let file = path.join(__dirname, "../views/products/productsByUser/product-create-form");
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-create-form"
+    );
     const validation = validationResult(req);
     /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
@@ -103,9 +115,7 @@ const productsController = {
           oldData: req.body,
         });
       });
-    }
-    else
-    {
+    } else {
       db.Product.create({
         users_id: req.session.userLogged.id,
         genre_id: req.body.genre,
@@ -121,6 +131,21 @@ const productsController = {
     }
   },
 
+  // --- List method FOR API ---
+  list: (req, res) => {
+    db.Product
+      .findAll()
+      .then(products => {
+        // JSON sends data in this format in order to allow API consumption
+        return res.status(200).json({
+          total: products.length,
+          data: products,
+          status: 200
+        });
+    });
+  },
+
+  // --- List products BY USER --- 
   listProduct: (req, res) => {
     let file = path.join(
       __dirname,
@@ -168,9 +193,12 @@ const productsController = {
 
   // Method to update
   update: (req, res) => {
-    let file = path.join(__dirname,"../views/products/productsByUser/product-edit-form"); // path view
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-edit-form"
+    ); // path view
     const validation = validationResult(req);
-    
+
     /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
     let reqGenres = db.Genre.findAll();
@@ -187,9 +215,7 @@ const productsController = {
           oldData: req.body,
         });
       });
-    }
-    else
-    {
+    } else {
       db.Product.update(
         {
           users_id: req.session.userLogged.id,
@@ -205,10 +231,9 @@ const productsController = {
         {
           where: { id: req.params.id },
         }
-      ); 
+      );
       res.redirect("/profile");
     }
-  
 
     /* OLD METHOD JSON 
     let product = products.find((product) => {

@@ -30,7 +30,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "sequelize": "^7.0.0-alpha.1"
+    "sequelize": "^7.0.0-next.1"
   },
   "keywords": []
 }
