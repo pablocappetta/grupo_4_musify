@@ -84,6 +84,11 @@
 .cart-checkout .product-img {
   width: 50%;
 }
+
+.product-img img {
+  border-radius: 8px;
+}
+
 .cart-checkout .product-info {
   text-align: center;
 }
@@ -262,6 +267,20 @@
   justify-content: space-around;
   border-top: solid 1px #e6e6e6;
   margin-top: 31px;
+  max-width: 360px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+
+.payment-method:hover {
+  -webkit-filter: none; /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+}
+
+.payment-method img {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .paypal-logo {
@@ -294,6 +313,20 @@
   }
 
   .card-logo {
+    display: none;
+  }
+
+  .paypal-logo {
+    width: 25%;
+    margin: 10px;
+  }
+
+  .mercadopago-logo {
+    width: 25%;
+    margin: 10px;
+  }
+
+  .card-card-logo {
     display: none;
   }
 }
@@ -394,8 +427,27 @@
     margin-top: 70px;
   }
 
+  .paypal-logo {
+    width: 60%;
+    margin: 10px;
+  }
+
+  .mercadopago-logo {
+    width: 60%;
+    margin: 10px;
+  }
+
   .card-logo {
     display: inline-block;
+  }
+
+  .product-img img {
+    width: 50%;
+    border-radius: 8px;
+  }
+
+  div .product-img {
+    text-align: center;
   }
 }
 
@@ -422,6 +474,11 @@
     width: 40%;
     text-align: center;
     line-height: 10px;
+  }
+
+  .product-img img {
+    width: 50%;
+    border-radius: 8px;
   }
 
   .cart-checkout .product-name {

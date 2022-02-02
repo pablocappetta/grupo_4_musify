@@ -674,7 +674,9 @@ h3.grids-titles {
   text-align: center;
   max-width: 75ch;
   margin: auto;
-  padding: 18px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 36px;
   color: white;
 }
 
@@ -703,12 +705,14 @@ h3.grids-titles {
   flex-direction: column;
   text-align: center;
   background-color: #141518;
-  padding: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
 }
 
 .contact-fill {
   background-color: #141518;
-  height: 100px;
+  height: 320px;
 }
 
 .container-about-us .grids-titles {
@@ -1356,6 +1360,11 @@ footer a {
   .reg-psw-icon {
     right: 13%;
   }
+
+  .contact-fill {
+    background-color: #141518;
+    height: 100px;
+  }
 }
 
 /**************/
@@ -1367,6 +1376,11 @@ footer a {
     justify-content: center;
     display: revert;
     width: 60%;
+  }
+
+  .contact-fill {
+    background-color: #141518;
+    height: 100px;
   }
 
   .flex-second-column-top-main {
@@ -1411,6 +1425,11 @@ footer a {
   .section-home-grids {
     display: flex;
     flex-direction: column;
+  }
+
+  .contact-fill {
+    background-color: #141518;
+    height: 420px;
   }
 
   .header-search-bar {
