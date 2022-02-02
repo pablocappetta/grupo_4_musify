@@ -133,7 +133,7 @@ const productsController = {
     }
   },
 
-// ###############################   API   ##################################### //
+  // ###############################   API   ##################################### //
 
   // --- List method FOR API ---
   list: (req, res) => {
@@ -146,7 +146,7 @@ const productsController = {
           data: products,
           status: 200,
         });
-    });
+      });
   },
 
   // --- Show method FOR API ---
@@ -160,6 +160,36 @@ const productsController = {
         });
       });
   },
+
+  // --- Store method for creating a resource in the API ---
+  store: (req, res) => {
+    db.Product
+      .create(req.body)
+      .then((product) => {
+        return res.status(200).json({
+          data: product,
+          status: 200,
+          created: "Yes.",
+        });
+      });
+  },
+
+  // --- Delete method for the API ---
+  delete: (req, res) => {
+    db.Product
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then((product) => {
+        return res.json(product)
+      });
+  },
+
+  // product_name, price, discount - NO, producer, product_description - NO
+  // product_image - NO, popularity- NO -- How to shall we interact with FKs?
+  // users_id, genre_id
 
   // ######################################################################### //
 

@@ -33,8 +33,12 @@ router.post("/edit/:id", fileUpload.single("imageProduct"), editValidation, prod
 router.post("/delete/:id", productsController.destroy);
 
 // -------------------------------------------     API     --------------------------------------------------------- //
-router.get("/api", productsController.list); // first endpoint
-router.get("/api/:id", productsController.show);
+
+router.get("/api", productsController.list); // Global endpoint
+router.get("/api/:id", productsController.show); // Specific request
+router.post("/api", productsController.store); // Creating a resource 
+router.delete("/api/:id", productsController.delete); // Deleting a resource
 
 // ----------------------------------- EXPORTING THE DATA GATHERED IN THE ROUTER ----------------------------------- //
+
 module.exports = router;
