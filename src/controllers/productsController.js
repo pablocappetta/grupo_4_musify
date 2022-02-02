@@ -11,13 +11,15 @@ const Op = db.Sequelize.Op;
 
 // ························································································ //
 
-const productsFilePath = path.join(__dirname,"../database/productsDataBase.json");
+const productsFilePath = path.join(
+  __dirname,
+  "../database/productsDataBase.json"
+);
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 // ························································································ //
 
 const productsController = {
-
   index: (req, res) => {
     let archivo = path.join(__dirname, "../views/products/store");
     res.render(archivo, {
@@ -131,21 +133,37 @@ const productsController = {
     }
   },
 
+// ###############################   API   ##################################### //
+
   // --- List method FOR API ---
   list: (req, res) => {
     db.Product
       .findAll()
-      .then(products => {
+      .then((products) => {
         // JSON sends data in this format in order to allow API consumption
         return res.status(200).json({
           total: products.length,
           data: products,
-          status: 200
+          status: 200,
         });
     });
   },
 
-  // --- List products BY USER --- 
+  // --- Show method FOR API ---
+  show: (req, res) => {
+    db.Product
+      .findByPk(req.params.id)
+      .then((product) => {
+        return res.status(200).json({
+          data: product,
+          status: 200,
+        });
+      });
+  },
+
+  // ######################################################################### //
+
+  // --- List products BY USER ---
   listProduct: (req, res) => {
     let file = path.join(
       __dirname,
