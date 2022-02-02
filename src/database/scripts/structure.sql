@@ -74,5 +74,3 @@ CREATE TABLE `cartsProducts` (
    CONSTRAINT FOREIGN KEY (`cartId`) REFERENCES `Cart`(`id`),
    CONSTRAINT FOREIGN KEY (`productId`) REFERENCES `Products`(`id`)
 );
-
---
