@@ -1035,18 +1035,30 @@ h3.grids-titles {
   background: transparent;
   color: black;
   font-size: 1rem;
-  text-indent: 1rem;
   transition: all 0.35s;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#profile-picture-text:hover {
+  border: 2px solid black;
 }
 
 #profile-picture-text label {
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
+  position: absolute;
+  left: 15px;
+  bottom: 8px;
+  color: #888;
 }
 
-#profile-picture-text photo {
-  justify-content: center;
+#profile-picture-text input {
+  color: #888;
+  margin-left: 180px;
+}
+
+#profile-picture-text #file:hover {
+  color: black !important;
 }
 
 .main-form {
@@ -1085,6 +1097,7 @@ main div section div form p button {
   margin-top: 25px;
   margin-bottom: 25px;
   transition: all 0.35s;
+  color: white;
 }
 
 .btn-form-signin:hover {
@@ -1419,6 +1432,13 @@ footer a {
     display: none;
   }
 
+  #profile-picture-text input {
+    color: #888;
+    margin-left: 100px;
+    font-size: 12px;
+    border-radius: 1000px;
+  }
+
   .mobile-button-log-in {
     margin-right: 0px;
   }
@@ -1468,6 +1488,12 @@ footer a {
     width: 60%;
   }
 
+  #profile-picture-text input {
+    color: #888;
+    margin-left: 100px;
+    font-size: 12px;
+  }
+
   .contact-fill {
     background-color: #141518;
     height: 100px;
@@ -1515,6 +1541,11 @@ footer a {
   .section-home-grids {
     display: flex;
     flex-direction: column;
+  }
+
+  #profile-picture-text input {
+    color: #888;
+    margin-left: 190px;
   }
 
   .contact-fill {
@@ -1678,6 +1709,16 @@ footer a {
 @media (min-width: 1024px) {
   #burger-button {
     display: none;
+  }
+
+  #profile-picture-text input {
+    color: #888;
+    margin-left: 220px;
+  }
+
+  #profile-picture-text #photo {
+    display: inline;
+    position: absolute;
   }
 
   .desktop-button-cart {
