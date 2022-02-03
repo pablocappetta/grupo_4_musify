@@ -211,17 +211,14 @@ const usersController = {
   // --- Show method FOR API --- \\
   show: (req, res) => {
     db.User.findByPk(req.params.id, { include: [{ association: "UserCategory" }] })
-      .then((product) => {
+      .then((users) => {
         return res.status(200).json({
           data: {
-            id: product.id,
-            product_name: product.product_name,
-            product_description: product.product_description,
-            producer: product.producer,
-            price: product.price,
-            discount: product.discount,
-            genre_name: product.genre.genre_name,
-            image: `http://localhost:42133/products/api/${product.id}`, // must UPDATE for IMAGE URL
+            id: users.id,
+            user_full_name: `${users.first_name} ${users.last_name}`,
+            email: users.email,
+            description: users.description_producer,
+            image: `http://localhost:42133/products/api/${users.id}`, // UPDATE for USER IMAGE
           },
           status: 200,
         });
