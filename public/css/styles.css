@@ -309,8 +309,6 @@ iframe {
 .grids-titles {
   text-align: center;
   font-size: 36px;
-  margin-left: 17px;
-  margin-right: 17px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   color: rgb(255, 66, 77);
@@ -644,7 +642,14 @@ p.store-commends-name-person {
   background-color: #141518;
 }
 
+.container-join-us .grids-titles {
+  margin: auto;
+  margin-bottom: 36px;
+}
+
 h2.grids-titles {
+  margin-left: 17px;
+  margin-right: 17px;
   margin-bottom: 21px;
   color: rgb(255, 66, 77);
 }
@@ -975,9 +980,34 @@ h3.grids-titles {
   transition: all 0.35s;
 }
 
+.form-input:hover {
+  color: black !important;
+}
+
 #profile-picture-text {
-  padding-top: 24px !important;
-  padding-left: 4px;
+  height: 50px;
+  align-items: center;
+  border: 2px solid #888;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 25px 0;
+  padding: 23px;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+}
+
+#profile-picture-text label {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+#profile-picture-text photo {
+  justify-content: center;
 }
 
 .main-form {
