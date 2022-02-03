@@ -141,7 +141,7 @@ const productsController = {
   list: (req, res) => {
     db.Product.findAll({ include: [{ association: "genre" }] })
       .then((products) => {
-        // ·········· JSON sends data in this format in order to allow API consumption ·········· \\
+        //  JSON sends data in this format in order to allow API consumption  \\
 
         // ·························   countByCategory loop    ·························  \\
 
@@ -201,7 +201,7 @@ const productsController = {
             price: product.price,
             discount: product.discount,
             genre_name: product.genre.genre_name,
-            image: `http://localhost:42133/products/api/${product.id}`, // modify for IMAGE URL
+            image: `http://localhost:42133/products/api/${product.id}`, // must UPDATE for IMAGE URL
           },
           status: 200,
         });

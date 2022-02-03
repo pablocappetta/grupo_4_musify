@@ -34,6 +34,12 @@ router.post("/profile/delete/:id", usersController.destroy);
 // Logout
 router.get('/logout', usersController.logout);
 
+// -------------------------------------------     API     --------------------------------------------------------- //
 
-// Tengo que exportar el router
+router.get("/api/users", usersController.list); // Global endpoint
+router.get("/api/users/search", usersController.search); // Search a specific resource
+router.get("/api/users/:id", usersController.show); // Specific request
+router.post("/api/users", usersController.store); // Creating a resource 
+router.delete("/api/users/:id", usersController.delete); // Deleting a resource
+
 module.exports = router;

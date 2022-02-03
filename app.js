@@ -23,7 +23,7 @@ const port = 42133;
 
 //process.env.PORT -> Heroku PORT
 app.listen(process.env.PORT || port, () => {
-  console.log("Server initiated in port 42133");
+  console.log(`Server initiated in port: ${port}`);
   console.log(`Hostname: http://localhost:${port}`);
 });
 
