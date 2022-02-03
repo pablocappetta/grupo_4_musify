@@ -228,10 +228,10 @@ const usersController = {
 
   // --- Store method for creating a resource in the API --- \\
   store: (req, res) => {
-    db.Product.create(req.body)
-      .then((product) => {
+    db.User.create(req.body)
+      .then((users) => {
         return res.status(200).json({
-          data: product,
+          data: users,
           status: 200,
           created: "Yes.",
         });
@@ -241,32 +241,32 @@ const usersController = {
 
   // --- Delete method for the API --- \\
   delete: (req, res) => {
-    db.Product.destroy({
+    db.User.destroy({
       where: {
         id: req.params.id,
       },
     })
-      .then((product) => {
-        return res.json(product);
+      .then((users) => {
+        return res.json(users);
       })
       .catch((err) => console.log(err));
   },
 
   // --- Search method for the API --- \\
   search: (req, res) => {
-    db.Product.findAll({
+    db.User.findAll({
       where: {
         // Like operator to search for a product by its name using our wild card operator (%)
-        product_name: { [Op.like]: "%" + req.query.keyword + "%" },
+        last_name: { [Op.like]: "%" + req.query.keyword + "%" },
       },
     })
-      .then((product) => {
-        if (product.length > 0) {
-          return res.status(200).json(product);
+      .then((users) => {
+        if (users.length > 0) {
+          return res.status(200).json(users);
         }
         return res
           .status(200)
-          .json("There are no products that match your search.");
+          .json("There are no users that match your search.");
       })
       .catch((err) => console.log(err));
   },
@@ -275,11 +275,8 @@ const usersController = {
   // id, first_name, last_name, email, password, description_producer - NO
   // image_producer - NO, category_id
 
-  // EXTRA
-  // Use DDBB consulting with association (.findAll(X, include))
-
   // PENDING ISSUES:
-  // 
+  // URL for USER Images
 
   // ######################################################################### //
 };

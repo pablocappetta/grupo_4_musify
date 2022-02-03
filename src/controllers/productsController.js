@@ -258,9 +258,6 @@ const productsController = {
   // product_name, price, discount - NO, producer, product_description - NO
   // product_image - NO, popularity- NO, users_id, genre_id
 
-  // EXTRA
-  // Use DDBB consulting
-
   // PENDING ISSUES:
   // URL for image (products/api/:id) -- pending review
 
