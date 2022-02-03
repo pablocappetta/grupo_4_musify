@@ -139,14 +139,12 @@ const productsController = {
 
   // --- List method FOR API ---
   list: (req, res) => {
-    db.Product
-      .findAll({include: [
-        {association: "genre"}
-      ]})
+    db.Product.findAll({ include: [{ association: "genre" }] })
       .then((products) => {
-        // JSON sends data in this format in order to allow API consumption \\
+        // ·········· JSON sends data in this format in order to allow API consumption ·········· \\
 
-        // ·························   countByCategory    ·························
+        // ·························   countByCategory loop    ·························  \\
+
         let genreID = () => {
           let generos = [];
 
@@ -162,60 +160,58 @@ const productsController = {
           return generosReducer;
         };
 
-        // ·························   Product    ·························
+        // ·························   Product selection loop    ························· \\
+
         let propProducts = () => {
           let selectedProducts = [];
           for (let i = 0; i < products.length; i++) {
             selectedProducts.push({
               id: products[i].id,
-              product_name: products[i].product_name, 
-              product_description: products[i].product_description, 
-              genre_name: products[i].genre.genre_name, 
-              details: `http://localhost:42133/products/api/${products[i].id}`}) 
+              product_name: products[i].product_name,
+              product_description: products[i].product_description,
+              genre_name: products[i].genre.genre_name,
+              details: `http://localhost:42133/products/api/${products[i].id}`,
+            });
           }
           return selectedProducts;
         };
 
+        // ·························   .then() FUNCTION RETURN    ························· \\
+
         return res.status(200).json({
           count: products.length,
-
           countByCategory: genreID(),
-
           products: propProducts(),
-
-          // ································································
-          // FX W/ LOOP TO ASSIGN OBJET DETAIL & REMOVE SOME DISPLAYING DATA:
-          // ································································
-          // products: () => {
-          //   for (let i = 0; i < products.length; i++) {
-          //     return JSON.stringify(products[i].id, products[i].product_name, products[i].product_description, {detail: `http://localhost:42133/products/api/${products[i].id}`});
-          //   }
-          // },        
-          // ································································
-          
-          status: 200
-        })
-  })},
-
-  // --- Show method FOR API ---
-  show: (req, res) => {
-    db.Product
-      .findByPk(req.params.id)
-      .then((product) => {
-        return res.status(200).json({
-          data: product,
           status: 200,
         });
       })
-      .catch(err =>
-        handleError(err)
-      );
+      .catch((err) => console.log(err));
   },
 
-  // --- Store method for creating a resource in the API ---
+  // --- Show method FOR API --- \\
+  show: (req, res) => {
+    db.Product.findByPk(req.params.id, { include: [{ association: "genre" }] })
+      .then((product) => {
+        return res.status(200).json({
+          data: {
+            id: product.id,
+            product_name: product.product_name,
+            product_description: product.product_description,
+            producer: product.producer,
+            price: product.price,
+            discount: product.discount,
+            genre_name: product.genre.genre_name,
+            image: `http://localhost:42133/products/api/${product.id}`, // modify for IMAGE URL
+          },
+          status: 200,
+        });
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Store method for creating a resource in the API --- \\
   store: (req, res) => {
-    db.Product
-      .create(req.body)
+    db.Product.create(req.body)
       .then((product) => {
         return res.status(200).json({
           data: product,
@@ -223,45 +219,39 @@ const productsController = {
           created: "Yes.",
         });
       })
-      .catch(err =>
-        handleError(err)
-      );
+      .catch((err) => console.log(err));
   },
 
-  // --- Delete method for the API ---
+  // --- Delete method for the API --- \\
   delete: (req, res) => {
-    db.Product
-      .destroy({
-        where: {
-          id: req.params.id
-        }
-      })
+    db.Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
       .then((product) => {
-        return res.json(product)
+        return res.json(product);
       })
-      .catch(err =>
-        handleError(err)
-      );
+      .catch((err) => console.log(err));
   },
 
-  // --- Search method for the API ---
+  // --- Search method for the API --- \\
   search: (req, res) => {
-    db.Product
-      .findAll({
-        where: {
-          // Like operator to search for a product by its name using our wild card operator (%)
-          product_name:  { [Op.like]: '%' + req.query.keyword + '%' }
-        }
-      })
+    db.Product.findAll({
+      where: {
+        // Like operator to search for a product by its name using our wild card operator (%)
+        product_name: { [Op.like]: "%" + req.query.keyword + "%" },
+      },
+    })
       .then((product) => {
         if (product.length > 0) {
           return res.status(200).json(product);
         }
-        return res.status(200).json("There are no products that match your search.");
+        return res
+          .status(200)
+          .json("There are no products that match your search.");
       })
-      .catch(err =>
-        handleError(err)
-      );
+      .catch((err) => console.log(err));
   },
 
   // COLUMNS:
@@ -272,7 +262,7 @@ const productsController = {
   // Use DDBB consulting
 
   // PENDING ISSUES:
-  // Array con ppal relacion 1:M & detail -- pending review
+  // URL for image (products/api/:id) -- pending review
 
   // ######################################################################### //
 
