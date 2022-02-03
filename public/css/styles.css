@@ -730,6 +730,45 @@ h3.grids-titles {
   font-size: 36px;
 }
 
+.class-container-prof{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.profile-image-prof{
+  width: 40%;  
+  text-align: center;
+}
+
+.main-form-structure-prof{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+.register-form-container-prof{
+  width: 50%;
+  align-self: center;
+  margin-top: -30px;
+}
+.text-profile{
+  color: white;
+}
+
+.img-prof{
+  border-radius: 100%;
+  height: 15vw;
+  width: 15vw;
+  border: solid 3px;
+}
+
+.main-form-prof{
+  width: 50%;
+}
+
 /*******************************/
 /* MAIN STYLING -- REGISTER -- */
 /*******************************/
@@ -1021,7 +1060,7 @@ h3.grids-titles {
 }
 
 .register-form-container {
-  width: 85%;
+  width: 200%;
   max-width: 720px;
   margin: 40px 60px;
   display: flex;

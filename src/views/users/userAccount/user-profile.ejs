@@ -6,23 +6,21 @@
       <%- include ('../../partials/header') %>
     </div>
     <main>
-        
-        <div class = "profile-image">
+      <div class="class-container-prof">
+        <div class = "profile-image-prof">
           <h2 class = "profile-title"> Welcome <%= user.first_name %> <%= user.last_name %></h2>
-          <img src = "../img/usersImg/<%= user.image_producer%>">
-        </div>
-            
-        <br>
+          <img src = "../img/usersImg/<%= user.image_producer%>" class = "img-prof">
+        </div> 
 
-        <div class="main-form">
+        <div class="main-form-prof">
           <section>
-            <div class="main-form-structure">
+            <div class="main-form-structure-prof">
               <form action="products/create"
                     method="GET"
-                    class="register-form-container"
+                    class="register-form-container-prof"
                     enctype="multipart/form-data">
                 <p class="form-btn-container">
-                  <button type="submit" class="btn-form-signin">
+                  <button type="submit" class="btn-form-signin text-profile">
                     Sell a new product
                   </button>
                 </p> 
@@ -30,10 +28,10 @@
 
               <form action="products/edit"
                     method="GET"
-                    class="register-form-container"
+                    class="register-form-container-prof"
                     enctype="multipart/form-data">
                 <p class="form-btn-container">
-                  <button type="submit" class="btn-form-signin">
+                  <button type="submit" class="btn-form-signin text-profile">
                     Edit your products
                   </button>
                 </p> 
@@ -41,24 +39,25 @@
 
               <form action="profile/edit/"
                   method="GET"
-                  class="register-form-container"
+                  class="register-form-container-prof"
                   enctype="multipart/form-data">
                 <p class="form-btn-container">
-                  <button type="submit" class="btn-form-signin">
+                  <button type="submit" class="btn-form-signin text-profile">
                     Edit your profile
                   </button>
                 </p> 
               </form>
 
-              <form method="GET" action="/logout" class="register-form-container">
+              <form method="GET" action="/logout" class="register-form-container-prof">
                 <p class="form-btn-container">
-                  <button type="submit" class="btn-form-signin">Logout</button>
+                  <button type="submit" class="btn-form-signin text-profile">Logout</button>
                 </p>
               </form>
 
             </div>
           </section>
         </div> 
+      </div>
     </main>
     <%- include ('../../partials/footer') %>
   </body>
