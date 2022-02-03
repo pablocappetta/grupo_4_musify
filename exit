@@ -1,0 +1,125 @@
+[33mcommit 7307ed847bab334e42d4b48651d6a6e04878633a[m[33m ([m[1;36mHEAD -> [m[1;32mSprint7[m[33m, [m[1;31morigin/Sprint7[m[33m)[m
+Author: Pablo <75391203+pablocappetta@users.noreply.github.com>
+Date:   Wed Feb 2 19:00:58 2022 -0300
+
+    Changes to the register UI
+
+[33mcommit 7fbccfffeb3663e58366a7e96c653f330749abf0[m
+Author: Pablo <75391203+pablocappetta@users.noreply.github.com>
+Date:   Wed Feb 2 18:48:03 2022 -0300
+
+    UI tweaks to prepare the app for release
+
+[33mcommit 214aa47b555353bee299c949d4b832aedb3e616d[m
+Author: Pablo <75391203+pablocappetta@users.noreply.github.com>
+Date:   Wed Feb 2 12:44:58 2022 -0300
+
+    UI tweaks
+
+[33mcommit e6c6ca3f2b7119cbea2fc616d8e7abf62a3ca37b[m
+Author: Diego <diegocej@gmail.com>
+Date:   Tue Feb 1 22:27:42 2022 -0300
+
+    index reform
+
+[33mcommit 0a0f1356e042a14525668ad824da51ff1bfbf007[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Tue Feb 1 22:22:49 2022 -0300
+
+    fix: structure MySQL creation script
+
+[33mcommit 5be67639553287ce10dae25bb11517a940a73556[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Tue Feb 1 22:21:39 2022 -0300
+
+    fix: data MySQL insert values script
+
+[33mcommit 7a3ac94c31b82e819f6d35a96880c416e0fed6d0[m
+Author: Diego <diegocej@gmail.com>
+Date:   Tue Feb 1 22:07:33 2022 -0300
+
+    fix index
+
+[33mcommit bc1db111004fec039031c9c3ac751cb41c3eae95[m
+Author: Diego <diegocej@gmail.com>
+Date:   Tue Feb 1 00:54:58 2022 -0300
+
+    validation backend - front working v1.0, dont work script
+
+[33mcommit 8ae79256e64448059170556bc2e2f0152594bff4[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Sat Jan 29 15:19:17 2022 -0300
+
+    fix: DB products / users
+
+[33mcommit bfb717f012bf0987689577ca228a11a6ffdb10a7[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Sat Jan 29 00:26:09 2022 -0300
+
+    add: back -end profile edit middleware -- controller // pending review ¡!
+
+[33mcommit a53a73f875b76094d8f0e638baf75e81d27d4815[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Sat Jan 29 00:17:31 2022 -0300
+
+    add: front-end profile edit validation -- routes & middleware // pending review
+
+[33mcommit 6e829985e49918cfd72e86f5c7112020d7d71a81[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Sat Jan 29 00:06:36 2022 -0300
+
+    add: front-end edit product form validation -- controller // pending review ! <
+
+[33mcommit 0811c8d61bf1c393c24d1e34ce1958512cff8908[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 23:59:17 2022 -0300
+
+    add: front-end edit prod form validation -- routes & middleware // pending review
+
+[33mcommit cc82c80dbd20f8b0a7052fa272e19e04a9a996fd[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 23:52:00 2022 -0300
+
+    add: front-end create prod validation form -- controller // pending review
+
+[33mcommit e295a995df23e520bac36663729eae140c9e54c9[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 23:45:11 2022 -0300
+
+    add: front-end validation for the create prod form // pending review
+
+[33mcommit b251a9260173a90fb6d26bc4cc284f9e84973ef9[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 18:35:58 2022 -0300
+
+    add: renamed middleware folders & reassigned routes
+
+[33mcommit e5766f12069f5d530c39af16ff3f63f78a5d14dc[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 18:23:46 2022 -0300
+
+    add: front-end login validation -- controller // review
+
+[33mcommit 4d67f802d5ad0e140e803879c30086aa6dc0f540[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 18:11:23 2022 -0300
+
+    front-end login validation -- routes, middleware // review
+
+[33mcommit 5006f93f5b5f2d95f3ed2130f38ddc859427258b[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 17:59:40 2022 -0300
+
+    add: front-end register validation -- controller // check password field
+
+[33mcommit 624004b09795d829218f2bc1468a65d4cc78d331[m
+Author: Felix-Hz <feluhv@outlook.es>
+Date:   Fri Jan 28 17:20:25 2022 -0300
+
+    back-end register validations -- middleware & routes
+
+[33mcommit 99039d8f92a8bf154157b7756353b27fbfa60948[m
+Author: Diego <diegocej@gmail.com>
+Date:   Fri Jan 28 15:42:01 2022 -0300
+
+    sprint 7 start

@@ -37,15 +37,31 @@ const productsController = {
   product: (req, res) => {
     let file = path.join(__dirname, "../views/products/product");
 
-    const id = req.params.id;
-    const product = products.find((product) => {
-      return product.id == id;
-    });
+    // const id = req.params.id;
+    // const product = products.find((product) => {
+    //   return product.id == id;
+    // });
 
-    res.render(file, {
-      productSent: product,
-      productLoop: products,
+    const products = db.Product.findAll({
+      include: [{ association: "genre" }, { association: "user" }],
     });
+    const product = db.Product.findByPk(req.params.id,{
+      include: [{ association: "genre" }, { association: "user" }],
+    } );
+ 
+
+    Promise.all([products,product])
+      .then(function([Fproducts,Fproduct]){
+        res.render(file, {
+          productSent: Fproduct,
+          productLoop: Fproducts,
+        });
+      });
+
+    // res.render(file, {
+    //   productSent: product,
+    //   productLoop: products,
+    // });
   },
 
   // Create - Form to create products

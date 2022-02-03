@@ -67,7 +67,7 @@
         <section class="top-new-arrivals">
           <% for(let index = 0; index < products.length; index++){ %> 
           <article class="product-new-arrivals">
-            <a class="starred-icon" href="/products/product/1">
+            <a class="starred-icon" href="/products/product/<%=products[index].id%>">
               <i class="bi bi-eye"></i>
             </a>
             <div class="container-products-new-arrivals">
@@ -91,7 +91,7 @@
           <section class="most-liked-libraries">
             <% for(let index = 0; index < products.length; index++){ %> 
             <article class="product">
-              <a class="starred-icon" href="/products/product/11">
+              <a class="starred-icon" href="/products/product/<%=products[index].id%>">
                 <i class="bi bi-eye"></i>
               </a>
               <div class="container-products">
