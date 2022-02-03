@@ -975,10 +975,6 @@ h3.grids-titles {
   transition: all 0.35s;
 }
 
-.form-input:hover {
-  color: yellow !important;
-}
-
 #profile-picture-text {
   padding-top: 24px !important;
   padding-left: 4px;
