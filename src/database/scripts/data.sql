@@ -36,7 +36,7 @@ INSERT INTO musify_db.users (id,
 							description_producer, 
 							image_producer, 
 							category_id) VALUES 
-(1,"Gustavo","Cerati","g.cerati@gmail.com", "12345", "Gustavo Cerati, iconic music producer from Argentina.", "1_producerUser.jpg", 1 ),
+(1,"Gustavo","Cerati","g.cerati@gmail.com", "12345", "Gustavo Cerati, iconic music producer from Argentina.", "6_producerUser.jpg", 1 ),
 (2,"Carlos","Maslatón","colemanch@gmail.com", "100barrani", "Charlie is a rising star from South America, you must procede.", "2_producerUser.jpg", 2);
 
 
