@@ -1,15 +1,24 @@
-// utilizo libreria path para obtener la ruta
+// ··································· IMPORTS ············································ //
+
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require("express-validator");
+let db = require("../database/models");
+let port = require("../../app.js");
+
+// ························································································ //
+
+const Op = db.Sequelize.Op;
+
+// ························································································ //
+
 const productsFilePath = path.join(
   __dirname,
   "../database/productsDataBase.json"
 );
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-const { validationResult } = require("express-validator");
-
-let db = require("../database/models");
+// ························································································ //
 
 const productsController = {
   index: (req, res) => {
@@ -41,7 +50,10 @@ const productsController = {
 
   // Create - Form to create products
   create: (req, res) => {
-    let file = path.join(__dirname,"../views/products/productsByUser/product-create-form");
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-create-form"
+    );
 
     /* OLD METHOD JSON */
     // res.render(file, {
@@ -87,8 +99,12 @@ const productsController = {
     res.redirect("/products/store");
     */
 
-    let file = path.join(__dirname, "../views/products/productsByUser/product-create-form");
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-create-form"
+    );
     const validation = validationResult(req);
+
     /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
     let reqGenres = db.Genre.findAll();
@@ -103,9 +119,7 @@ const productsController = {
           oldData: req.body,
         });
       });
-    }
-    else
-    {
+    } else {
       db.Product.create({
         users_id: req.session.userLogged.id,
         genre_id: req.body.genre,
@@ -121,6 +135,135 @@ const productsController = {
     }
   },
 
+  // ###############################   API   ##################################### //
+
+  // --- List method FOR API ---
+  list: (req, res) => {
+    db.Product.findAll({ include: [{ association: "genre" }] })
+      .then((products) => {
+        //  JSON sends data in this format in order to allow API consumption  \\
+
+        // ·························   countByCategory loop    ·························  \\
+
+        let genreID = () => {
+          let generos = [];
+
+          for (let i = 0; i < products.length; i++) {
+            generos.push(products[i].genre.genre_name);
+          }
+
+          let generosReducer = generos.reduce((accumulator, current) => {
+            accumulator[current] = (accumulator[current] || 0) + 1;
+            return accumulator;
+          }, {});
+
+          return generosReducer;
+        };
+
+        // ·························   Product selection loop    ························· \\
+
+        let propProducts = () => {
+          let selectedProducts = [];
+          for (let i = 0; i < products.length; i++) {
+            selectedProducts.push({
+              id: products[i].id,
+              product_name: products[i].product_name,
+              product_description: products[i].product_description,
+              genre_name: products[i].genre.genre_name,
+              details: `http://localhost:42133/products/api/${products[i].id}`,
+            });
+          }
+          return selectedProducts;
+        };
+
+        // ·························   .then() FUNCTION RETURN    ························· \\
+
+        return res.status(200).json({
+          count: products.length,
+          countByCategory: genreID(),
+          products: propProducts(),
+          status: 200,
+        });
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Show method FOR API --- \\
+  show: (req, res) => {
+    db.Product.findByPk(req.params.id, { include: [{ association: "genre" }] })
+      .then((product) => {
+        return res.status(200).json({
+          data: {
+            id: product.id,
+            product_name: product.product_name,
+            product_description: product.product_description,
+            producer: product.producer,
+            price: product.price,
+            discount: product.discount,
+            genre_name: product.genre.genre_name,
+            image: `http://localhost:42133/products/api/${product.id}`, // must UPDATE for IMAGE URL
+          },
+          status: 200,
+        });
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Store method for creating a resource in the API --- \\
+  store: (req, res) => {
+    db.Product.create(req.body)
+      .then((product) => {
+        return res.status(200).json({
+          data: product,
+          status: 200,
+          created: "Yes.",
+        });
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Delete method for the API --- \\
+  delete: (req, res) => {
+    db.Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((product) => {
+        return res.json(product);
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Search method for the API --- \\
+  search: (req, res) => {
+    db.Product.findAll({
+      where: {
+        // Like operator to search for a product by its name using our wild card operator (%)
+        product_name: { [Op.like]: "%" + req.query.keyword + "%" },
+      },
+    })
+      .then((product) => {
+        if (product.length > 0) {
+          return res.status(200).json(product);
+        }
+        return res
+          .status(200)
+          .json("There are no products that match your search.");
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // COLUMNS:
+  // product_name, price, discount - NO, producer, product_description - NO
+  // product_image - NO, popularity- NO, users_id, genre_id
+
+  // PENDING ISSUES:
+  // URL for image (products/api/:id) -- pending review
+
+  // ######################################################################### //
+
+  // --- List products BY USER ---
   listProduct: (req, res) => {
     let file = path.join(
       __dirname,
@@ -168,9 +311,12 @@ const productsController = {
 
   // Method to update
   update: (req, res) => {
-    let file = path.join(__dirname,"../views/products/productsByUser/product-edit-form"); // path view
+    let file = path.join(
+      __dirname,
+      "../views/products/productsByUser/product-edit-form"
+    ); // path view
     const validation = validationResult(req);
-    
+
     /* WITH DATABASE */
     let reqProduct = db.Product.findAll();
     let reqGenres = db.Genre.findAll();
@@ -187,9 +333,7 @@ const productsController = {
           oldData: req.body,
         });
       });
-    }
-    else
-    {
+    } else {
       db.Product.update(
         {
           users_id: req.session.userLogged.id,
@@ -205,10 +349,9 @@ const productsController = {
         {
           where: { id: req.params.id },
         }
-      ); 
+      );
       res.redirect("/profile");
     }
-  
 
     /* OLD METHOD JSON 
     let product = products.find((product) => {

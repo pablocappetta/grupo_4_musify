@@ -8,8 +8,8 @@ const fileUpload = require('../middlewares/multer/multerProductMiddleware');    
 const createValidation = require('../middlewares/validations/validateCreateMiddleware');      /* Middleware validate the create form */
 const editValidation = require('../middlewares/validations/validateEditMiddleware');      /* Middleware validate the edit prod form */
 
+// -------------------------------------------     CRUD     --------------------------------------------------------- //
 
-// Si la solicitud es GET y la ruta '/' llamamos a la funcion index de productsController
 router.get("/cart", productsController.cart);
 
 /*** GET PRODUCT DETAILS ***/
@@ -21,7 +21,7 @@ router.get("/store", productsController.index);
 /*** CREATE PRODUCTS ***/
 router.get("/create", productsController.create);
 
-// Multer como Middleware almacena la imagen en store-img
+// Using MULTER as middleware
 router.post("/create", fileUpload.single("imageProduct"), createValidation, productsController.store); 
 
 /*** EDIT ONE PRODUCT ***/
@@ -29,8 +29,17 @@ router.get("/edit", productsController.listProduct);
 router.get("/edit/:id", productsController.edit);
 router.post("/edit/:id", fileUpload.single("imageProduct"), editValidation, productsController.update);
 
-/*** DELETE ONE PRODUCT***/
+/*** DELETE ONE PRODUCT ***/
 router.post("/delete/:id", productsController.destroy);
 
-// Tengo que exportar el router
+// -------------------------------------------     API     --------------------------------------------------------- //
+
+router.get("/api", productsController.list); // Global endpoint
+router.get("/api/search", productsController.search); // Search a specific resource
+router.get("/api/:id", productsController.show); // Specific request
+router.post("/api", productsController.store); // Creating a resource 
+router.delete("/api/:id", productsController.delete); // Deleting a resource
+
+// ----------------------------------- EXPORTING THE DATA GATHERED IN THE ROUTER ----------------------------------- //
+
 module.exports = router;

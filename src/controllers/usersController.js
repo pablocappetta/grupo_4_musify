@@ -10,6 +10,7 @@ const { validationResult } = require("express-validator");
 // ---------------------------------------------------------------------------------
 
 let db = require("../database/models");
+const Op = db.Sequelize.Op;
 const { join } = require("path");
 
 /* object: usersController */
@@ -172,6 +173,112 @@ const usersController = {
     req.session.destroy();
     return res.redirect("/");
   },
+
+  // ###############################   API   ##################################### //
+
+  // --- List method FOR API ---
+  list: (req, res) => {
+    db.User.findAll()
+      .then((users) => {
+        //  JSON sends data in this format in order to allow API consumption  \\
+
+        // ·························   User selection loop    ························· \\
+
+        let propUsers = () => {
+          let selectedUsers = [];
+          for (let i = 0; i < users.length; i++) {
+            selectedUsers.push({
+              id: users[i].id,
+              user_full_name: `${users[i].first_name} ${users[i].last_name}`,
+              email: users[i].email,
+              details: `http://localhost:42133/products/api/${users[i].id}`,
+            });
+          }
+          return selectedUsers;
+        };
+
+        // ·························   .then() FUNCTION RETURN    ························· \\
+
+        return res.status(200).json({
+          count: users.length,
+          products: propUsers(),
+          status: 200,
+        });
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Show method FOR API --- \\
+  show: (req, res) => {
+    db.User.findByPk(req.params.id, { include: [{ association: "UserCategory" }] })
+      .then((users) => {
+        return res.status(200).json({
+          data: {
+            id: users.id,
+            user_full_name: `${users.first_name} ${users.last_name}`,
+            email: users.email,
+            description: users.description_producer,
+            image: `http://localhost:42133/products/api/${users.id}`, // UPDATE for USER IMAGE
+          },
+          status: 200,
+        });
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Store method for creating a resource in the API --- \\
+  store: (req, res) => {
+    db.User.create(req.body)
+      .then((users) => {
+        return res.status(200).json({
+          data: users,
+          status: 200,
+          created: "Yes.",
+        });
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Delete method for the API --- \\
+  delete: (req, res) => {
+    db.User.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((users) => {
+        return res.json(users);
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // --- Search method for the API --- \\
+  search: (req, res) => {
+    db.User.findAll({
+      where: {
+        // Like operator to search for a product by its name using our wild card operator (%)
+        last_name: { [Op.like]: "%" + req.query.keyword + "%" },
+      },
+    })
+      .then((users) => {
+        if (users.length > 0) {
+          return res.status(200).json(users);
+        }
+        return res
+          .status(200)
+          .json("There are no users that match your search.");
+      })
+      .catch((err) => console.log(err));
+  },
+
+  // COLUMNS:
+  // id, first_name, last_name, email, password, description_producer - NO
+  // image_producer - NO, category_id
+
+  // PENDING ISSUES:
+  // URL for USER Images
+
+  // ######################################################################### //
 };
 
 module.exports = usersController;
