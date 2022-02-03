@@ -31,13 +31,15 @@
             <div class="first-column__product">
               <img
                 class="main-image-product"
-                src="/img/cart-img/<%= productSent.imageProduct %>"
+                src="/img/cart-img/<%= productSent.product_image %>"
                 class="top-bar-image-alt-desktop"
               />
             </div>
             <div class="second-column__product">
               <div class="title-and-price-row">
-                <h3 class="title-product-name"><%= productSent.name %></h3>
+                <h3 class="title-product-name">
+                  <%= productSent.product_name %>
+                </h3>
                 <h3 class="title-product-price">$<%= productSent.price %></h3>
                 <div class="add-to-cart-div">
                   <button type="submit" class="add-to-cart-button">
@@ -49,18 +51,19 @@
                 <h4 class="title-producer">
                   Made by:
                   <a href="/producer" class="link-producer"
-                    ><%= productSent.producer %></a
+                    ><%= productSent.user.first_name%> <%=
+                    productSent.user.last_name%></a
                   >
                 </h4>
                 <h4 class="title-genre">
                   Genre:
                   <a href="/genre" class="link-genre"
-                    ><%= productSent.genre %></a
+                    ><%= productSent.genre.genre_name %></a
                   >
                 </h4>
               </div>
               <p class="product-description">
-                <%= productSent.descriptionProduct %>
+                <%= productSent.product_description %>
               </p>
             </div>
           </div>
@@ -71,37 +74,42 @@
           <div class="first-column__artist">
             <img
               class="profile-photo__artist"
-              src="/img/producer-img/<%= productSent.imageProducer %>"
+              src="/img/producer-img/<%= productSent.user.image_producer %>"
             />
           </div>
           <div class="second-column-flex__artist">
-            <h1 class="name__artist"><%= productSent.producer %></h1>
+            <h1 class="name__artist">
+              <%= productSent.user.first_name%> <%= productSent.user.last_name%>
+            </h1>
             <div class="container-tags__artist">
               <h3 class="title-common-tags__artist">Most common tags:</h3>
-              <% productLoop.forEach(product => { %> <% if(product.producer ==
-              productSent.producer) { %>
+              <% productLoop.forEach(product => { %> <%
+              if(product.user.first_name == productSent.user.first_name &&
+              product.user.last_name == productSent.user.last_name) { %>
               <h4 class="tag__artist">
-                <a href="/genre" class="link-genre"><%= product.genre %></a>
+                <a href="/genre" class="link-genre"
+                  ><%= product.genre.genre_name %></a
+                >
               </h4>
               <% } %> <% }) %>
             </div>
             <p class="description__artist">
-              <%= productSent.descriptionProducer %>
+              <%= productSent.user.description_producer %>
             </p>
           </div>
         </div>
         <div class="products-flex__artist">
-          <% productLoop.forEach(product => { %> <% if(product.producer ==
-          productSent.producer) { %>
+          <% productLoop.forEach(product => { %> <% if(product.user.first_name == productSent.user.first_name &&
+              product.user.last_name == productSent.user.last_name) { %>
           <article class="items-flex__artist">
             <a href="/products/product/<%= product.id %>">
               <img
                 class="main-image-product"
-                src="/img/cart-img/<%= product.imageProduct %>"
+                src="/img/cart-img/<%= product.product_image %>"
                 class="top-bar-image-alt-desktop"
               />
             </a>
-            <h4><%= product.name %></h4>
+            <h4><%= product.product_name %></h4>
             <h4 class="timer-item__artist">$<%= product.price %></h4>
           </article>
           <% } %> <% }) %>

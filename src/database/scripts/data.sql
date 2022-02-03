@@ -36,8 +36,9 @@ INSERT INTO musify_db.users (id,
 							description_producer, 
 							image_producer, 
 							category_id) VALUES 
-(1,"Gustavo","Cerati","g.cerati@gmail.com", "12345", "Gustavo Cerati, iconic music producer from Argentina.", "1_producerUser.jpg", 1 ),
-(2,"Carlos","Maslatón","colemanch@gmail.com", "100barrani", "Charlie is a rising star from South America, you must procede.", "2_producerUser.jpg", 2);
+(1,"Jean","W. Gibson","jean.gib@gmail.com", "jeanjaures", "Brilliant musician from Southern France, bringing you those Mediterranean vibes.", "1_producerUser.jpg", 2),
+(2,"Jim","L. Bremer","jlb@gmail.com", "jimsthebest", "Jim's jams are what everybody are listening to.", "2_producerUser.jpg", 1),
+(3,"Sam","K. Preston","preston@gmail.com", "hurlingamscocaine", "Sam is one of the latests Harvard music school stars.", "3_producerUser.jpg", 2);
 
 
 INSERT INTO musify_db.products(id, 
